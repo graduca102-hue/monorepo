@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /docs/
+Allow: /miniapp/
+Allow: /email/
+Allow: /sms/
+Allow: /proxy/
+Disallow: /partner/
+Disallow: /crm/
+Disallow: /api/
+Disallow: /market/
+Disallow: /assortment/
+Disallow: /miniapp/*/api/
+Disallow: /email/*/api/
+Disallow: /sms/*/api/
+Disallow: /proxy/*/api/
+
+Sitemap: https://sousmarketfranchize.shop/sitemap.xml
+Sitemap: https://docs.sousmarketfranchize.shop/sitemap.xml

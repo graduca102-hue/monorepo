@@ -1,0 +1,24 @@
+[package]
+name = "vpn-orchestrator"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "vpn-orchestrator"
+path = "src/main.rs"
+
+[dependencies]
+vpn-core.workspace = true
+vpn-xray-config.workspace = true
+tokio.workspace = true
+reqwest.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sqlx.workspace = true
+uuid.workspace = true
+time.workspace = true
+tracing.workspace = true
+anyhow.workspace = true
+clap.workspace = true

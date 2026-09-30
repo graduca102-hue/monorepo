@@ -1,0 +1,14 @@
+$TTL 3600
+@   IN  SOA ns1.31-77-145-160.sslip.io. admin.sousmarketfranchize.shop. (
+        2026062802 ; Serial
+        3600       ; Refresh
+        1800       ; Retry
+        1209600    ; Expire
+        3600 )     ; Negative Cache TTL
+;
+@       IN  NS      ns1.31-77-145-160.sslip.io.
+@       IN  NS      ns2.31-77-145-160.sslip.io.
+
+@       IN  A       31.77.145.160
+www     IN  A       31.77.145.160
+*       IN  A       31.77.145.160

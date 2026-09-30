@@ -1,0 +1,1291 @@
+[
+  {
+    "id": 1,
+    "name": "Вконтакте",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/7wdTMsp5x2vFWujhBcWvHKdr9EnWteLAGbXLkeRX.svg",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 93,
+        "name": "►VK.COM Реальные",
+        "parent_id": 1,
+        "image": "https://djekxa.ru/storage/71wY1cDVCayJLX7wmEtlPs0xLNgOETVA7g1UrA53.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 136,
+        "name": "►Вход через TOKEN",
+        "parent_id": 1,
+        "image": "https://djekxa.ru/storage/7wdTMsp5x2vFWujhBcWvHKdr9EnWteLAGbXLkeRX.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 165,
+        "name": "►VK.COM Вход через импорт Cookie",
+        "parent_id": 1,
+        "image": "https://djekxa.ru/storage/RrthL41o4WNsgm4nlZRlq9IicqfAqpjM44jIJHVD.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 97,
+        "name": "►Не привязан номер",
+        "parent_id": 1,
+        "image": "https://djekxa.ru/storage/4DtTbyWzzo099aYhfVMPvkVFrU7TEO7NHtOZmxpS.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 4,
+        "name": "►Авторег (без владельцев, созданы изначально для продажи)",
+        "parent_id": 1,
+        "image": "https://djekxa.ru/storage/7wdTMsp5x2vFWujhBcWvHKdr9EnWteLAGbXLkeRX.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 5,
+        "name": "►Ретрив (восстановленные после блокировки)",
+        "parent_id": 1,
+        "image": "https://djekxa.ru/storage/7wdTMsp5x2vFWujhBcWvHKdr9EnWteLAGbXLkeRX.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 94,
+        "name": "►ВК с друзьями, показана ссылка на профиль",
+        "parent_id": 1,
+        "image": "https://djekxa.ru/storage/AvDfZoopcO59GUUiLrbhGuqcE8T1CbtWsmMNKTZg.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 11,
+        "name": "►С красивыми или короткими ID",
+        "parent_id": 1,
+        "image": "https://djekxa.ru/storage/7wdTMsp5x2vFWujhBcWvHKdr9EnWteLAGbXLkeRX.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 12,
+        "name": "►Раскрученные группы/паблики",
+        "parent_id": 1,
+        "image": "https://djekxa.ru/storage/7wdTMsp5x2vFWujhBcWvHKdr9EnWteLAGbXLkeRX.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 95,
+        "name": "►Заблокированные аккаунты",
+        "parent_id": 1,
+        "image": "https://djekxa.ru/storage/BweETcP4RcA2c6fP9zxC1O8viBLyrhR4QI7K7LCF.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 78,
+        "name": "►Несортированный",
+        "parent_id": 1,
+        "image": "https://djekxa.ru/storage/7wdTMsp5x2vFWujhBcWvHKdr9EnWteLAGbXLkeRX.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 164,
+        "name": "►ВК Базы групп/сообществ",
+        "parent_id": 1,
+        "image": "https://djekxa.ru/storage/7wdTMsp5x2vFWujhBcWvHKdr9EnWteLAGbXLkeRX.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Facebook",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/lvUQEW4bE4eJZD3zMmhQSnSMaxmGdsvdh6OvFCnd.svg",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 21,
+        "name": "►Приглашения БМ (Бизнес Менеджер)",
+        "parent_id": 2,
+        "image": "https://djekxa.ru/storage/lvUQEW4bE4eJZD3zMmhQSnSMaxmGdsvdh6OvFCnd.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 160,
+        "name": "►Приглашения БМ (Бизнес Менеджер) ПЗРД",
+        "parent_id": 2,
+        "image": "https://djekxa.ru/storage/lvUQEW4bE4eJZD3zMmhQSnSMaxmGdsvdh6OvFCnd.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 7,
+        "name": "►Авторег регистрация на почту",
+        "parent_id": 2,
+        "image": "https://djekxa.ru/storage/lvUQEW4bE4eJZD3zMmhQSnSMaxmGdsvdh6OvFCnd.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 162,
+        "name": "►Авторег, регистрация на телефон",
+        "parent_id": 2,
+        "image": "https://djekxa.ru/storage/lvUQEW4bE4eJZD3zMmhQSnSMaxmGdsvdh6OvFCnd.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 8,
+        "name": "►Реальные",
+        "parent_id": 2,
+        "image": "https://djekxa.ru/storage/lvUQEW4bE4eJZD3zMmhQSnSMaxmGdsvdh6OvFCnd.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 19,
+        "name": "►Авторег + фарм",
+        "parent_id": 2,
+        "image": "https://djekxa.ru/storage/lvUQEW4bE4eJZD3zMmhQSnSMaxmGdsvdh6OvFCnd.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 159,
+        "name": "►Авторег с накрученными друзьями",
+        "parent_id": 2,
+        "image": "https://djekxa.ru/storage/lvUQEW4bE4eJZD3zMmhQSnSMaxmGdsvdh6OvFCnd.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 158,
+        "name": "►ПЗРД Аккаунты",
+        "parent_id": 2,
+        "image": "https://djekxa.ru/storage/lvUQEW4bE4eJZD3zMmhQSnSMaxmGdsvdh6OvFCnd.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 163,
+        "name": "►Отработка после рекламы",
+        "parent_id": 2,
+        "image": "https://djekxa.ru/storage/lvUQEW4bE4eJZD3zMmhQSnSMaxmGdsvdh6OvFCnd.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 117,
+        "name": "►Аренда рекламных кабинетов (Бизнес менеджер), обучение арбитраж",
+        "parent_id": 2,
+        "image": "https://djekxa.ru/storage/Zlhcqj8smFvMKLtsFeV4mN9eVABvaSSz4UgZyozd.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 133,
+        "name": "►Facebook Сборки/Сетапы/SetUp",
+        "parent_id": 2,
+        "image": "https://djekxa.ru/storage/E1RLf7Old6pJgAOK9duouU0Y0cQBp2uoTS5UvGcb.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 80,
+        "name": "►FanPage/ФП/FP/Группы и прочее",
+        "parent_id": 2,
+        "image": "https://djekxa.ru/storage/lvUQEW4bE4eJZD3zMmhQSnSMaxmGdsvdh6OvFCnd.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 134,
+        "name": "►РК/Рекламные кабинеты",
+        "parent_id": 2,
+        "image": "https://djekxa.ru/storage/sqhrONeTBE016DZqBVD2yLyCzv9SGL7hvbaHqY6W.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 161,
+        "name": "►Заблокированные, под разблокировку",
+        "parent_id": 2,
+        "image": "https://djekxa.ru/storage/lvUQEW4bE4eJZD3zMmhQSnSMaxmGdsvdh6OvFCnd.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Instagram",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/r0WIF5g4FnnpK9EUara9l4GdlffUfSELJjMRW8VF.svg",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 14,
+        "name": "►Реальные",
+        "parent_id": 3,
+        "image": "https://djekxa.ru/storage/VbqcST1KDINS1rUvOcKj8P5OPaQZtHLF1iKFSoEf.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 107,
+        "name": "►С Проф-Режимом",
+        "parent_id": 3,
+        "image": "https://djekxa.ru/storage/X0yeDmMnnmJ623RCLBAe8dw80cCkiN4QNh5an1tf.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 9,
+        "name": "►Авторег",
+        "parent_id": 3,
+        "image": "https://djekxa.ru/storage/uSgm6uW2LcTqPBhMCQfLDeSpDW5AOpBYdczq8nJc.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 15,
+        "name": "►Авторег с почтой в комплекте",
+        "parent_id": 3,
+        "image": "https://djekxa.ru/storage/akImGoUGjkzXcMRPNh5uVboxL4Ez92ybK5wAz2ZW.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 16,
+        "name": "►Авторег с заполнением (ава+посты)",
+        "parent_id": 3,
+        "image": "https://djekxa.ru/storage/JsRSYnnakQ0Ou1mYLce2UqOnZRnVcrB0FR0GrXf0.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 18,
+        "name": "►Старые по годам",
+        "parent_id": 3,
+        "image": "https://djekxa.ru/storage/2ZqHuavtXobmjv0IsKAAoCEtdYl8syKgaS2t7ijh.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 17,
+        "name": "►Раскрученные с подписчиками",
+        "parent_id": 3,
+        "image": "https://djekxa.ru/storage/XpbFU0OdcYeDS0bZfFgO0sBP6x41b2rrg87q7vhZ.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 137,
+        "name": "►Instagram накрутка Подписчиков, Лайков",
+        "parent_id": 3,
+        "image": "https://djekxa.ru/storage/FxTlWkYQQDlYVwvmrkjbW6PjYvQnEI8an0bVopF6.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 126,
+        "name": "►Заблокированные аккаунты, под разблокировку покупателем",
+        "parent_id": 3,
+        "image": "https://djekxa.ru/storage/RCibExbhOsKxS6OAHMX9tgTMzttzQrGhda62EeWk.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 82,
+        "name": "►Несортированный",
+        "parent_id": 3,
+        "image": "https://djekxa.ru/storage/scnlLSGNwzDEiuBh9KRAH2kYxfrRKx8cgAiFybev.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 140,
+        "name": "Старые аккаунты с синей галочкой",
+        "parent_id": 3,
+        "image": "https://djekxa.ru/storage/FEvTBDBUtLFiDRaH9lJU8BZDs1TtBS13YQemFWZI.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 156,
+        "name": "►Threads аккаунты",
+        "parent_id": 3,
+        "image": "https://djekxa.ru/storage/b1eF82fWLrpIapLUIqSN4Pf2vE4EmdqQpJirGX34.webp",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "TikTok.com ТикТок",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/x81VCnoHGu9j2qeMbu7Y3Xf0hbw2rcvi9byJ063S.svg",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 27,
+        "name": "►Раскрученные",
+        "parent_id": 24,
+        "image": "https://djekxa.ru/storage/x81VCnoHGu9j2qeMbu7Y3Xf0hbw2rcvi9byJ063S.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 88,
+        "name": "►c Live Studio/Для запуска эфиров",
+        "parent_id": 24,
+        "image": "https://djekxa.ru/storage/x81VCnoHGu9j2qeMbu7Y3Xf0hbw2rcvi9byJ063S.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 25,
+        "name": "►Авторег",
+        "parent_id": 24,
+        "image": "https://djekxa.ru/storage/x81VCnoHGu9j2qeMbu7Y3Xf0hbw2rcvi9byJ063S.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 26,
+        "name": "►Авторег с ADS кабинетом",
+        "parent_id": 24,
+        "image": "https://djekxa.ru/storage/x81VCnoHGu9j2qeMbu7Y3Xf0hbw2rcvi9byJ063S.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 100,
+        "name": "►Накрутка Просмотров/Подписчиков/Лайков",
+        "parent_id": 24,
+        "image": "https://djekxa.ru/storage/KI1fpA1rO32UQLvgxQNkRgpsyP5FSUqlKAvy68nk.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 118,
+        "name": "►Авторег по ГЕО",
+        "parent_id": 24,
+        "image": "https://djekxa.ru/storage/oZrWHbHyUkez7Etp7RzritMDcuWTE3nZ4uf2oW7W.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 119,
+        "name": "►Авторег раскрученные по ГЕО",
+        "parent_id": 24,
+        "image": "https://djekxa.ru/storage/m0w74yiFFlS57YuGHktZPPJYo5g7ybCV56zR8vJc.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Telegram.org Телеграм",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/hwOMnDiIoJc7gVhplIxpOwDT8VUcu3LszzGYVsAt.svg",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 157,
+        "name": "►Telegram вход по коду с почты или ссылки",
+        "parent_id": 28,
+        "image": "https://djekxa.ru/storage/hwOMnDiIoJc7gVhplIxpOwDT8VUcu3LszzGYVsAt.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 135,
+        "name": "►Вход по коду от поставщика",
+        "parent_id": 28,
+        "image": "https://djekxa.ru/storage/hwOMnDiIoJc7gVhplIxpOwDT8VUcu3LszzGYVsAt.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 30,
+        "name": "►Авторег и Саморег. Формат tData",
+        "parent_id": 28,
+        "image": "https://djekxa.ru/storage/hwOMnDiIoJc7gVhplIxpOwDT8VUcu3LszzGYVsAt.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 128,
+        "name": "►Авторег и Саморег. Формат tData+Session+JSON",
+        "parent_id": 28,
+        "image": "https://djekxa.ru/storage/lmSuyVOGhO1Uc49JcQIfr8ukAxVGJ6wyNeE6WGsF.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 31,
+        "name": "►Авторег и Саморег. Формат Session / JSON / OneDash",
+        "parent_id": 28,
+        "image": "https://djekxa.ru/storage/hwOMnDiIoJc7gVhplIxpOwDT8VUcu3LszzGYVsAt.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 29,
+        "name": "►Реальные",
+        "parent_id": 28,
+        "image": "https://djekxa.ru/storage/hwOMnDiIoJc7gVhplIxpOwDT8VUcu3LszzGYVsAt.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 33,
+        "name": "►Пачки аккаунтов",
+        "parent_id": 28,
+        "image": "https://djekxa.ru/storage/hwOMnDiIoJc7gVhplIxpOwDT8VUcu3LszzGYVsAt.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 81,
+        "name": "►Готовые чаты/каналы (передача прав)",
+        "parent_id": 28,
+        "image": "https://djekxa.ru/storage/hwOMnDiIoJc7gVhplIxpOwDT8VUcu3LszzGYVsAt.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 32,
+        "name": "►Базы чатов/каналов",
+        "parent_id": 28,
+        "image": "https://djekxa.ru/storage/hwOMnDiIoJc7gVhplIxpOwDT8VUcu3LszzGYVsAt.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 138,
+        "name": "Telagram реклама, продвижение",
+        "parent_id": 28,
+        "image": "https://djekxa.ru/storage/hwOMnDiIoJc7gVhplIxpOwDT8VUcu3LszzGYVsAt.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Twitter (X) Твиттер",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/oojZuzlgaXfH2Oxz7mKaPlziJYv59n1EyNQlnjDW.svg",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 35,
+        "name": "►Реальные",
+        "parent_id": 34,
+        "image": "https://djekxa.ru/storage/g6Iv0hXXBoBtyxXHUd3llNMwSBYqM0V8XlChYrwA.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 36,
+        "name": "►Авторег",
+        "parent_id": 34,
+        "image": "https://djekxa.ru/storage/ZI1kky8IUUfcDPue6hKubsrefzRYF8ZvJ9coa6Kg.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 37,
+        "name": "►С заполнением и фолловерами",
+        "parent_id": 34,
+        "image": "https://djekxa.ru/storage/dQllKjj5pHG0TGjaJFVfFgSObUKmo8HsJc1wy8Kd.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 38,
+        "name": "►Авторег по годам",
+        "parent_id": 34,
+        "image": "https://djekxa.ru/storage/fjEG5h5JTkamjdOrW8Ud6yHwATZBHYjYiXDtX2tT.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 132,
+        "name": "►Twitter (X) Услуги накрутки",
+        "parent_id": 34,
+        "image": "https://djekxa.ru/storage/IXy9QWRpZIU9zt4R2GcZu4DngVbLqMs3HBS6ezjC.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Gmail.com + Youtube.com + Google",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/1kVE4A7F9HCkrNn9C9S54iqYwQo58xji6yTDYw4n.svg",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 40,
+        "name": "►Авторег Gmail",
+        "parent_id": 39,
+        "image": "https://djekxa.ru/storage/c94Fg2Q60Z8rHotQ2YmioHCwxikX9WHyFWDODj9L.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 41,
+        "name": "►Авторег Youtube",
+        "parent_id": 39,
+        "image": "https://djekxa.ru/storage/nrNRjATLIqSdSHbWq3Aqik7ZqL4xYrzrbWcBzUAK.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 42,
+        "name": "►Авторег по годам",
+        "parent_id": 39,
+        "image": "https://djekxa.ru/storage/LwK15NRuLj7OlU6xpgI3zprS4FDJrs2xeDCpLODQ.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 43,
+        "name": "►Промокоды и аккаунты Google ADS",
+        "parent_id": 39,
+        "image": "https://djekxa.ru/storage/PEb96BSeDDN4jG0ABOI51pgXxJglegRU2BYEiQ4k.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 127,
+        "name": "►White Page для модерации Google Ads",
+        "parent_id": 39,
+        "image": "https://djekxa.ru/storage/qUyfsNXvOaK4gQI3UdFdS1kRTmjuJ7O19OjpNl51.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 141,
+        "name": "►Авторег Google с фармом для рекламы",
+        "parent_id": 39,
+        "image": "https://djekxa.ru/storage/1kVE4A7F9HCkrNn9C9S54iqYwQo58xji6yTDYw4n.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Discord.com Дискорд",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/GNqdLny1uOpTPmrm43b51feaoIHeDrVlXImhhFtq.svg",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 45,
+        "name": "►Авторег",
+        "parent_id": 44,
+        "image": "https://djekxa.ru/storage/GNqdLny1uOpTPmrm43b51feaoIHeDrVlXImhhFtq.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "OK.ru Одноклассники",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/R2MAhfxdhWnnWBUpfDrGmFzNYLq5hkoeykpADwRA.png",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 47,
+        "name": "►Реальные",
+        "parent_id": 46,
+        "image": "https://djekxa.ru/storage/R2MAhfxdhWnnWBUpfDrGmFzNYLq5hkoeykpADwRA.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 48,
+        "name": "►Авторег или ретрив",
+        "parent_id": 46,
+        "image": "https://djekxa.ru/storage/R2MAhfxdhWnnWBUpfDrGmFzNYLq5hkoeykpADwRA.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 49,
+        "name": "►С друзьями",
+        "parent_id": 46,
+        "image": "https://djekxa.ru/storage/R2MAhfxdhWnnWBUpfDrGmFzNYLq5hkoeykpADwRA.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 99,
+        "name": "►Группы OK.RU",
+        "parent_id": 46,
+        "image": "https://djekxa.ru/storage/eT8nsCQXskUJ8tk8fuS13iWlegDet8E4xdZzfhM1.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 79,
+        "name": "►Блок, заблокированные",
+        "parent_id": 46,
+        "image": "https://djekxa.ru/storage/R2MAhfxdhWnnWBUpfDrGmFzNYLq5hkoeykpADwRA.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Mail.ru Маил + мой мир",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/ttyyhIwaPJt1ufa48cHjigGpSqjHO51CtEhIhZs0.svg",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 51,
+        "name": "►Реальные",
+        "parent_id": 50,
+        "image": "https://djekxa.ru/storage/ttyyhIwaPJt1ufa48cHjigGpSqjHO51CtEhIhZs0.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 52,
+        "name": "►Авторег",
+        "parent_id": 50,
+        "image": "https://djekxa.ru/storage/ttyyhIwaPJt1ufa48cHjigGpSqjHO51CtEhIhZs0.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 53,
+        "name": "►Авторег ВКЛ IMAP/POP3/SMTP",
+        "parent_id": 50,
+        "image": "https://djekxa.ru/storage/ttyyhIwaPJt1ufa48cHjigGpSqjHO51CtEhIhZs0.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 101,
+        "name": "►Мой Мир",
+        "parent_id": 50,
+        "image": "https://djekxa.ru/storage/NhmRqOfXUsGUMM41zskTXgiuHo1988jHXkit7Jtu.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "mail.yandex.ru Яндекс",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/sKeu2lHc0ZK61TDyKyL5DKnnFhFzlfHUWNDJcUyU.svg",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 56,
+        "name": "►Авторег",
+        "parent_id": 54,
+        "image": "https://djekxa.ru/storage/sKeu2lHc0ZK61TDyKyL5DKnnFhFzlfHUWNDJcUyU.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 57,
+        "name": "►Авторег ВКЛ IMAP/POP3/SMTP",
+        "parent_id": 54,
+        "image": "https://djekxa.ru/storage/sKeu2lHc0ZK61TDyKyL5DKnnFhFzlfHUWNDJcUyU.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 55,
+        "name": "►Реальные",
+        "parent_id": 54,
+        "image": "https://djekxa.ru/storage/sKeu2lHc0ZK61TDyKyL5DKnnFhFzlfHUWNDJcUyU.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Rambler.ru Рамблер",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/0qz9lmrkrGGzEoDURxRnrtFtKPGJgIZ1WhRylPiQ.jpg",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 59,
+        "name": "►Реальные",
+        "parent_id": 58,
+        "image": "https://djekxa.ru/storage/0qz9lmrkrGGzEoDURxRnrtFtKPGJgIZ1WhRylPiQ.jpg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 60,
+        "name": "►Авторег",
+        "parent_id": 58,
+        "image": "https://djekxa.ru/storage/0qz9lmrkrGGzEoDURxRnrtFtKPGJgIZ1WhRylPiQ.jpg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 61,
+        "name": "►Авторег ВКЛ IMAP/POP3/SMTP",
+        "parent_id": 58,
+        "image": "https://djekxa.ru/storage/0qz9lmrkrGGzEoDURxRnrtFtKPGJgIZ1WhRylPiQ.jpg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Другие почты",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/EUtSApr3ERcB7oG2SXpk54KvdJsAlDpHxpF5Bedb.png",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 65,
+        "name": "►GMX.com ГМХ",
+        "parent_id": 62,
+        "image": "https://djekxa.ru/storage/SvGOnmRzXYiTnukjm9K8rMEZycLgdJgdI6H5Os4c.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 63,
+        "name": "►Hotmail.com & Outlook.com",
+        "parent_id": 62,
+        "image": "https://djekxa.ru/storage/z3Hxnwhi2FFK90Usvm1VDCWsgy4QrQXZsLCLBBxP.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 166,
+        "name": "►Proton mail",
+        "parent_id": 62,
+        "image": "https://djekxa.ru/storage/liGkiAHz2jeSFRovyAee8daJQiz8WNdSPGVbJxHu.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 66,
+        "name": "►Mail.com Маил ком",
+        "parent_id": 62,
+        "image": "https://djekxa.ru/storage/GDHRSberCDwfjvVJa7UtvYBYaGjrfrY9qUBL4yEk.jpg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 64,
+        "name": "►Yahoo.com Яху",
+        "parent_id": 62,
+        "image": "https://djekxa.ru/storage/rqTTQJM2ayYV6R7WQjpasOZ5ldpe52t5CVz2U7bn.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 149,
+        "name": "►Apple, iCloud",
+        "parent_id": 62,
+        "image": "https://djekxa.ru/storage/tHLXF2S4ZXM6bgY8RX9l7Q88tDgwMvluQME1Mxw9.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 67,
+        "name": "►Разные зарубежные почтовые сервисы",
+        "parent_id": 62,
+        "image": "https://djekxa.ru/storage/EUtSApr3ERcB7oG2SXpk54KvdJsAlDpHxpF5Bedb.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 84,
+        "name": "►Несортированный",
+        "parent_id": 62,
+        "image": "https://djekxa.ru/storage/EUtSApr3ERcB7oG2SXpk54KvdJsAlDpHxpF5Bedb.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Остальное",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/HzVGeObjyxs8gV0XvgD1Cvcbd75IePPzuG8U6lwG.png",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 116,
+        "name": "►Windows ключи активации",
+        "parent_id": 68,
+        "image": "https://djekxa.ru/storage/JrKKLWJlmodL9EGhLPBPmgICApAs089PEkvkvv52.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 72,
+        "name": "►Skype Скайп",
+        "parent_id": 68,
+        "image": "https://djekxa.ru/storage/IzncY4oEQd4nYswbYTX949T1dQM3UFvvoxh7AwVG.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 129,
+        "name": "►WhatsApp",
+        "parent_id": 68,
+        "image": "https://djekxa.ru/storage/7Erx939I4W7gfDCnfUSj8EXwZRzGyWPtlIHH2OaA.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 154,
+        "name": "►MAX Макс - аккаунты и каналы",
+        "parent_id": 68,
+        "image": "https://djekxa.ru/storage/AFS8qDbHV8e0FG6dKhmPeSXylnqHUa6XW6dKNJmR.webp",
+        "active": true,
+        "only_for_users": true,
+        "children": []
+      },
+      {
+        "id": 70,
+        "name": "►Разные сайты и социальные сети",
+        "parent_id": 68,
+        "image": "https://djekxa.ru/storage/2RAC8NQwL5vGA5G6gqV2YiLrq8fcqKSaxJVBs8Z4.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 71,
+        "name": "►Отзывы/Купоны/Балы/Монеты/Ваучеры сервисов раскрутки",
+        "parent_id": 68,
+        "image": "https://djekxa.ru/storage/HzVGeObjyxs8gV0XvgD1Cvcbd75IePPzuG8U6lwG.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 124,
+        "name": "►Likest.ru купоны и аккаунты (сервис по раскрутке)",
+        "parent_id": 68,
+        "image": "https://djekxa.ru/storage/7ssUJ9RlZpdNkjIW6LMwfZADuKVpgLSPofQ4d1KO.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 123,
+        "name": "►Bosslike.ru купоны и аккаунты (сервис по раскрутке)",
+        "parent_id": 68,
+        "image": "https://djekxa.ru/storage/x5d4gzCNpk7rEX28PEHbZN0iQnl9jiiioLQlwfU6.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 125,
+        "name": "►Likes.FM купоны и аккаунты (сервис по раскрутке)",
+        "parent_id": 68,
+        "image": "https://djekxa.ru/storage/aJ2jzecG6gLw8wblqyujcNbw8R5LXolR9mZGkccU.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 73,
+        "name": "►Кино / музыкальные / развлекательные / сервисы",
+        "parent_id": 68,
+        "image": "https://djekxa.ru/storage/HzVGeObjyxs8gV0XvgD1Cvcbd75IePPzuG8U6lwG.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 74,
+        "name": "►Программы / SOFT / ПО",
+        "parent_id": 68,
+        "image": "https://djekxa.ru/storage/HzVGeObjyxs8gV0XvgD1Cvcbd75IePPzuG8U6lwG.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 83,
+        "name": "►Сервисы объявлений",
+        "parent_id": 68,
+        "image": "https://djekxa.ru/storage/1zmfo7HWz3aecvxkOc9cmjmF14kMsuOqaBmk09Dh.webp",
+        "active": true,
+        "only_for_users": true,
+        "children": []
+      },
+      {
+        "id": 89,
+        "name": "►Несортированный",
+        "parent_id": 68,
+        "image": "https://djekxa.ru/storage/HzVGeObjyxs8gV0XvgD1Cvcbd75IePPzuG8U6lwG.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 92,
+        "name": "►Other (другие товары)",
+        "parent_id": 68,
+        "image": "https://djekxa.ru/storage/HzVGeObjyxs8gV0XvgD1Cvcbd75IePPzuG8U6lwG.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "name": "VPN & Proxy & VPS RDP",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/eoYs4XEo1xlk9mb7HvKoJSTNcVk13VkpNqNxkui7.png",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 76,
+        "name": "►VPN сервисы",
+        "parent_id": 75,
+        "image": "https://djekxa.ru/storage/eoYs4XEo1xlk9mb7HvKoJSTNcVk13VkpNqNxkui7.png",
+        "active": true,
+        "only_for_users": true,
+        "children": []
+      },
+      {
+        "id": 77,
+        "name": "►Proxy сервисы",
+        "parent_id": 75,
+        "image": "https://djekxa.ru/storage/BnQrLmqn4gSrwAS9IgNmK3tBsvEFRgyUiaE5YOUy.png",
+        "active": true,
+        "only_for_users": true,
+        "children": []
+      },
+      {
+        "id": 139,
+        "name": "►VPS RDP серверы",
+        "parent_id": 75,
+        "image": "https://djekxa.ru/storage/RgRhSGy795BEOClBZs5zfOgVm3D5NsRjQ94X20A3.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "name": "reddit",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/jmw8CQIIus5ReYlBNaXE52kZyS3DtuVLrgH6d7OU.svg",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 110,
+        "name": "►реддит",
+        "parent_id": 108,
+        "image": "https://djekxa.ru/storage/Jy9VoSVueatnSI1jPrhLQNzKG67Nnbo3U3qqE28j.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "name": "ИИ Искусственный интеллект DeepSeek | gemini | прочие",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/WAJvN4jp9cpbQtkvfVZPRNaHgAGOoe2hKDsPu1Z4.svg",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 111,
+        "name": "Нейросети",
+        "parent_id": 109,
+        "image": "https://djekxa.ru/storage/XrzTvYhEKDt1q1jflslkqjBrPcCmoiugGJPqCHyC.webp",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 151,
+        "name": "ChatGPT",
+        "parent_id": 109,
+        "image": "https://djekxa.ru/storage/J6blkpeJKanSc5SOfb8Lyb8M5xSomEs5vJTa94zO.webp",
+        "active": true,
+        "only_for_users": true,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "name": "Linkedin",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/GLcLDifqwdW7jjj3jiVnWO5z5ziiVbxYOt8mevqG.svg",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 113,
+        "name": "Авторег",
+        "parent_id": 112,
+        "image": "https://djekxa.ru/storage/F4UA9ZuKeZdSu6vf0qshwlq3fRTKWDvQFkwct3Ij.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "name": "Steam, Twitch, Kick игровые аккаунты и сервисы",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/ZOHdPuKJ8RRH02P8zwM6rSBq8UAvB2xPrtGvfHfQ.svg",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 130,
+        "name": "►Steam аккаунты",
+        "parent_id": 114,
+        "image": "https://djekxa.ru/storage/AGh0BHpjmUYh3yHivAlTYQ7v1MQJQIZRQOqtMk5a.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 115,
+        "name": "►Twitch аккаунты",
+        "parent_id": 114,
+        "image": "https://djekxa.ru/storage/YCl9c7ya5rDQrb5aN3ISUHvfzlPbIIf920ecyjNR.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 131,
+        "name": "►Прочие игровые сервисы",
+        "parent_id": 114,
+        "image": "https://djekxa.ru/storage/77Hvsz2rKHT6V51fSYg2Xe6ed7g4a4AdI50OzqkY.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 167,
+        "name": "►Kick - стриминговый сервис, аккаунты KICK",
+        "parent_id": 114,
+        "image": "https://djekxa.ru/storage/S5mCxTfslt3yV8O3QxNpyZe5yxQLp7AB87ely79J.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "name": "Сайты для знакомств или общения",
+    "parent_id": null,
+    "image": "https://djekxa.ru/storage/D2e72Ca1UAPpHWL6tOAyniZ2wbhkYZI6Di80jQLL.png",
+    "active": true,
+    "only_for_users": false,
+    "children": [
+      {
+        "id": 143,
+        "name": "►Mamba Мамба",
+        "parent_id": 142,
+        "image": "https://djekxa.ru/storage/fkYMKamqQtkqCRk0MMtX98D5YZPkCPtkbv0z1J87.webp",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 145,
+        "name": "►Snapchat Снепчат",
+        "parent_id": 142,
+        "image": "https://djekxa.ru/storage/GtY9AhFwnSiWj22Pt2cow5ZgevXi4e4RrSd8RSVL.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 146,
+        "name": "►TABOR Табор",
+        "parent_id": 142,
+        "image": "https://djekxa.ru/storage/ZQ5QT35W5dFr8PcbysezZxNFt2e75vl60r06G6Fq.jpg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 147,
+        "name": "►Beboo",
+        "parent_id": 142,
+        "image": "https://djekxa.ru/storage/erHu4jVd7XnP1yLyLgSRaAGguLLHwHr4VS52jxKJ.svg",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 148,
+        "name": "►LovePlanet ЛавПланет",
+        "parent_id": 142,
+        "image": "https://djekxa.ru/storage/e1ehjRQIowLY9fFZvwbFtoMXkU50SmZNIHlqhEoY.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      },
+      {
+        "id": 144,
+        "name": "►Прочие сервисы знакомств / Other Dating",
+        "parent_id": 142,
+        "image": "https://djekxa.ru/storage/D2e72Ca1UAPpHWL6tOAyniZ2wbhkYZI6Di80jQLL.png",
+        "active": true,
+        "only_for_users": false,
+        "children": []
+      }
+    ]
+  }
+]

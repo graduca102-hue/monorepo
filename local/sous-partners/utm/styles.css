@@ -1,0 +1,190 @@
+/* Партнёрский кабинет SOUS — Telegram-native theme.
+   Все цвета берутся из Telegram WebApp themeParams (--tg-theme-*), фолбэки —
+   тёмная схема Telegram по умолчанию. */
+:root{
+  --bg:var(--tg-theme-secondary-bg-color,#17212b);
+  --section:var(--tg-theme-section-bg-color,#232e3c);
+  --section-header:var(--tg-theme-section-header-text-color,#7d8b99);
+  --text:var(--tg-theme-text-color,#f5f5f5);
+  --hint:var(--tg-theme-hint-color,#7d8b99);
+  --subtitle:var(--tg-theme-subtitle-text-color,#7d8b99);
+  --link:var(--tg-theme-link-color,#64b5ef);
+  --accent:var(--tg-theme-accent-text-color,#64b5ef);
+  --button:var(--tg-theme-button-color,#50a8eb);
+  --button-text:var(--tg-theme-button-text-color,#fff);
+  --destructive:var(--tg-theme-destructive-text-color,#ec3942);
+  --header-bg:var(--tg-theme-header-bg-color,var(--section));
+  --separator:color-mix(in srgb,var(--hint) 22%,transparent);
+  --radius:12px;
+  --tap:color-mix(in srgb,var(--text) 7%,transparent);
+  --safe-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{background:var(--bg)}
+body{
+  margin:0;color:var(--text);
+  font:16px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+button,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0;padding:0}
+.loading{padding:64px 20px;text-align:center;color:var(--hint)}
+
+.shell{max-width:560px;margin:0 auto;padding:8px 0 calc(76px + var(--safe-bottom))}
+
+/* ---- large title ---- */
+.title{padding:12px 20px 14px}
+.title h1{margin:0;font-size:26px;line-height:1.15;font-weight:700;letter-spacing:-.02em}
+.title p{margin:6px 0 0;color:var(--hint);font-size:14px;max-width:420px}
+
+/* ---- account bar ---- */
+.acct{display:flex;align-items:center;gap:12px;padding:10px 16px 16px}
+.acct-logo{width:40px;height:40px;border-radius:50%;flex:none;display:grid;place-items:center;
+  background:var(--button);color:var(--button-text);font-weight:700;font-size:17px;overflow:hidden}
+.acct-logo img{width:100%;height:100%;object-fit:cover}
+.acct-meta{min-width:0;flex:1}
+.acct-meta b{display:block;font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.acct-meta span{display:block;color:var(--hint);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.acct-balance{flex:none;text-align:right;padding:6px 12px;border-radius:10px;background:var(--section);min-width:96px}
+.acct-balance small{display:block;color:var(--hint);font-size:11px}
+.acct-balance b{display:block;font-size:15px;color:var(--accent);font-weight:650;margin-top:2px}
+
+/* ---- grouped list ---- */
+.group{margin:18px 0 0}
+.group-header{padding:0 20px 6px;color:var(--section-header);font-size:13px;text-transform:uppercase;letter-spacing:.02em}
+.group-footer{padding:7px 20px 0;color:var(--hint);font-size:13px;line-height:1.4}
+.list{background:var(--section);border-radius:var(--radius);overflow:hidden}
+.list.inset{margin:0 16px}
+
+.cell{display:flex;align-items:center;gap:12px;width:100%;padding:11px 14px;text-align:left;position:relative;color:var(--text);min-height:44px}
+.cell+.cell::before{content:"";position:absolute;left:48px;right:0;top:0;height:1px;background:var(--separator)}
+.cell:active{background:var(--tap)}
+.cell.plain+.cell.plain::before{left:14px}
+.cell-ico{width:29px;height:29px;border-radius:7px;flex:none;display:grid;place-items:center;color:#fff}
+.cell-ico svg{width:17px;height:17px;fill:currentColor}
+.cell-body{min-width:0;flex:1}
+.cell-body b{display:block;font-size:16px;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cell-body small{display:block;color:var(--hint);font-size:13px;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cell-val{flex:none;color:var(--hint);font-size:15px;max-width:45%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cell-val.accent{color:var(--accent)}
+.cell-chev{flex:none;width:8px;color:var(--hint);opacity:.7}
+.cell-chev svg{width:8px;height:13px;fill:currentColor;display:block}
+
+/* icon tints (Telegram-settings style) */
+.t-blue{background:#3e88f7}.t-green{background:#4cd964}.t-purple{background:#c17ce0}
+.t-orange{background:#fa9600}.t-red{background:#ff3b30}.t-teal{background:#5ac8fa}
+.t-indigo{background:#5856d6}.t-gray{background:#8e8e93}.t-pink{background:#ff2d92}
+
+/* ---- big balance / metric cards ---- */
+.hero-balance{margin:16px;padding:18px 18px 16px;background:var(--section);border-radius:16px}
+.hero-balance small{color:var(--hint);font-size:13px;text-transform:uppercase;letter-spacing:.03em}
+.hero-balance b{display:block;font-size:34px;font-weight:700;letter-spacing:-.02em;margin:6px 0 14px}
+.metrics{margin:14px 16px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.metric{background:var(--section);border-radius:14px;padding:13px 14px}
+.metric span{display:flex;align-items:center;gap:7px;color:var(--hint);font-size:12px}
+.metric span svg{width:12px;height:12px;fill:currentColor}
+.metric b{display:block;font-size:21px;font-weight:650;margin-top:7px;letter-spacing:-.01em}
+
+.chart{margin:14px 16px 0;padding:14px;background:var(--section);border-radius:14px}
+.chart-head{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--hint)}
+.chart-head button{color:var(--link);font-size:13px}
+.spark{margin-top:12px;height:96px;display:flex;align-items:flex-end;gap:4px}
+.spark i{flex:1;background:color-mix(in srgb,var(--button) 55%,transparent);border-radius:3px 3px 0 0;min-height:3px}
+.chart-empty{margin-top:12px;height:88px;border-radius:11px;display:grid;place-items:center;
+  color:var(--hint);font-size:13px;background:color-mix(in srgb,var(--hint) 8%,transparent)}
+
+/* ---- status pill ---- */
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--hint)}
+.pill i{width:7px;height:7px;border-radius:50%;background:currentColor}
+.pill.on{color:#4cd964}
+.pill.off{color:var(--hint)}
+
+/* ---- forms ---- */
+.field{padding:10px 16px 0}
+.field label{display:block;color:var(--section-header);font-size:13px;text-transform:uppercase;letter-spacing:.02em;padding:0 4px 6px}
+.field .control{background:var(--section);border-radius:12px;display:flex;align-items:center;gap:8px;padding:0 14px}
+.field input,.field textarea{width:100%;border:0;background:none;outline:none;padding:13px 0;font-size:16px}
+.field textarea{resize:vertical;min-height:96px;line-height:1.45}
+.field .hint{padding:7px 20px 0;color:var(--hint);font-size:13px}
+.field .hint b{color:var(--text)}
+.inline-btn{flex:none;color:var(--link);font-weight:600;font-size:15px;white-space:nowrap;padding:10px 0 10px 6px}
+
+.btn{display:block;width:calc(100% - 32px);margin:16px;padding:14px;border-radius:12px;
+  background:var(--button);color:var(--button-text);font-size:16px;font-weight:600;text-align:center;text-decoration:none}
+.btn:active{opacity:.85}
+.btn.ghost{background:var(--section);color:var(--link)}
+.inline-btn.ghost{color:var(--destructive);font-weight:500}
+.btn.danger{background:var(--section);color:var(--destructive)}
+
+.notice{margin:12px 16px 0;padding:12px 14px;border-radius:12px;font-size:13px;line-height:1.45;
+  background:color-mix(in srgb,var(--destructive) 14%,transparent);color:var(--destructive)}
+.notice.info{background:color-mix(in srgb,var(--link) 12%,transparent);color:var(--text)}
+
+/* ---- toggle ---- */
+.switch{width:51px;height:31px;border-radius:16px;background:color-mix(in srgb,var(--hint) 40%,transparent);padding:2px;flex:none;transition:background .18s}
+.switch i{display:block;width:27px;height:27px;border-radius:50%;background:#fff;transition:transform .18s;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.switch.on{background:#4cd964}
+.switch.on i{transform:translateX(20px)}
+
+/* ---- bots list ---- */
+.bot-cell .cell-ico{border-radius:50%;background:var(--button);font-weight:700;font-size:15px}
+.bot-badge{flex:none;font-size:11px;font-weight:700;padding:3px 8px;border-radius:8px;color:var(--hint);background:color-mix(in srgb,var(--hint) 15%,transparent)}
+.bot-badge.on{color:#4cd964;background:color-mix(in srgb,#4cd964 16%,transparent)}
+
+/* ---- empty state ---- */
+.empty{padding:56px 28px;text-align:center}
+.empty .ico{width:76px;height:76px;border-radius:20px;margin:0 auto 18px;display:grid;place-items:center;background:var(--section)}
+.empty .ico svg{width:34px;height:34px;fill:var(--hint)}
+.empty h2{margin:0 0 8px;font-size:20px;font-weight:700}
+.empty p{margin:0 auto 20px;color:var(--hint);font-size:14px;max-width:300px}
+
+/* ---- feature list (universal store) ---- */
+.hero-ico{width:72px;height:72px;border-radius:20px;margin:6px auto 14px;display:grid;place-items:center;background:var(--button);color:var(--button-text)}
+.hero-ico svg{width:34px;height:34px;fill:currentColor}
+.hero-txt{text-align:center;padding:0 24px 4px}
+.hero-txt h1{margin:4px 0 8px;font-size:24px;font-weight:700;letter-spacing:-.02em}
+.hero-txt p{margin:0 auto;color:var(--hint);font-size:14px;max-width:380px}
+.steps{margin:16px;background:var(--section);border-radius:14px;padding:6px 16px}
+.steps h3{margin:12px 0;font-size:15px;font-weight:600}
+.step{display:flex;gap:12px;align-items:flex-start;padding:10px 0;color:var(--hint);font-size:14px;border-top:1px solid var(--separator)}
+.step:first-of-type{border-top:0}
+.step b{width:22px;height:22px;border-radius:50%;flex:none;display:grid;place-items:center;
+  background:color-mix(in srgb,var(--button) 22%,transparent);color:var(--text);font-size:12px}
+
+.product-shot{margin:14px 16px 0}
+.product-shot img{display:block;width:100%;border-radius:14px}
+.product-nav{display:flex;justify-content:center;gap:6px;margin-top:10px}
+.product-nav i{width:6px;height:6px;border-radius:50%;background:color-mix(in srgb,var(--hint) 40%,transparent)}
+.product-nav i.active{width:18px;border-radius:3px;background:var(--button)}
+
+/* ---- period segmented ---- */
+.segmented{margin:12px 16px;display:grid;grid-auto-flow:column;gap:2px;background:color-mix(in srgb,var(--hint) 12%,transparent);border-radius:10px;padding:2px}
+.segmented button{padding:8px 4px;border-radius:8px;color:var(--hint);font-size:13px}
+.segmented button.active{background:var(--section);color:var(--text);font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+
+/* ---- bottom tab bar ---- */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:10;display:grid;grid-auto-flow:column;
+  background:var(--section);border-top:1px solid var(--separator);
+  padding-bottom:var(--safe-bottom)}
+.tabbar button{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 0 7px;color:var(--hint);font-size:11px}
+.tabbar button svg{width:24px;height:24px;fill:currentColor}
+.tabbar button.active{color:var(--link)}
+
+/* ---- auth / error screen ---- */
+.screen{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 28px}
+.screen .ico{width:66px;height:66px;border-radius:18px;display:grid;place-items:center;background:var(--section);margin-bottom:16px}
+.screen .ico svg{width:30px;height:30px;fill:var(--hint)}
+.screen h1{margin:0 0 8px;font-size:21px;font-weight:700}
+.screen p{margin:0 0 20px;color:var(--hint);font-size:14px;max-width:320px}
+.screen .btn{width:auto;min-width:200px}
+
+/* ---- menu banners ---- */
+.banner-thumb{width:56px;height:36px;border-radius:7px;flex:none;overflow:hidden;background:color-mix(in srgb,var(--hint) 15%,transparent)}
+.banner-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.banner-preview{margin:12px 16px 4px;border-radius:14px;overflow:hidden;background:color-mix(in srgb,var(--hint) 12%,transparent);aspect-ratio:16/9}
+.banner-preview img{width:100%;height:100%;object-fit:cover;display:block}
+label.btn{cursor:pointer}
+.btn svg{width:17px;height:17px;fill:currentColor;vertical-align:-3px}
+
+.back{display:none}
+@media(max-width:360px){.title h1{font-size:23px}.hero-balance b{font-size:29px}.metric b{font-size:19px}}

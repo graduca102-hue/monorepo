@@ -1,0 +1,21 @@
+[package]
+name = "vpn-billing-bot"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "vpn-billing-bot"
+path = "src/main.rs"
+
+[dependencies]
+vpn-core.workspace = true
+tokio.workspace = true
+teloxide = { version = "0.13", features = ["macros"] }
+reqwest.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+uuid.workspace = true
+tracing.workspace = true
+anyhow.workspace = true

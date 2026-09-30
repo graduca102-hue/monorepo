@@ -1,0 +1,21 @@
+[package]
+name = "vpn-node-agent"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "vpn-node-agent"
+path = "src/main.rs"
+
+[dependencies]
+vpn-core.workspace = true
+vpn-xray-config.workspace = true
+tokio.workspace = true
+axum.workspace = true
+reqwest.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tracing.workspace = true
+anyhow.workspace = true

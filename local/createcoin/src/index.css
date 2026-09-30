@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scrollbar-gutter: stable;
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      zoom: 1.25;
+    }
+  }
+
+  body {
+    background-color: #111113;
+    color: #fafafa;
+    min-height: 100vh;
+  }
+
+  input, textarea, select, button {
+    font-family: inherit;
+  }
+
+  ::selection {
+    background-color: rgba(134, 239, 172, 0.2);
+    color: #fafafa;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #111113;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #272a2d;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #363a3f;
+  }
+}
+
+@keyframes dex-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.dex-shimmer {
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(134, 239, 172, 0.12) 50%,
+    transparent 60%
+  );
+  background-size: 200% 100%;
+  animation: dex-shimmer 2s linear infinite;
+  border-radius: inherit;
+}
+
+/* Liquidity modals */
+@keyframes liqu-modal-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes liqu-modal-backdrop-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes liqu-modal-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes liqu-modal-panel-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}
+
+.modal-backdrop-in {
+  animation: liqu-modal-backdrop-in 0.2s ease-out both;
+}
+.modal-backdrop-out {
+  animation: liqu-modal-backdrop-out 0.15s ease-in both;
+}
+.modal-panel-in {
+  animation: liqu-modal-panel-in 0.22s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.modal-panel-out {
+  animation: liqu-modal-panel-out 0.15s ease-in both;
+}
+
+/* Solana wallet-adapter modal: center in viewport (fixed overlay is not a flex item) */
+.wallet-adapter-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.wallet-adapter-modal-container {
+  margin: 0 !important;
+  min-height: unset !important;
+  width: 100%;
+  max-width: 400px;
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wallet-adapter-modal-wrapper {
+  flex: 0 1 auto !important;
+  width: 100%;
+  max-height: min(calc(100dvh - 2rem), calc(100vh - 2rem));
+  overflow-y: auto;
+}

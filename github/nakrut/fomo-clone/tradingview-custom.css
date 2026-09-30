@@ -1,0 +1,15 @@
+.theme-dark:root,
+:root {
+  --tv-color-popup-background: #060510 !important;
+  --tv-color-platform-background: #060510 !important;
+  --tv-color-pane-background: #060510 !important;
+}
+
+/* Target dialog/modal containers directly */
+[class*="dialog-"],
+[class*="Dialog"],
+[data-dialog-name],
+[class*="modal"],
+[class*="overlay"] > div {
+  background-color: #060510 !important;
+}

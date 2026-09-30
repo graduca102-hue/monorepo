@@ -1,0 +1,13 @@
+services:
+  shop:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+    environment:
+      DATABASE_PATH: /app/data/shop.db
+      ENCRYPTION_KEY_PATH: /app/data/.secret.key
+

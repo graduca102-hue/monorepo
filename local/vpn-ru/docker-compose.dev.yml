@@ -1,0 +1,15 @@
+# Local dev: just Postgres. Run the crates with `cargo run -p <crate>`.
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: vpnru
+      POSTGRES_PASSWORD: vpnru
+      POSTGRES_DB: vpnru
+    ports:
+      - "5432:5432"
+    volumes:
+      - vpnru_pg:/var/lib/postgresql/data
+
+volumes:
+  vpnru_pg:

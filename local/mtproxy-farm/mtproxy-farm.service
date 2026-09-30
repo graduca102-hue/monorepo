@@ -1,0 +1,16 @@
+[Unit]
+Description=mtproxy-farm (mtprotoproxy, 10 FakeTLS users)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/mtproxy-farm
+Environment=MTPROXY_PORT=8443
+ExecStart=/usr/bin/python3 /opt/mtproxy-farm/mtprotoproxy.py /opt/mtproxy-farm/config.py
+Restart=always
+RestartSec=3
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,21 @@
+[package]
+name = "vpn-probe"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "vpn-probe"
+path = "src/main.rs"
+
+[dependencies]
+vpn-core.workspace = true
+tokio.workspace = true
+reqwest.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+uuid.workspace = true
+time.workspace = true
+tracing.workspace = true
+anyhow.workspace = true

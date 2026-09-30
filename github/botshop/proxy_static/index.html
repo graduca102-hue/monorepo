@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Прокси SOUS: резидентские и статические прокси, выбор страны, протокола и срока с быстрой выдачей.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+  <link rel="canonical" href="https://sousmarketfranchize.shop/proxy/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SOUS Proxy">
+  <meta property="og:title" content="SOUS Proxy — прокси по странам и тарифам">
+  <meta property="og:description" content="Резидентские и статические прокси с гибкими настройками.">
+  <meta property="og:url" content="https://sousmarketfranchize.shop/proxy/">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"SOUS Proxy","url":"https://sousmarketfranchize.shop/proxy/","description":"Прокси по странам, протоколам и тарифам."}</script>
+  <title>SOUS Proxy — прокси по странам и тарифам</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=__ASSET_VERSION__" />
+  </head>
+<body>
+  <noscript><main><h1>SOUS Proxy</h1><p>Резидентские и статические прокси с выбором страны и протокола.</p></main></noscript>
+    <main class="proxy-shell">
+      <div class="proxy-glow proxy-glow-one"></div>
+      <div class="proxy-glow proxy-glow-two"></div>
+      <div class="proxy-stars" aria-hidden="true"></div>
+
+      <header class="proxy-topbar">
+        <div class="proxy-brand">
+          <div id="proxy-brand-badge" class="proxy-brand-badge"></div>
+          <div class="proxy-brand-copy">
+            <h1 id="proxy-brand-name"></h1>
+            <p id="proxy-brand-subtitle"></p>
+          </div>
+        </div>
+        <button id="proxy-balance-button" class="proxy-balance" type="button">
+          <span>Баланс</span>
+          <strong id="proxy-balance-value">0.00 $</strong>
+        </button>
+      </header>
+
+      <section class="proxy-proof" aria-label="Преимущества прокси">
+        <span><b>✓</b> Автовыдача</span>
+        <span><b>✓</b> HTTP(S) и SOCKS5</span>
+        <span><b>✓</b> Поддержка</span>
+      </section>
+
+      <nav class="proxy-nav" aria-label="Навигация">
+        <button class="proxy-nav-button proxy-nav-button-active" type="button" data-screen="purchase">
+          <span class="proxy-nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M5 6.5h14l-1.2 10H6.2L5 6.5Zm2.1-3h9.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span>Покупка</span>
+        </button>
+        <button class="proxy-nav-button" type="button" data-screen="orders">
+          <span class="proxy-nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M7 4.5h10a1.5 1.5 0 0 1 1.5 1.5v13L12 16l-6.5 3V6A1.5 1.5 0 0 1 7 4.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </span>
+          <span>Заказы</span>
+        </button>
+        <button class="proxy-nav-button" type="button" data-screen="profile">
+          <span class="proxy-nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 12a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2Zm-6.8 6.7a6.8 6.8 0 0 1 13.6 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </span>
+          <span>Профиль</span>
+        </button>
+      </nav>
+
+      <section id="proxy-screen-purchase" class="proxy-screen">
+        <header class="proxy-hero">
+          <span class="proxy-hero-kicker">Прокси</span>
+          <h2>Выберите тип прокси</h2>
+          <p>Страна, протокол и количество — в одном заказе.</p>
+        </header>
+
+        <section class="types-section">
+          <div id="proxy-type-grid" class="type-grid"></div>
+        </section>
+
+        <section class="countries-section">
+          <div class="section-head">
+            <div>
+              <h3>Каталог</h3>
+            </div>
+            <div class="section-actions">
+              <span id="proxy-unit-price" class="price-chip">от 0.00 $</span>
+            </div>
+          </div>
+          <div id="proxy-country-grid" class="country-grid"></div>
+        </section>
+      </section>
+
+      <section id="proxy-screen-orders" class="proxy-screen hidden">
+        <header class="proxy-hero proxy-hero-compact">
+          <span class="proxy-hero-kicker">История</span>
+          <h2>Ваши заказы</h2>
+        </header>
+        <div id="proxy-orders-status" class="helper-text">Загрузка заказов…</div>
+        <div id="proxy-orders-list" class="manager-list"></div>
+      </section>
+
+      <section id="proxy-screen-profile" class="proxy-screen hidden">
+        <header class="proxy-hero proxy-hero-compact">
+          <span class="proxy-hero-kicker">Профиль</span>
+          <h2>Ваш профиль</h2>
+        </header>
+        <div id="proxy-profile-panel" class="profile-grid"></div>
+      </section>
+    </main>
+
+    <div id="proxy-overlay" class="proxy-overlay hidden">
+      <div class="proxy-overlay-backdrop"></div>
+      <section class="proxy-overlay-sheet">
+        <button id="proxy-overlay-close" class="proxy-overlay-close" type="button">×</button>
+        <div id="proxy-overlay-content"></div>
+      </section>
+    </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="./app.js?v=__ASSET_VERSION__"></script>
+  </body>
+</html>

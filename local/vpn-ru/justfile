@@ -1,0 +1,31 @@
+# task runner — `cargo install just`
+
+set dotenv-load := true
+
+# bring up local Postgres
+db-up:
+    docker compose -f docker-compose.dev.yml up -d
+
+db-down:
+    docker compose -f docker-compose.dev.yml down
+
+# compile everything
+build:
+    cargo build --workspace
+
+check:
+    cargo clippy --workspace --all-targets -- -D warnings
+    cargo fmt --all --check
+
+# run the internal API (runs migrations on start)
+api:
+    cargo run -p vpn-api
+
+orchestrator *ARGS:
+    cargo run -p vpn-orchestrator -- {{ARGS}}
+
+bot:
+    cargo run -p vpn-billing-bot
+
+probe:
+    cargo run -p vpn-probe

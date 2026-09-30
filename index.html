@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Projects — graduca102</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--card:#12121a;--card-hover:#1a1a28;--border:#1e1e2e;--accent:#6c5ce7;--accent2:#a29bfe;--text:#e0e0e8;--muted:#8888a0;--green:#00b894;--orange:#fdcb6e;--red:#e17055;--blue:#74b9ff;--pink:#fd79a8;--yellow:#ffeaa7;--cyan:#81ecec}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+.glow{position:fixed;width:600px;height:600px;border-radius:50%;filter:blur(120px);opacity:.07;pointer-events:none;z-index:0}
+.glow-1{background:var(--accent);top:-200px;left:-100px}
+.glow-2{background:var(--pink);bottom:-200px;right:-100px}
+.container{max-width:1400px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+header{padding:60px 0 40px;text-align:center}
+header h1{font-size:2.8rem;font-weight:800;background:linear-gradient(135deg,var(--accent2),var(--pink),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-1px}
+header p{color:var(--muted);font-size:1.1rem;margin-top:8px}
+.stats-row{display:flex;justify-content:center;gap:32px;margin:32px 0;flex-wrap:wrap}
+.stat{text-align:center}
+.stat .num{font-size:2rem;font-weight:700;color:var(--accent2)}
+.stat .label{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+.controls{display:flex;gap:12px;margin:32px 0;flex-wrap:wrap;justify-content:center}
+.search{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 20px;color:var(--text);font-size:1rem;width:320px;outline:none;transition:.2s}
+.search:focus{border-color:var(--accent)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.filter-btn{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:8px 18px;color:var(--muted);font-size:.85rem;cursor:pointer;transition:.2s;white-space:nowrap}
+.filter-btn:hover,.filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.section{margin:48px 0 16px}
+.section h2{font-size:1.4rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:10px}
+.section h2 .badge{background:var(--accent);color:#fff;font-size:.75rem;padding:2px 10px;border-radius:10px;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;margin-top:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;transition:.25s;cursor:default;position:relative;overflow:hidden}
+.card:hover{background:var(--card-hover);border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 32px rgba(108,92,231,.1)}
+.card .name{font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:6px}
+.card .desc{font-size:.88rem;color:var(--muted);line-height:1.5;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card .meta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.tag{font-size:.75rem;padding:3px 10px;border-radius:8px;font-weight:600}
+.tag-py{background:rgba(253,203,110,.15);color:var(--orange)}
+.tag-js{background:rgba(255,234,167,.15);color:var(--yellow)}
+.tag-ts{background:rgba(116,185,255,.15);color:var(--blue)}
+.tag-rs{background:rgba(225,112,85,.15);color:var(--red)}
+.tag-go{background:rgba(0,184,148,.15);color:var(--green)}
+.tag-html{background:rgba(253,121,168,.15);color:var(--pink)}
+.tag-sh{background:rgba(129,236,236,.15);color:var(--cyan)}
+.tag-ps1{background:rgba(162,155,254,.15);color:var(--accent2)}
+.card .files{font-size:.78rem;color:var(--muted)}
+.card .source{position:absolute;top:16px;right:16px;font-size:.7rem;padding:3px 8px;border-radius:6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.source-gh{background:rgba(108,92,231,.15);color:var(--accent2)}
+.source-local{background:rgba(0,184,148,.15);color:var(--green)}
+.card .gh-link{display:inline-flex;align-items:center;gap:4px;color:var(--accent2);text-decoration:none;font-size:.8rem;margin-top:10px;transition:.2s}
+.card .gh-link:hover{color:#fff}
+.cat-indicator{width:4px;height:100%;position:absolute;left:0;top:0;border-radius:16px 0 0 16px}
+.cat-bots .cat-indicator{background:var(--accent)}
+.cat-web .cat-indicator{background:var(--pink)}
+.cat-infra .cat-indicator{background:var(--cyan)}
+.cat-ecom .cat-indicator{background:var(--orange)}
+.cat-tools .cat-indicator{background:var(--green)}
+.cat-docs .cat-indicator{background:var(--muted)}
+footer{text-align:center;padding:60px 0 40px;color:var(--muted);font-size:.85rem}
+.hidden{display:none!important}
+@media(max-width:600px){header h1{font-size:1.8rem}.grid{grid-template-columns:1fr}.search{width:100%}}
+</style>
+</head>
+<body>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="container">
+<header>
+<h1>graduca102 — All Projects</h1>
+<p>Telegram bots, web apps, infrastructure, tools</p>
+</header>
+<div class="stats-row">
+<div class="stat"><div class="num" id="total-count">0</div><div class="label">Projects</div></div>
+<div class="stat"><div class="num" id="total-files">0</div><div class="label">Files</div></div>
+<div class="stat"><div class="num" id="lang-count">0</div><div class="label">Languages</div></div>
+<div class="stat"><div class="num" id="gh-count">0</div><div class="label">GitHub Repos</div></div>
+</div>
+<div class="controls">
+<input type="text" class="search" id="search" placeholder="Search projects...">
+<div class="filters">
+<button class="filter-btn active" data-filter="all">All</button>
+<button class="filter-btn" data-filter="bots">Telegram Bots</button>
+<button class="filter-btn" data-filter="web">Web / Frontend</button>
+<button class="filter-btn" data-filter="infra">Infrastructure</button>
+<button class="filter-btn" data-filter="ecom">E-commerce</button>
+<button class="filter-btn" data-filter="tools">Tools & Scripts</button>
+</div>
+</div>
+<div id="projects-container"></div>
+<footer>monorepo &middot; graduca102-hue &middot; 2026</footer>
+</div>
+<script>
+const projects=[
+// GitHub repos
+{name:"botshop",desc:"SOUS MARKET — Telegram-магазин цифровых товаров: аккаунты, прокси, SMS, email. Франчайзинг, API, mini-app, партнёрские промокоды.",files:230,langs:["py","js","html","css"],cat:"bots",src:"github",gh:"graduca102-hue/SHOP_BOT"},
+{name:"asf-shop",desc:"Nexo Shop — Telegram-бот продажи Instagram-аккаунтов и резидентских прокси через SOUS API + DataImpulse.",files:21,langs:["py"],cat:"bots",src:"github",gh:"graduca102-hue/asf-shop"},
+{name:"chessbot",desc:"Rich Text Chess & Checkers для Telegram — P2P-игра в шахматы и русские шашки без Mini App, через Bot API 10.3 Rich Messages.",files:22,langs:["ts","js"],cat:"bots",src:"github",gh:"graduca102-hue/chessbot"},
+{name:"nakrut",desc:"Telegram-бот накрутки: подписки, профиль, реферальная система, ежедневный бонус, VIP, промокоды, задания через Flyer API.",files:318,langs:["py","js","html","css"],cat:"bots",src:"github",gh:"graduca102-hue/nakrut"},
+{name:"rassil",desc:"LZT Telegram buyer — автопокупка лотов Telegram-аккаунтов на lzt.market через API.",files:22,langs:["py"],cat:"bots",src:"github",gh:"graduca102-hue/rassil"},
+{name:"botauto-ckstr",desc:"Автоматизация Telegram-ботов — массовые действия и управление.",files:7,langs:["py"],cat:"tools",src:"github",gh:"graduca102-hue/botauto-ckstr"},
+{name:"createcoin-main",desc:"Memecoin launcher (Solana) — Vite + React + TypeScript SPA: создание SPL-токенов, Metaplex metadata, Raydium CPMM liquidity.",files:83,langs:["ts","tsx","js","html","css"],cat:"web",src:"github",gh:"graduca102-hue/createcoin-main"},
+{name:"x-com",desc:"Инструменты для работы с X.com (Twitter) — скрипты автоматизации.",files:3,langs:["py","js"],cat:"tools",src:"github",gh:"graduca102-hue/x-com"},
+
+// Local — Telegram Bots
+{name:"bot-farm",desc:"Управление парком Telegram-ботов: загружаешь .txt с токенами → для каждого поднимается бот, копит аудиторию, broadcast.",files:24,langs:["py","ps1"],cat:"bots",src:"local"},
+{name:"file-drop-bot",desc:"Telegram-бот «файл → одноразовые utm-ссылки → 10 строк». Каждая ссылка срабатывает один раз.",files:16,langs:["py","ps1"],cat:"bots",src:"local"},
+{name:"join-approver",desc:"Telegram-бот авто-одобрения заявок на вступление во всех каналах и группах. Одна копия — сколько угодно чатов.",files:17,langs:["py"],cat:"bots",src:"local"},
+{name:"supplier-bot",desc:"Бот поставщиков SOUS MARKET @menupostavshukabot — заявки, карточки товаров, загрузка товара, модерация.",files:19,langs:["py","sh"],cat:"bots",src:"local"},
+{name:"support-ai",desc:"ИИ-поддержка SOUS MARKET на DeepSeek API — отвечает на типовые вопросы, эскалирует сложные оператору.",files:6,langs:["py"],cat:"bots",src:"local"},
+{name:"vpn-panel",desc:"Telegram-бот-магазин VPN со встроенной панелью: триал, подписка, авто-провиженинг серверов (Xray VLESS-Reality + mtprotoproxy).",files:30,langs:["py","sh"],cat:"bots",src:"local"},
+{name:"bot-dm-topics",desc:"Telegram forum topics в DM — отдельный топик на каждую сессию агента.",files:3,langs:["py"],cat:"bots",src:"local"},
+
+// Local — Web / Frontend
+{name:"createcoin",desc:"Локальная версия memecoin launcher — форк с доработками для coincreate.fun.",files:96,langs:["ts","tsx","js","html","css"],cat:"web",src:"local"},
+{name:"shop-miniapp",desc:"Telegram Mini App для магазина SOUS MARKET — витрина товаров и оплата.",files:6,langs:["html","js","css"],cat:"web",src:"local"},
+{name:"email-miniapp",desc:"Telegram Mini App для покупки email-аккаунтов.",files:7,langs:["html","js","css"],cat:"web",src:"local"},
+{name:"frontend-kit",desc:"Общая фронт-база для Telegram mini-app'ов: React 18 + Vite + TypeScript + telegram-ui + Font Awesome.",files:20,langs:["ts","tsx","html","css"],cat:"web",src:"local"},
+{name:"sous-partners",desc:"Кабинет партнёров SOUS MARKET — франчайзинг: промокоды, акции, статистика, витрина mini-app.",files:42,langs:["py","js","html","css","sh"],cat:"web",src:"local"},
+{name:"sous-market-debug",desc:"Отладочные инструменты для SOUS MARKET — логирование, диагностика заказов.",files:9,langs:["py","js","html","css","sh"],cat:"web",src:"local"},
+
+// Local — Infrastructure
+{name:"mtproxy-ddns",desc:"DDNS для MTProxy: держит A-записи aikort.lol на живом IP сервиса MT3S через Cloudflare API.",files:26,langs:["py","sh"],cat:"infra",src:"local"},
+{name:"mtproxy-farm",desc:"Собственные MTProxy (FakeTLS) на серверах — резервный вариант, когда MT3S из РФ не работает.",files:9,langs:["py","sh"],cat:"infra",src:"local"},
+{name:"mt3s-proxy",desc:"Интеграция с MT3S Public — получение и проверка MTProxy.",files:3,langs:["py","sh"],cat:"infra",src:"local"},
+{name:"perebiraika",desc:"Приватный отсеиватель быстрых RU-прокси maskify — 15 sticky-линий с probe по скорости.",files:4,langs:["py","sh"],cat:"infra",src:"local"},
+{name:"screen-share",desc:"Демонстрация экрана ПК по ссылке — MJPEG ~12fps в браузере, без установки.",files:9,langs:["py","ps1","sh"],cat:"infra",src:"local"},
+{name:"wg2proxy",desc:"WireGuard → HTTP/SOCKS5 proxy — конвертер VPN-туннеля в прокси для приложений.",files:9,langs:["sh"],cat:"infra",src:"local"},
+{name:"sandbox-run",desc:"Быстрый запуск Windows Sandbox с нужной конфигурацией.",files:3,langs:["ps1"],cat:"infra",src:"local"},
+
+// Local — E-commerce / Proxy
+{name:"asf-dataimpulse",desc:"Прокси-раздел Nexo Shop на DataImpulse reseller API — 4 пула (residential/premium/mobile/datacenter), суб-аккаунт на покупателя.",files:34,langs:["py","sh"],cat:"ecom",src:"local"},
+{name:"asf-resi-proxy",desc:"Резидентские прокси через maskify — генерация и выдача sticky-линий клиентам.",files:16,langs:["py","sh"],cat:"ecom",src:"local"},
+{name:"asf-resi-recheck",desc:"Авто-проверка и замена нерабочих резидентских прокси в botshop и Nexo Shop.",files:15,langs:["py","sh"],cat:"ecom",src:"local"},
+{name:"botshop-speed",desc:"Оптимизация скорости SOUS MARKET — кэширование, async, профилирование узких мест.",files:17,langs:["py","sh"],cat:"ecom",src:"local"},
+{name:"sous-market-pricing",desc:"Система ценообразования SOUS MARKET — наценки, курсы, скидки лояльности.",files:18,langs:["py","sh"],cat:"ecom",src:"local"},
+{name:"rassil-proxy-system",desc:"Система прокси для масс-сендера rassil на srv1 — ротация, health-check.",files:11,langs:["py","sh"],cat:"ecom",src:"local"},
+{name:"asf-crm",desc:"CRM-модуль для ASF/Nexo Shop — управление клиентами и заказами.",files:43,langs:["py","sh"],cat:"ecom",src:"local"},
+
+// Local — Tools
+{name:"parsing-ocr",desc:"OCR-парсер — распознавание текста из изображений, пакетная обработка.",files:229,langs:["py"],cat:"tools",src:"local"},
+{name:"super-doorways",desc:"Генератор дорвейных страниц — шаблоны, авто-генерация контента.",files:159,langs:["py"],cat:"tools",src:"local"},
+{name:"rassil-delay-work",desc:"Планировщик отложенных задач для масс-сендера rassil.",files:5,langs:["py"],cat:"tools",src:"local"},
+{name:"reger-fiz",desc:"Автоматизация регистрации — скрипты для массового создания аккаунтов.",files:7,langs:["py"],cat:"tools",src:"local"},
+{name:"neon-effect",desc:"Скрипт неонового визуального эффекта.",files:1,langs:["py"],cat:"tools",src:"local"},
+{name:"dump",desc:"Скрипты для обработки и конвертации данных.",files:5,langs:["py"],cat:"tools",src:"local"},
+{name:"asd",desc:"Python-скрипт.",files:1,langs:["py"],cat:"tools",src:"local"},
+
+// Local — Knowledge
+{name:"support-faq",desc:"База знаний для ИИ-поддержки SOUS MARKET — правила возвратов, алгоритмы, FAQ из 681 тикета.",files:3,langs:[],cat:"tools",src:"local"},
+{name:"vpn-ru",desc:"Control plane для коммерческого VPN (anti-censorship, Россия) — Rust backend.",files:36,langs:["rs"],cat:"infra",src:"local"},
+];
+
+const langNames={py:"Python",js:"JavaScript",ts:"TypeScript",tsx:"React TSX",jsx:"React JSX",html:"HTML",css:"CSS",rs:"Rust",go:"Go",java:"Java",sh:"Shell",ps1:"PowerShell"};
+const catNames={bots:"Telegram Bots",web:"Web / Frontend",infra:"Infrastructure",ecom:"E-commerce & Proxy",tools:"Tools & Scripts"};
+
+function render(filter,query){
+const container=document.getElementById("projects-container");
+container.innerHTML="";
+const q=query.toLowerCase();
+const filtered=projects.filter(p=>{
+if(filter!=="all"&&p.cat!==filter)return false;
+if(q&&!p.name.toLowerCase().includes(q)&&!p.desc.toLowerCase().includes(q)&&!p.langs.some(l=>langNames[l]?.toLowerCase().includes(q)))return false;
+return true;
+});
+const groups={};
+filtered.forEach(p=>{
+const g=catNames[p.cat]||"Other";
+if(!groups[g])groups[g]=[];
+groups[g].push(p);
+});
+const order=["Telegram Bots","Web / Frontend","E-commerce & Proxy","Infrastructure","Tools & Scripts"];
+order.forEach(g=>{
+if(!groups[g])return;
+const sec=document.createElement("div");
+sec.className="section";
+sec.innerHTML=`<h2>${g} <span class="badge">${groups[g].length}</span></h2>`;
+const grid=document.createElement("div");
+grid.className="grid";
+groups[g].forEach(p=>{
+const card=document.createElement("div");
+card.className=`card cat-${p.cat}`;
+const langTags=p.langs.map(l=>`<span class="tag tag-${l}">${langNames[l]||l}</span>`).join("");
+const srcBadge=p.src==="github"?`<span class="source source-gh">GitHub</span>`:`<span class="source source-local">Local</span>`;
+const ghLink=p.gh?`<a class="gh-link" href="https://github.com/${p.gh}" target="_blank">&#x1F517; ${p.gh}</a>`:"";
+card.innerHTML=`<div class="cat-indicator"></div>${srcBadge}<div class="name">${p.name}</div><div class="desc">${p.desc}</div><div class="meta">${langTags}<span class="files">${p.files} files</span></div>${ghLink}`;
+grid.appendChild(card);
+});
+sec.appendChild(grid);
+container.appendChild(sec);
+});
+if(filtered.length===0){
+container.innerHTML=`<div style="text-align:center;padding:60px;color:var(--muted)">No projects found</div>`;
+}
+}
+
+// Stats
+document.getElementById("total-count").textContent=projects.length;
+document.getElementById("total-files").textContent=projects.reduce((a,p)=>a+p.files,0).toLocaleString();
+const allLangs=new Set();projects.forEach(p=>p.langs.forEach(l=>allLangs.add(l)));
+document.getElementById("lang-count").textContent=allLangs.size;
+document.getElementById("gh-count").textContent=projects.filter(p=>p.src==="github").length;
+
+// Controls
+let currentFilter="all";
+document.querySelectorAll(".filter-btn").forEach(btn=>{
+btn.addEventListener("click",()=>{
+document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
+btn.classList.add("active");
+currentFilter=btn.dataset.filter;
+render(currentFilter,document.getElementById("search").value);
+});
+});
+document.getElementById("search").addEventListener("input",e=>{
+render(currentFilter,e.target.value);
+});
+
+render("all","");
+</script>
+</body>
+</html>

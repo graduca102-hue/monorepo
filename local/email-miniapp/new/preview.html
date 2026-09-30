@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>PREVIEW — SOUS Mailbox</title>
+<link rel="stylesheet" href="./styles.css?v=preview">
+<style>
+:root{--tg-theme-bg-color:#17212b;--tg-theme-secondary-bg-color:#0e1621;--tg-theme-section-bg-color:#17212b;--tg-theme-section-header-text-color:#6c7883;--tg-theme-text-color:#f5f5f5;--tg-theme-hint-color:#708499;--tg-theme-link-color:#6ab7ff;--tg-theme-accent-text-color:#6ab7ff;--tg-theme-button-color:#5288c1;--tg-theme-button-text-color:#fff;--tg-theme-destructive-text-color:#ec3942;}
+:root.light{--tg-theme-bg-color:#fff;--tg-theme-secondary-bg-color:#efeff4;--tg-theme-section-bg-color:#fff;--tg-theme-section-header-text-color:#6d6d72;--tg-theme-text-color:#000;--tg-theme-hint-color:#8e8e93;--tg-theme-link-color:#007aff;--tg-theme-accent-text-color:#007aff;--tg-theme-button-color:#007aff;--tg-theme-button-text-color:#fff;--tg-theme-destructive-text-color:#ff3b30;}
+#dev{position:fixed;top:4px;right:4px;z-index:999;display:flex;gap:4px}
+#dev button{font:11px system-ui;padding:3px 7px;border:1px solid #888;border-radius:6px;background:#2228;color:#fff}
+</style>
+</head>
+<body>
+<div id="dev"><button data-t>theme</button></div>
+<script>
+window.Telegram={WebApp:{initData:'mock',initDataUnsafe:{user:{id:1000001,language_code:'ru'}},ready(){},expand(){},setHeaderColor(){},setBackgroundColor(){},openLink(u){window.open(u,'_blank')},
+ HapticFeedback:{impactOccurred(){},notificationOccurred(){}}, BackButton:{show(){},hide(){},onClick(){}}}};
+const DOMAINS=[{domain:'gmail.com',price:0.9,count:1240,available:true},{domain:'outlook.com',price:0.6,count:830,available:true},{domain:'mail.ru',price:0.3,count:5100,available:true},{domain:'yandex.ru',price:0.25,count:9000,available:true},{domain:'ya.ru',price:0.35,count:400,available:true}];
+const PROFILE={balance:12.4,activations_count:3,user_id:1000001};
+const ACTS=[
+ {id:1,site:'instagram.com',domain:'gmail.com',email:'kx8f2@gmail.com',price:0.9,status:'waiting',status_label:'Ожидает'},
+ {id:2,site:'steampowered.com',domain:'outlook.com',email:'qz44p@outlook.com',price:0.6,status:'done',status_label:'Готово',code:'481920',message:'Your Steam confirmation code is 481920'},
+];
+const j=o=>new Response(JSON.stringify(o),{status:200,headers:{'Content-Type':'application/json'}});
+const rf=window.fetch.bind(window);
+window.fetch=async(u,o={})=>{u=String(u);
+ if(u.includes('/api/bootstrap'))return j({brand:{name:'Mailbox'},profile:PROFILE,activations:ACTS});
+ if(u.includes('/api/domains'))return j({items:DOMAINS});
+ if(u.includes('/api/activations/'))return j({item:ACTS[0],profile:PROFILE});
+ if(u.includes('/api/activations'))return j({items:ACTS,profile:PROFILE});
+ if(u.includes('/api/order'))return j({profile:PROFILE,activation:{id:9,site:'test.com',domain:'gmail.com',email:'new9@gmail.com',price:0.9,status:'waiting',status_label:'Ожидает'}});
+ if(u.includes('/api/topup'))return j({pay_url:'https://example.com/pay'});
+ return rf(u,o);};
+document.getElementById('dev').onclick=e=>{if(e.target.dataset.hasOwnProperty('t'))document.documentElement.classList.toggle('light');};
+</script>
+
+
+    <noscript><main><h1>SOUS Mailbox — одноразовая почта</h1><p>Одноразовые адреса для получения писем и кодов подтверждения.</p></main></noscript>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-mark" aria-hidden="true">
+          <img id="brand-avatar" class="hidden" alt="" />
+          <span id="brand-fallback">E</span>
+        </div>
+        <div class="brand-copy">
+          <strong id="brand-name">Mailbox</strong>
+          <span>одноразовая почта</span>
+        </div>
+        <button class="balance-chip" id="balance-button" type="button" aria-label="Пополнить баланс">
+          <small>Баланс</small><b id="balance-value">—</b><span>+</span>
+        </button>
+      </header>
+
+      <main>
+        <section class="screen active" id="screen-purchase" aria-label="Новая активация">
+          <form id="site-form" class="search-card" novalidate>
+            <span class="form-kicker">Подберите адрес</span>
+            <label for="site-input">Для какого сайта нужна почта?</label>
+            <div class="search-row">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input id="site-input" name="site" type="text" inputmode="url" autocomplete="url" autocapitalize="none" spellcheck="false" placeholder="instagram.com" maxlength="180" required />
+              <button id="search-button" type="submit">Найти</button>
+            </div>
+          </form>
+
+          <section id="domains-section" class="result-section hidden" aria-live="polite">
+            <div class="section-heading">
+              <div><h2>Доступные домены</h2></div>
+              <button id="sort-button" class="sort-button" type="button" data-sort="price">Цена ↑</button>
+            </div>
+            <div id="domains-summary" class="result-summary"></div>
+            <div id="domains-list" class="domain-list"></div>
+          </section>
+
+          <div id="purchase-status" class="state-card hidden" role="status"></div>
+        </section>
+
+        <section class="screen" id="screen-activations" aria-labelledby="activations-title">
+          <div class="page-head">
+            <div><span class="eyebrow-label">Ваши покупки</span><h1 id="activations-title">Активации</h1></div>
+            <button id="refresh-activations" class="icon-button" type="button" aria-label="Обновить">↻</button>
+          </div>
+          <div class="filter-tabs" role="group" aria-label="Фильтр активаций">
+            <button type="button" class="filter-tab active" data-filter="all">Все</button>
+            <button type="button" class="filter-tab" data-filter="active">Ожидают</button>
+            <button type="button" class="filter-tab" data-filter="done">Готовые</button>
+          </div>
+          <div id="activations-status" class="state-card hidden" role="status"></div>
+          <div id="activations-list" class="activation-list"></div>
+        </section>
+
+        <section class="screen" id="screen-profile" aria-labelledby="profile-title">
+          <div class="page-head"><div><span class="eyebrow-label">Аккаунт</span><h1 id="profile-title">Профиль</h1></div></div>
+          <div class="profile-balance">
+            <span>Доступно для покупок</span>
+            <strong id="profile-balance-value">—</strong>
+            <button id="profile-topup-button" type="button">Пополнить баланс <b>↗</b></button>
+          </div>
+          <div class="stats-grid">
+            <div><span>Активаций</span><strong id="profile-activations">0</strong></div>
+            <div><span>ID пользователя</span><strong id="profile-user-id">—</strong></div>
+          </div>
+        </section>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Основная навигация">
+        <button class="nav-button active" type="button" data-screen="purchase"><span class="nav-icon">＋</span><span>Купить</span></button>
+        <button class="nav-button" type="button" data-screen="activations"><span class="nav-icon">▤</span><span>Активации</span><b id="active-count" class="nav-badge hidden">0</b></button>
+        <button class="nav-button" type="button" data-screen="profile"><span class="nav-icon">●</span><span>Профиль</span></button>
+      </nav>
+    </div>
+
+    <div id="overlay" class="overlay hidden" aria-hidden="true">
+      <button class="overlay-backdrop" type="button" data-close aria-label="Закрыть"></button>
+      <section id="sheet" class="sheet" role="dialog" aria-modal="true" aria-live="polite"></section>
+    </div>
+    <div id="toast" class="toast hidden" role="status"></div>
+  
+<script src="./app.js?v=preview"></script>
+</body>
+</html>

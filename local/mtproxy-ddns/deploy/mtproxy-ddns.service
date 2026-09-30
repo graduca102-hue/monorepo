@@ -1,0 +1,18 @@
+[Unit]
+Description=MTProxy dynamic DNS updater (MT3S -> BIND zone)
+After=network-online.target named.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/mtproxy-ddns
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=/opt/mtproxy-ddns/.env
+ExecStart=/usr/bin/python3 -m app.updater
+Restart=always
+RestartSec=5
+# needs to edit /etc/bind/db.* and run rndc
+User=root
+
+[Install]
+WantedBy=multi-user.target

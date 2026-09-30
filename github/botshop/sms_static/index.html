@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#08131f">
+  <meta name="description" content="SMS Hub SOUS — виртуальные номера для SMS-подтверждений и регистрации сервисов.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+  <link rel="canonical" href="https://sousmarketfranchize.shop/sms/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SOUS SMS Hub">
+  <meta property="og:title" content="SOUS SMS Hub — виртуальные номера">
+  <meta property="og:description" content="Виртуальные номера для SMS-подтверждений с быстрым получением кода.">
+  <meta property="og:url" content="https://sousmarketfranchize.shop/sms/">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"SOUS SMS Hub","url":"https://sousmarketfranchize.shop/sms/","description":"Виртуальные номера для SMS-подтверждений."}</script>
+  <title>SOUS SMS Hub — виртуальные номера</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="styles.css?v=__ASSET_VERSION__">
+</head>
+<body>
+  <noscript><main><h1>SOUS SMS Hub</h1><p>Виртуальные номера для SMS-подтверждений и получения кодов.</p></main></noscript>
+  <header>
+    <button class="icon-button" id="backButton" aria-label="Назад">‹</button>
+    <div class="brand">SMS <span>hub</span></div>
+    <button class="balance" id="balanceButton">$0.00</button>
+  </header>
+  <main>
+    <section class="screen active" id="servicesScreen">
+      <p class="eyebrow">НОВАЯ АКТИВАЦИЯ</p><h1>Какой сервис нужен?</h1>
+      <label class="search"><input id="serviceSearch" placeholder="Поиск сервиса…"><span>⌕</span></label>
+      <div class="list" id="serviceList"></div>
+      <div class="pager" id="servicePager"><button data-page="prev">‹</button><span></span><button data-page="next">›</button></div>
+    </section>
+
+    <section class="screen" id="countriesScreen">
+      <p class="eyebrow">ГЕОГРАФИЯ НОМЕРА</p><h1>Откуда нужен номер?</h1>
+      <div class="selected-pill" id="selectedService"></div>
+      <label class="search"><input id="countrySearch" placeholder="Поиск страны…"><span>⌕</span></label>
+      <div class="list" id="countryList"></div>
+      <div class="pager" id="countryPager"><button data-page="prev">‹</button><span></span><button data-page="next">›</button></div>
+    </section>
+
+    <section class="screen" id="pricesScreen">
+      <p class="eyebrow">ДОСТУПНЫЕ НОМЕРА</p><h1>Выберите предложение</h1>
+      <div class="selected-pill" id="selectedCountry"></div>
+      <div class="list" id="priceList"></div>
+      <div class="pager" id="pricePager"><button data-page="prev">‹</button><span></span><button data-page="next">›</button></div>
+    </section>
+
+    <section class="screen" id="activationScreen">
+      <div class="activation-card">
+        <div class="muted">Ваш номер</div>
+        <button class="phone" id="phone">—</button>
+        <div class="timer" id="activationStatus">Ожидаем SMS-код…</div>
+        <div class="code hidden" id="smsCode"></div>
+        <button class="primary" id="checkCode">Обновить код</button>
+        <div class="actions">
+          <button id="newCode">Другой код</button>
+          <button class="danger" id="cancelActivation">Отменить</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="historyScreen">
+      <h1>Мои активации</h1>
+      <div class="list" id="historyList"></div>
+    </section>
+
+    <section class="screen" id="profileScreen">
+      <h1>Профиль</h1>
+      <div class="profile-card">
+        <div class="profile-avatar" id="profileAvatar">U</div>
+        <div><div class="profile-name" id="profileName">Пользователь</div><div class="muted" id="profileId">ID —</div></div>
+      </div>
+      <div class="wallet-card">
+        <div><div class="muted">Доступный баланс</div><strong id="profileBalance">$0.00</strong></div>
+        <button class="primary compact" id="profileTopup">Пополнить</button>
+      </div>
+      <div class="stats-grid">
+        <div><b id="activationCount">0</b><span>Активаций</span></div>
+        <div><b id="topupsTotal">$0.00</b><span>Пополнено</span></div>
+      </div>
+      <a class="support-card" id="profileSupport" href="#">✦ Написать в поддержку <span>›</span></a>
+    </section>
+  </main>
+  <nav>
+    <button class="active" data-nav="servicesScreen">⚡<span>Купить</span></button>
+    <button data-nav="historyScreen">◷<span>История</span></button>
+    <button data-nav="profileScreen">◉<span>Профиль</span></button>
+    <a id="supportLink" href="#">✦<span>Поддержка</span></a>
+  </nav>
+  <div class="sheet hidden" id="topupSheet">
+    <div class="sheet-card">
+      <button class="sheet-close" id="closeTopup">×</button>
+      <h2>Пополнение баланса</h2><p class="muted">Введите сумму в долларах и выберите способ оплаты.</p>
+      <label class="topup-label">Сумма, $<input id="topupAmount" type="number" min="1" max="100000" step="0.01" placeholder="10.00"></label>
+      <div class="providers"><button class="active" data-provider="xrocket">XRocket</button><button data-provider="lolz">LOLZ</button><button data-provider="heleket">Heleket</button><button data-provider="crystalpay">CryptoBot</button></div>
+      <button class="primary" id="createTopup">Перейти к оплате</button>
+    </div>
+  </div>
+  <div class="overlay hidden" id="loader"><div class="spinner"></div><span>Загрузка…</span></div>
+  <div class="toast hidden" id="toast"></div>
+  <script src="app.js?v=__ASSET_VERSION__"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<Configuration>
+  <VGpu>Disable</VGpu>
+  <Networking>Default</Networking>
+  <MemoryInMB>8192</MemoryInMB>
+  <AudioInput>Disable</AudioInput>
+  <VideoInput>Disable</VideoInput>
+  <PrinterRedirection>Disable</PrinterRedirection>
+  <ClipboardRedirection>Enable</ClipboardRedirection>
+  <ProtectedClient>Enable</ProtectedClient>
+  <MappedFolders>
+    <MappedFolder>
+      <HostFolder>C:\Users\ewg\Desktop\sandbox_run\shared</HostFolder>
+      <SandboxFolder>C:\Sandbox\Shared</SandboxFolder>
+      <ReadOnly>false</ReadOnly>
+    </MappedFolder>
+    <MappedFolder>
+      <HostFolder>C:\Users\ewg\Desktop\sandbox_run\logs</HostFolder>
+      <SandboxFolder>C:\Sandbox\Logs</SandboxFolder>
+      <ReadOnly>false</ReadOnly>
+    </MappedFolder>
+    <MappedFolder>
+      <HostFolder>C:\Users\ewg\Desktop\sandbox_run\tools</HostFolder>
+      <SandboxFolder>C:\Sandbox\Tools</SandboxFolder>
+      <ReadOnly>true</ReadOnly>
+    </MappedFolder>
+  </MappedFolders>
+  <LogonCommand>
+    <Command>powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File C:\Sandbox\Tools\disable_defender.ps1</Command>
+  </LogonCommand>
+</Configuration>

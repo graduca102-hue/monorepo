@@ -1,0 +1,17 @@
+[Unit]
+Description=vpn-panel (Telegram VPN shop + panel)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/vpn-panel
+ExecStart=/opt/vpn-panel/.venv/bin/python run.py
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+# data/vpn.db holds SSH passwords — keep it private
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

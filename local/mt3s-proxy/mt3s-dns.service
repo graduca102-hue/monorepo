@@ -1,0 +1,17 @@
+[Unit]
+Description=MT3S Public listener -> mtproto.aikort.lol DNS sync
+After=network-online.target bind9.service named.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/mt3s-dns
+EnvironmentFile=/opt/mt3s-dns/.env
+ExecStart=/usr/bin/python3 /opt/mt3s-dns/mt3s_dns_sync.py
+Restart=always
+RestartSec=5
+# needs to write /etc/bind and run rndc
+User=root
+
+[Install]
+WantedBy=multi-user.target

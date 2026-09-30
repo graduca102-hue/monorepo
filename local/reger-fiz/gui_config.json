@@ -1,0 +1,23 @@
+{
+  "accounts_count": 1,
+  "max_retries": 3,
+  "install_method": "play_store",
+  "device_root": {
+    "192.168.0.101:5555": false,
+    "192.168.0.102:5555": false,
+    "192.168.0.104:5555": false,
+    "192.168.0.107:5555": false,
+    "192.168.0.108:5555": false,
+    "192.168.0.109:5555": false,
+    "192.168.0.110:5555": false,
+    "192.168.0.115:5555": false,
+    "192.168.0.118:5555": false
+  },
+  "email_mode": "anymessage",
+  "email_domain": "gmail.com",
+  "anymessage_token": "Ot4SEM5B7JIR7D7toMOwyROt2r5N9CAS",
+  "smsbower_token": "",
+  "selected_devices": [
+    "192.168.0.102:5555"
+  ]
+}

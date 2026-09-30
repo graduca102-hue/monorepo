@@ -1,0 +1,21 @@
+{
+  "name": "chess-and-checkers-telegram",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Native P2P chess and Russian checkers in Telegram Rich Messages",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "test": "node --test",
+    "check": "node --check src/index.js && node --check src/telegram/bot.js && node --check src/telegram/cards.js"
+  },
+  "dependencies": {
+    "chess.js": "^1.4.0",
+    "dotenv": "^16.6.1",
+    "grammy": "^1.45.1"
+  }
+}

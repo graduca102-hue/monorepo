@@ -1,0 +1,8 @@
+node_modules
+.env
+data
+.git
+test
+photo_*.jpg
+.reference-tvgram.webp
+npm-debug.log*

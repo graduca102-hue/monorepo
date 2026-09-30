@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>SOUS CRM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css?v=__ASSET_VERSION__">
+</head>
+<body>
+  <div class="crm-app">
+    <div class="crm-noise"></div>
+    <main class="crm-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Admin CRM</p>
+          <h1>Пульс магазина в одном экране</h1>
+          <p class="hero-subtitle">
+            Выручка, прибыль, пополнения, статусы заказов и последние доставки с доступом только после проверки Telegram.
+          </p>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-chip">
+            <span>Админ</span>
+            <strong id="adminName">Проверка доступа…</strong>
+          </div>
+          <div class="hero-chip">
+            <span>Снимок</span>
+            <strong id="generatedAt">-</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="loadingState" class="state-card">
+        <strong>Загружаю CRM-данные…</strong>
+        <span>Проверяю Telegram initData и собираю статистику.</span>
+      </section>
+
+      <section id="errorState" class="state-card is-error hidden">
+        <strong id="errorTitle">Нет доступа</strong>
+        <span id="errorText">Эта страница доступна только главному администратору.</span>
+      </section>
+
+      <section id="dashboard" class="dashboard hidden">
+        <div id="periodCards" class="cards-grid"></div>
+
+        <section class="panel chart-panel">
+          <div class="panel-head chart-head">
+            <div>
+              <p class="panel-kicker">Динамика</p>
+              <h2>Чистая прибыль за 14 дней</h2>
+            </div>
+            <div id="profitChartSummary" class="summary-grid compact chart-summary"></div>
+          </div>
+          <div id="profitChart" class="profit-chart"></div>
+        </section>
+
+        <div class="panel-grid">
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-kicker">Общая база</p>
+                <h2>Сводка CRM</h2>
+              </div>
+            </div>
+            <div id="summaryGrid" class="summary-grid"></div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-kicker">Заказы</p>
+                <h2>Финансы и статусы</h2>
+              </div>
+            </div>
+            <div id="orderHighlights" class="summary-grid compact"></div>
+            <div id="statusTable" class="table-wrap"></div>
+          </section>
+        </div>
+
+        <div class="panel-grid">
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-kicker">Платёжки</p>
+                <h2>Разбивка по провайдерам</h2>
+              </div>
+            </div>
+            <div id="providerTables" class="provider-grid"></div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-kicker">Франшизы</p>
+                <h2>Партнёрская сеть</h2>
+              </div>
+            </div>
+            <div id="franchiseGrid" class="summary-grid compact"></div>
+          </section>
+        </div>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="panel-kicker">Последние выдачи</p>
+              <h2>Свежие доставленные заказы</h2>
+            </div>
+          </div>
+          <div id="recentDeliveries" class="deliveries-list"></div>
+        </section>
+
+        <p class="footnote">
+          Чистая прибыль считается как платформенная прибыль минус возвраты по заказам и ручные пополнения баланса пользователям.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="./app.js?v=__ASSET_VERSION__" defer></script>
+</body>
+</html>

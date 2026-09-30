@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#071522" />
+    <meta name="description" content="Mailbox SOUS — одноразовая почта для получения писем и кодов подтверждения.">
+    <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+    <link rel="canonical" href="https://sousmarketfranchize.shop/email/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SOUS Mailbox">
+    <meta property="og:title" content="SOUS Mailbox — одноразовая почта">
+    <meta property="og:description" content="Одноразовые адреса для получения писем и кодов подтверждения.">
+    <meta property="og:url" content="https://sousmarketfranchize.shop/email/">
+    <meta name="twitter:card" content="summary">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"SOUS Mailbox","url":"https://sousmarketfranchize.shop/email/","description":"Одноразовая почта для получения кодов подтверждения."}</script>
+    <title>SOUS Mailbox — одноразовая почта</title>
+    <link rel="stylesheet" href="./styles.css?v=__ASSET_VERSION__" />
+    <script src="https://telegram.org/js/telegram-web-app.js" defer></script>
+    <script src="./app.js?v=__ASSET_VERSION__" defer></script>
+  </head>
+  <body>
+    <noscript><main><h1>SOUS Mailbox — одноразовая почта</h1><p>Одноразовые адреса для получения писем и кодов подтверждения.</p></main></noscript>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-mark" aria-hidden="true">
+          <img id="brand-avatar" class="hidden" alt="" />
+          <span id="brand-fallback">E</span>
+        </div>
+        <div class="brand-copy">
+          <strong id="brand-name">Mailbox</strong>
+          <span>одноразовая почта</span>
+        </div>
+        <button class="balance-chip" id="balance-button" type="button" aria-label="Пополнить баланс">
+          <small>Баланс</small><b id="balance-value">—</b><span>+</span>
+        </button>
+      </header>
+
+      <main>
+        <section class="screen active" id="screen-purchase" aria-label="Новая активация">
+          <form id="site-form" class="search-card" novalidate>
+            <span class="form-kicker">Подберите адрес</span>
+            <label for="site-input">Для какого сайта нужна почта?</label>
+            <div class="search-row">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input id="site-input" name="site" type="text" inputmode="url" autocomplete="url" autocapitalize="none" spellcheck="false" placeholder="instagram.com" maxlength="180" required />
+              <button id="search-button" type="submit">Найти</button>
+            </div>
+          </form>
+
+          <section id="domains-section" class="result-section hidden" aria-live="polite">
+            <div class="section-heading">
+              <div><h2>Доступные домены</h2></div>
+              <button id="sort-button" class="sort-button" type="button" data-sort="price">Цена ↑</button>
+            </div>
+            <div id="domains-summary" class="result-summary"></div>
+            <div id="domains-list" class="domain-list"></div>
+          </section>
+
+          <div id="purchase-status" class="state-card hidden" role="status"></div>
+        </section>
+
+        <section class="screen" id="screen-activations" aria-labelledby="activations-title">
+          <div class="page-head">
+            <div><span class="eyebrow-label">Ваши покупки</span><h1 id="activations-title">Активации</h1></div>
+            <button id="refresh-activations" class="icon-button" type="button" aria-label="Обновить">↻</button>
+          </div>
+          <div class="filter-tabs" role="group" aria-label="Фильтр активаций">
+            <button type="button" class="filter-tab active" data-filter="all">Все</button>
+            <button type="button" class="filter-tab" data-filter="active">Ожидают</button>
+            <button type="button" class="filter-tab" data-filter="done">Готовые</button>
+          </div>
+          <div id="activations-status" class="state-card hidden" role="status"></div>
+          <div id="activations-list" class="activation-list"></div>
+        </section>
+
+        <section class="screen" id="screen-profile" aria-labelledby="profile-title">
+          <div class="page-head"><div><span class="eyebrow-label">Аккаунт</span><h1 id="profile-title">Профиль</h1></div></div>
+          <div class="profile-balance">
+            <span>Доступно для покупок</span>
+            <strong id="profile-balance-value">—</strong>
+            <button id="profile-topup-button" type="button">Пополнить баланс <b>↗</b></button>
+          </div>
+          <div class="stats-grid">
+            <div><span>Активаций</span><strong id="profile-activations">0</strong></div>
+            <div><span>ID пользователя</span><strong id="profile-user-id">—</strong></div>
+          </div>
+        </section>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Основная навигация">
+        <button class="nav-button active" type="button" data-screen="purchase"><span class="nav-icon">＋</span><span>Купить</span></button>
+        <button class="nav-button" type="button" data-screen="activations"><span class="nav-icon">▤</span><span>Активации</span><b id="active-count" class="nav-badge hidden">0</b></button>
+        <button class="nav-button" type="button" data-screen="profile"><span class="nav-icon">●</span><span>Профиль</span></button>
+      </nav>
+    </div>
+
+    <div id="overlay" class="overlay hidden" aria-hidden="true">
+      <button class="overlay-backdrop" type="button" data-close aria-label="Закрыть"></button>
+      <section id="sheet" class="sheet" role="dialog" aria-modal="true" aria-live="polite"></section>
+    </div>
+    <div id="toast" class="toast hidden" role="status"></div>
+  </body>
+</html>

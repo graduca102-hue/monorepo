@@ -1,0 +1,578 @@
+support_bot.py:404:    if order["partner_bot_id"]:
+support_bot.py:405:        partner = cursor.execute("SELECT referral_enabled,referral_percent FROM partners_bots WHERE id=?", (order["partner_bot_id"],)).fetchone()
+support_bot.py:408:        override = cursor.execute("SELECT referral_percent FROM partner_referral_whitelist WHERE partner_bot_id=? AND user_id=?", (order["partner_bot_id"], ref["referred_by"])).fetchone()
+support_bot.py:438:        full_partner_amount = float(order["partner_profit_amount"] or 0) if order["partner_bot_id"] and order["partner_profit_accrued"] else 0.0
+support_bot.py:446:            db.execute("UPDATE partners_bots SET partner_earnings=partner_earnings-?,updated_at=? WHERE id=?",
+support_bot.py:447:                       (partner_amount, now(), order["partner_bot_id"]))
+support_bot.py:484:        full_partner = float(order["partner_profit_amount"] or 0) if order["partner_bot_id"] and order["partner_profit_accrued"] else 0.0
+support_bot.py:496:            db.execute("UPDATE partners_bots SET partner_earnings=partner_earnings-?,updated_at=? WHERE id=?",
+support_bot.py:497:                       (partner_amount, now(), order["partner_bot_id"]))
+vproxy_service.py:17:VPROXY_API_BASE = os.getenv("VPROXY_API_BASE", "https://vproxy.cc/public-api").rstrip("/")
+vproxy_service.py:21:VPROXY_API_KEY = os.getenv("VPROXY_API_KEY", "").strip()
+vproxy_service.py:22:VPROXY_RESELLER_API_BASE = os.getenv("VPROXY_RESELLER_API_BASE", "https://vproxy.cc/reseller-api").rstrip("/")
+vproxy_service.py:23:MASKIFY_USER_API_BASE = os.getenv("MASKIFY_USER_API_BASE", "https://maskify.su/api/user/v1").rstrip("/")
+vproxy_service.py:24:MASKIFY_USER_API_KEY = os.getenv("MASKIFY_USER_API_KEY", "").strip()
+vproxy_service.py:25:MASKIFY_RESELLER_API_BASE = os.getenv("MASKIFY_RESELLER_API_BASE", "https://maskify.su/api/reseller/v2").rstrip("/")
+vproxy_service.py:26:MASKIFY_RESELLER_API_KEY = os.getenv("MASKIFY_RESELLER_API_KEY", "").strip()
+vproxy_service.py:49:    """Return the supplier's currently available traffic without exposing API details."""
+vproxy_service.py:50:    if MASKIFY_RESELLER_API_KEY:
+vproxy_service.py:56:    if not MASKIFY_USER_API_KEY:
+vproxy_service.py:62:                f"{MASKIFY_USER_API_BASE}/info",
+vproxy_service.py:64:                    "X-User-API-Key": MASKIFY_USER_API_KEY,
+vproxy_service.py:80:    if not MASKIFY_RESELLER_API_KEY:
+vproxy_service.py:87:                f"{MASKIFY_RESELLER_API_BASE}{path}",
+vproxy_service.py:89:                    "X-Reseller-API-Key": MASKIFY_RESELLER_API_KEY,
+vproxy_service.py:298:    ttl = max(0, int(settings.get("sessionttl") or 0))
+vproxy_service.py:552:        "country_name": "Любая",
+vproxy_service.py:554:        "sessionttl": 1800,
+vproxy_service.py:579:        settings["sessionttl"] = max(0, min(int(settings.get("sessionttl", 1800)), 86400))
+vproxy_service.py:581:        settings["sessionttl"] = 1800
+vproxy_service.py:584:    if settings["type"] == "rotating" and settings["sessionttl"] <= 0:
+vproxy_service.py:585:        settings["sessionttl"] = 1800
+vproxy_service.py:598:    if settings["country"] == "UK" and "укр" in str(settings.get("country_name") or "").lower():
+vproxy_service.py:600:    settings["country_name"] = str(settings.get("country_name") or ("Любая" if not settings["country"] else settings["country"]))
+vproxy_service.py:632:    if not VPROXY_API_KEY:
+vproxy_service.py:638:            f"{VPROXY_RESELLER_API_BASE}{path}",
+vproxy_service.py:639:            headers={"apikey": VPROXY_API_KEY, "Accept": accept},
+vproxy_service.py:767:        if MASKIFY_RESELLER_API_KEY and MASKIFY_SUBUSER_USERNAME and str(row["pool"]) == "residential":
+vproxy_service.py:839:        # Some API versions return {"RU": "Russia", "US": "United States"}.
+vproxy_service.py:848:                name = str(row.get("name") or row.get("country_name") or row.get("countryName") or row.get("name_ru") or row.get("title") or code).strip()
+vproxy_service.py:853:    # Deduplicate and keep a usable menu if API returned an empty object.
+vproxy_service.py:874:        "sessionttl": int(settings["sessionttl"]),
+vproxy_service.py:888:    # The reseller API does not consistently honour its `format` argument.
+vproxy_service.py:890:    return format_proxy_export(str(raw).strip(), requested_format, str(settings["protocol"]))
+vproxy_service.py:893:def _parse_proxy_line(line: str) -> tuple[str, int, str, str] | None:
+vproxy_service.py:921:def format_proxy_export(raw: str, output_format: str, protocol: str) -> str:
+vproxy_service.py:928:        parsed = _parse_proxy_line(line)
+vproxy_service.py:984:            f"{VPROXY_API_BASE}/token",
+vproxy_service.py:1005:        if VPROXY_API_KEY:
+vproxy_service.py:1006:            headers["X-API-Key"] = VPROXY_API_KEY
+vproxy_service.py:1009:            f"{VPROXY_API_BASE}{path}",
+vproxy_service.py:1044:    if VPROXY_API_KEY:
+vproxy_service.py:1057:    # A reseller token is not a Public API JWT. It exposes the reseller's
+vproxy_service.py:1059:    if VPROXY_API_KEY:
+vproxy_service.py:1064:                    f"{VPROXY_RESELLER_API_BASE}/balance/get_full",
+vproxy_service.py:1065:                    headers={"apikey": VPROXY_API_KEY, "Accept": "application/json"},
+services.py:42:PARTNER_PROXY_API_BASE_URL = os.getenv("PARTNER_PROXY_API_BASE_URL", "http://193.161.204.52:8000").strip().rstrip("/")
+services.py:43:PARTNER_API_TOKEN = os.getenv("PARTNER_API_TOKEN", "").strip()
+services.py:45:XROCKET_API_BASE_URL = os.getenv("XROCKET_API_BASE_URL", "https://pay.xrocket.exchange").strip()
+services.py:46:XROCKET_API_TOKEN = os.getenv("XROCKET_API_TOKEN", "").strip()
+services.py:49:HELEKET_API_BASE_URL = os.getenv("HELEKET_API_BASE_URL", "https://api.heleket.com").strip().rstrip("/")
+services.py:50:HELEKET_PAYMENT_API_KEY = os.getenv("HELEKET_PAYMENT_API_KEY", os.getenv("HELEKET_API_KEY", "")).strip()
+services.py:52:LOLZ_API_BASE_URL = os.getenv("LOLZ_API_BASE_URL", "https://prod-api.lzt.market").strip().rstrip("/")
+services.py:53:LOLZ_API_KEY = os.getenv("LOLZ_API_KEY", "").strip()
+services.py:57:CRYSTALPAY_API_BASE_URL = os.getenv("CRYSTALPAY_API_BASE_URL", "https://api.crystalpay.io/v3").strip().rstrip("/")
+services.py:60:COINGECKO_API_BASE_URL = os.getenv("COINGECKO_API_BASE_URL", "https://api.coingecko.com/api/v3").strip().rstrip("/")
+services.py:64:MARKET_API_BASE_URL = os.getenv(
+services.py:65:    "MARKET_API_BASE_URL",
+services.py:68:MARKET_API_TOKEN = os.getenv("MARKET_API_TOKEN", os.getenv("DJEKXA_API_TOKEN", "")).strip()
+services.py:164:    if not PARTNER_API_TOKEN:
+services.py:165:        raise PartnerProxyApiError("API прокси не настроен")
+services.py:171:                f"{PARTNER_PROXY_API_BASE_URL}{path}",
+services.py:172:                headers={"token": PARTNER_API_TOKEN, "Accept": "application/json"},
+services.py:511:    country_name = category.get("name", {}).get("ru", "Страна")
+services.py:512:    return COUNTRY_BUTTON_LABELS.get(country_name, f"{country_name.upper()} | IPV4 ПРОКСИ")
+services.py:520:    if not MARKET_API_TOKEN:
+services.py:523:        "Authorization": f"Bearer {MARKET_API_TOKEN}",
+services.py:576:        # Keep expired entries as a short-lived stale fallback when the API is
+services.py:612:            challenge_url = f"{MARKET_API_BASE_URL}/api/v2/categories"
+services.py:624:            cookies = session.cookie_jar.filter_cookies(URL(MARKET_API_BASE_URL))
+services.py:646:                response_url=URL(MARKET_API_BASE_URL),
+services.py:664:    session.cookie_jar.update_cookies(cookies, response_url=URL(MARKET_API_BASE_URL))
+services.py:699:                    f"{MARKET_API_BASE_URL}{path}",
+services.py:878:        # Keep the API contract stable during transient limits.  The frontend
+services.py:999:    if not XROCKET_API_TOKEN:
+services.py:1002:        "Rocket-Pay-Key": XROCKET_API_TOKEN,
+services.py:1045:    return hashlib.md5(f"{encoded_payload}{HELEKET_PAYMENT_API_KEY}".encode("utf-8")).hexdigest()
+services.py:1049:    if not HELEKET_PAYMENT_API_KEY:
+services.py:1081:    if not LOLZ_API_KEY:
+services.py:1084:        "Authorization": f"Bearer {LOLZ_API_KEY}",
+services.py:1104:            f"{XROCKET_API_BASE_URL}{path}",
+services.py:1126:            f"{HELEKET_API_BASE_URL}{path}",
+services.py:1148:            f"{CRYSTALPAY_API_BASE_URL}{path}",
+services.py:1171:            f"{LOLZ_API_BASE_URL}{path}",
+services.py:1190:            f"{COINGECKO_API_BASE_URL}{path}",
+database/data.py:17:PARTNER_TOPUP_SHARE_PERCENT = min(max(float(os.getenv("PARTNER_TOPUP_SHARE_PERCENT", "25") or 25), 0.0), 100.0)
+database/data.py:134:            partner_bot_id INTEGER,
+database/data.py:136:            balance_kind TEXT NOT NULL DEFAULT 'main',
+database/data.py:157:            shop_markup_percentage INTEGER,
+database/data.py:158:            margin_percentage INTEGER NOT NULL DEFAULT 50,
+database/data.py:159:            goods_markup_percentage INTEGER,
+database/data.py:160:            proxy_markup_percentage INTEGER,
+database/data.py:161:            sms_markup_percentage INTEGER,
+database/data.py:163:            partner_earnings REAL NOT NULL DEFAULT 0.0,
+database/data.py:164:            partner_withdrawn REAL NOT NULL DEFAULT 0.0,
+database/data.py:184:        CREATE TABLE IF NOT EXISTS partner_withdrawals
+database/data.py:187:            partner_bot_id INTEGER NOT NULL,
+database/data.py:201:            partner_bot_id INTEGER NOT NULL,
+database/data.py:206:            UNIQUE(partner_bot_id, user_id)
+database/data.py:294:            topup_id INTEGER,
+database/data.py:314:            partner_bot_id INTEGER,
+database/data.py:370:        "partner_bot_id": "ALTER TABLE orders ADD COLUMN partner_bot_id INTEGER",
+database/data.py:372:        "partner_margin_percentage": "ALTER TABLE orders ADD COLUMN partner_margin_percentage INTEGER NOT NULL DEFAULT 0",
+database/data.py:391:        "partner_bot_id": "ALTER TABLE topups ADD COLUMN partner_bot_id INTEGER",
+database/data.py:393:        "balance_kind": "ALTER TABLE topups ADD COLUMN balance_kind TEXT NOT NULL DEFAULT 'main'",
+database/data.py:404:        CREATE TABLE IF NOT EXISTS api_accounts (
+database/data.py:420:    if not _column_exists(cursor, "api_accounts", "api_user_id"):
+database/data.py:421:        cursor.execute("ALTER TABLE api_accounts ADD COLUMN api_user_id INTEGER")
+database/data.py:422:    if not _column_exists(cursor, "api_accounts", "api_key"):
+database/data.py:423:        cursor.execute("ALTER TABLE api_accounts ADD COLUMN api_key TEXT")
+database/data.py:424:    cursor.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_api_accounts_key_hash ON api_accounts(api_key_hash) WHERE api_key_hash IS NOT NULL")
+database/data.py:427:        "shop_markup_percentage": "ALTER TABLE partners_bots ADD COLUMN shop_markup_percentage INTEGER",
+database/data.py:428:        "margin_percentage": "ALTER TABLE partners_bots ADD COLUMN margin_percentage INTEGER NOT NULL DEFAULT 0",
+database/data.py:429:        "goods_markup_percentage": "ALTER TABLE partners_bots ADD COLUMN goods_markup_percentage INTEGER",
+database/data.py:430:        "proxy_markup_percentage": "ALTER TABLE partners_bots ADD COLUMN proxy_markup_percentage INTEGER",
+database/data.py:431:        "sms_markup_percentage": "ALTER TABLE partners_bots ADD COLUMN sms_markup_percentage INTEGER",
+database/data.py:433:        "partner_earnings": "ALTER TABLE partners_bots ADD COLUMN partner_earnings REAL NOT NULL DEFAULT 0.0",
+database/data.py:434:        "partner_withdrawn": "ALTER TABLE partners_bots ADD COLUMN partner_withdrawn REAL NOT NULL DEFAULT 0.0",
+database/data.py:450:        SET goods_markup_percentage = COALESCE(goods_markup_percentage, margin_percentage),
+database/data.py:451:            proxy_markup_percentage = COALESCE(proxy_markup_percentage, margin_percentage),
+database/data.py:452:            sms_markup_percentage = COALESCE(sms_markup_percentage, margin_percentage)
+database/data.py:509:        "ON partner_referral_whitelist(partner_bot_id, user_id)"
+database/data.py:530:        "CREATE INDEX IF NOT EXISTS idx_sales_log_events_topup_id ON sales_log_events(topup_id)"
+database/data.py:986:def get_api_account(user_id: int):
+database/data.py:991:        FROM api_accounts a LEFT JOIN users u ON u.user_id = a.api_user_id
+database/data.py:1004:def submit_api_application(user_id: int):
+database/data.py:1012:        INSERT INTO api_accounts (user_id,api_user_id,status,balance,requested_at,created_at,updated_at)
+database/data.py:1015:            api_user_id = COALESCE(api_accounts.api_user_id, excluded.api_user_id),
+database/data.py:1016:            status = CASE WHEN api_accounts.status = 'approved' THEN 'approved' ELSE 'pending' END,
+database/data.py:1017:            requested_at = CASE WHEN api_accounts.status = 'approved' THEN api_accounts.requested_at ELSE excluded.requested_at END,
+database/data.py:1023:    row = conn.execute("SELECT * FROM api_accounts WHERE user_id = ?", (int(user_id),)).fetchone()
+database/data.py:1028:def list_pending_api_applications(limit: int = 100):
+database/data.py:1031:        "SELECT * FROM api_accounts WHERE status = 'pending' ORDER BY requested_at ASC LIMIT ?",
+database/data.py:1038:def review_api_application(user_id: int, approved: bool, admin_id: int):
+database/data.py:1043:        UPDATE api_accounts
+database/data.py:1055:def generate_api_key(user_id: int):
+database/data.py:1056:    account = get_api_account(int(user_id))
+database/data.py:1064:        "UPDATE api_accounts SET api_key = ?, api_key_hash = ?, api_key_prefix = ?, updated_at = ? WHERE user_id = ? AND status = 'approved'",
+database/data.py:1072:def get_api_account_by_key(raw_key: str):
+database/data.py:1078:        FROM api_accounts a LEFT JOIN users u ON u.user_id = a.api_user_id
+database/data.py:1097:    margin_percentage: int = DEFAULT_PARTNER_MARGIN_PERCENT,
+database/data.py:1098:    shop_markup_percentage: int | None = None,
+database/data.py:1127:                shop_markup_percentage,
+database/data.py:1128:                margin_percentage,
+database/data.py:1130:                partner_earnings,
+database/data.py:1142:                shop_markup_percentage,
+database/data.py:1143:                margin_percentage,
+database/data.py:1159:                shop_markup_percentage = ?,
+database/data.py:1160:                margin_percentage = ?,
+database/data.py:1168:                shop_markup_percentage,
+database/data.py:1169:                margin_percentage,
+database/data.py:1248:def update_partner_bot_margin(partner_id: int, owner_id: int, margin_percentage: int):
+database/data.py:1255:            margin_percentage = ?,
+database/data.py:1259:        (margin_percentage, _now_text(), partner_id, owner_id),
+database/data.py:1267:def update_partner_bot_markup(partner_id: int, owner_id: int, kind: str, margin_percentage: int):
+database/data.py:1269:        "goods": "goods_markup_percentage",
+database/data.py:1270:        "proxy": "proxy_markup_percentage",
+database/data.py:1271:        "sms": "sms_markup_percentage",
+database/data.py:1280:        (max(0, min(int(margin_percentage), 500)), _now_text(), int(partner_id), int(owner_id)),
+database/data.py:1351:def add_partner_earnings(partner_id: int, amount: float):
+database/data.py:1361:            partner_earnings = partner_earnings + ?,
+database/data.py:1378:    cursor.execute("SELECT COALESCE(SUM(partner_earnings), 0) FROM partners_bots WHERE is_active = 1")
+database/data.py:1407:        WHERE partner_bot_id IN (
+database/data.py:1417:        WHERE partner_bot_id IN (
+database/data.py:1427:        WHERE partner_bot_id IN (
+database/data.py:1439:            COALESCE(pb.partner_earnings, 0) AS partner_earnings
+database/data.py:1443:        GROUP BY pb.id, pb.bot_username, pb.partner_earnings
+database/data.py:1444:        ORDER BY users_count DESC, partner_earnings DESC, pb.bot_username COLLATE NOCASE ASC
+database/data.py:1457:                "partner_earnings": round(float(row["partner_earnings"] or 0.0), 2),
+database/data.py:1488:        "SELECT COALESCE(SUM(partner_earnings), 0) FROM partners_bots WHERE owner_id = ?",
+database/data.py:1493:        "SELECT COALESCE(SUM(partner_withdrawn), 0) FROM partners_bots WHERE owner_id = ?",
+database/data.py:1516:        WHERE partner_bot_id = ? AND status = 'delivered'
+database/data.py:1525:        WHERE partner_bot_id = ? AND status = 'delivered'
+database/data.py:1534:        WHERE partner_bot_id = ? AND status = 'delivered'
+database/data.py:1558:        WHERE partner_bot_id = ? AND status = 'delivered'
+database/data.py:1571:    earned = float(partner_bot.get("partner_earnings") or 0.0)
+database/data.py:1572:    withdrawn = float(partner_bot.get("partner_withdrawn") or 0.0)
+database/data.py:1686:def list_partner_referral_whitelist(partner_bot_id: int, limit: int = 20) -> list[dict]:
+database/data.py:1693:        WHERE partner_bot_id = ?
+database/data.py:1697:        (partner_bot_id, limit),
+database/data.py:1705:    partner_bot_id: int,
+database/data.py:1715:            partner_bot_id,
+database/data.py:1722:        ON CONFLICT(partner_bot_id, user_id)
+database/data.py:1728:            partner_bot_id,
+database/data.py:1740:def remove_partner_referral_whitelist(partner_bot_id: int, user_id: int) -> bool:
+database/data.py:1746:        WHERE partner_bot_id = ? AND user_id = ?
+database/data.py:1748:        (partner_bot_id, user_id),
+database/data.py:1758:    partner_bot_id: int,
+database/data.py:1766:        WHERE partner_bot_id = ? AND user_id = ?
+database/data.py:1768:        (partner_bot_id, referrer_user_id),
+database/data.py:1776:def record_partner_withdrawal(
+database/data.py:1777:    partner_bot_id: int,
+database/data.py:1789:            partner_withdrawn = partner_withdrawn + ?,
+database/data.py:1793:        (amount, _now_text(), partner_bot_id, owner_id),
+database/data.py:1802:        INSERT INTO partner_withdrawals (
+database/data.py:1803:            partner_bot_id,
+database/data.py:1812:        (partner_bot_id, owner_id, amount, asset, xrocket_transfer_id, _now_text()),
+database/data.py:2008:    partner_bot_id: int | None = None,
+database/data.py:2010:    partner_margin_percentage: int = 0,
+database/data.py:2031:            partner_bot_id,
+database/data.py:2033:            partner_margin_percentage,
+database/data.py:2057:            partner_bot_id,
+database/data.py:2059:            partner_margin_percentage,
+database/data.py:2079:def create_topup(user_id: int, amount: float, partner_bot_id: int | None = None, balance_kind: str = "main"):
+database/data.py:2083:    normalized_balance_kind = "api" if str(balance_kind).lower() == "api" else "main"
+database/data.py:2085:    if normalized_balance_kind == "api":
+database/data.py:2086:        api_account = get_api_account(int(user_id))
+database/data.py:2087:        if api_account is None or str(api_account.get("status")) != "approved" or not api_account.get("api_user_id"):
+database/data.py:2089:            raise ValueError("API account is not approved")
+database/data.py:2090:        credited_user_id = int(api_account["api_user_id"])
+database/data.py:2096:            partner_bot_id,
+database/data.py:2097:            balance_kind,
+database/data.py:2108:            int(partner_bot_id) if partner_bot_id else None,
+database/data.py:2109:            normalized_balance_kind,
+database/data.py:2115:    topup_id = cursor.lastrowid
+database/data.py:2118:    return topup_id
+database/data.py:2122:    topup_id: int,
+database/data.py:2150:            topup_id,
+database/data.py:2157:def get_topup(topup_id: int):
+database/data.py:2160:    cursor.execute("SELECT * FROM topups WHERE id = ?", (topup_id,))
+database/data.py:2171:    topup_id: int | None = None,
+database/data.py:2185:            topup_id,
+database/data.py:2199:            topup_id,
+database/data.py:2314:def complete_topup_payment(topup_id: int):
+database/data.py:2318:        cursor.execute("SELECT * FROM topups WHERE id = ?", (topup_id,))
+database/data.py:2333:            (now_value, topup_id),
+database/data.py:2336:            cursor.execute("SELECT * FROM topups WHERE id = ?", (topup_id,))
+database/data.py:2362:        if str(topup["balance_kind"] or "main") == "api":
+database/data.py:2376:        if str(topup["balance_kind"] or "main") == "main" and topup["partner_bot_id"] and not int(topup["partner_credit_accrued"] or 0):
+database/data.py:2378:                float(topup["amount"] or 0.0) * PARTNER_TOPUP_SHARE_PERCENT / 100,
+database/data.py:2384:                SET partner_earnings = partner_earnings + ?, updated_at = ?
+database/data.py:2387:                (partner_topup_income, now_value, topup["partner_bot_id"]),
+database/data.py:2391:                (topup_id,),
+database/data.py:2394:        cursor.execute("SELECT * FROM topups WHERE id = ?", (topup_id,))
+database/data.py:2608:        if order["partner_bot_id"]:
+database/data.py:2615:                (order["partner_bot_id"],),
+database/data.py:2622:                int(order["partner_bot_id"]),
+database/data.py:2656:    if not order["partner_bot_id"] or order["partner_profit_accrued"]:
+database/data.py:2665:                partner_earnings = partner_earnings + ?,
+database/data.py:2669:            (amount, _now_text(), order["partner_bot_id"]),
+database/data.py:3170:                    "is_partner_order": bool(order.get("partner_bot_id")),
+database/data.py:3361:                   WHERE partner_bot_id = ? AND status IN ('delivered', 'credited') GROUP BY user_id) AS p
+database/data.py:3377:                   WHERE partner_bot_id = ? AND status IN ('delivered', 'credited') GROUP BY user_id) AS p
+database/data.py:3393:                   WHERE partner_bot_id = ? AND status IN ('delivered', 'credited') GROUP BY user_id) AS p
+database/data.py:3472:    partner_bot_id: int | None = None,
+database/data.py:3511:                partner_bot_id,
+database/data.py:3525:                int(partner_bot_id) if partner_bot_id else None,
+main.py:24:    complete_topup_payment,
+main.py:535:                InlineKeyboardButton(text="Ротация", callback_data=f"proxy_test:rotation:{pool}"),
+main.py:852:    rotation = "По запросу" if int(settings["sessionttl"]) == 0 else f"Каждые {max(1, int(settings['sessionttl']) // 60)} минут"
+main.py:858:        f"<blockquote>Страна: {settings['country_name']}</blockquote>\n"
+main.py:860:        f"<blockquote>Сессия: {session_name}\nРотация: {rotation}</blockquote>\n"
+main.py:1281:    elif action == "rotation":
+main.py:1282:        pool=parts[2]; await callback.message.edit_text("Выберите ротацию:", reply_markup=build_choices_keyboard(pool,"sessionttl",[("По запросу","0"),("5 минут","300"),("15 минут","900"),("30 минут","1800"),("60 минут","3600")]))
+main.py:1312:                settings["country_name"] = "Любая"
+main.py:1319:                settings["country_name"] = str(selected.get("name")) if selected else value.upper()
+main.py:1320:        elif key in {"quantity","sessionttl"}: settings[key]=int(value)
+main.py:1331:        pool=parts[2]; save_proxy_settings(user_id,pool,{"country":"","country_name":"Любая","type":"rotating","sessionttl":1800,"protocol":"http","format":"login:password@hostname:port","quantity":5}); await render_proxy_pool(callback.message,user_id,pool)
+main.py:1507:                                complete_topup_payment(reminder["id"])
+main.py:1517:                                complete_topup_payment(reminder["id"])
+main.py:1524:                                complete_topup_payment(reminder["id"])
+main.py:1531:                                complete_topup_payment(reminder["id"])
+miniapp.py:29:    complete_topup_payment,
+miniapp.py:33:    create_topup,
+miniapp.py:38:    get_api_account_by_key,
+miniapp.py:67:    AnyMessageAPIError,
+miniapp.py:152:PUBLIC_API_MARKUP_PERCENT = 35.0
+miniapp.py:218:    margin_percentage: int
+miniapp.py:299:    raw_value = partner_bot.get("shop_markup_percentage")
+miniapp.py:310:        "goods": "goods_markup_percentage",
+miniapp.py:311:        "proxy": "proxy_markup_percentage",
+miniapp.py:312:        "sms": "sms_markup_percentage",
+miniapp.py:313:    }.get(kind, "margin_percentage")
+miniapp.py:316:        value = partner_bot.get("margin_percentage")
+miniapp.py:320:def calculate_sale_price_from_base_usdt(base_price_usdt: float, margin_percentage: int) -> float:
+miniapp.py:321:    raw_amount = float(base_price_usdt or 0.0) * (1 + max(margin_percentage, 0) / 100)
+miniapp.py:330:def convert_rub_to_usdt(amount_rub: float, margin_percentage: int) -> float:
+miniapp.py:333:    return calculate_sale_price_from_base_usdt(base_amount, margin_percentage)
+miniapp.py:346:    margin_percentage: int,
+miniapp.py:348:    clean_profit_usdt = float(purchase_unit_price or 0.0) * max(margin_percentage, 0) / 100 * max(quantity, 0)
+miniapp.py:545:                margin_percentage=MARKET_MARKUP_PERCENT,
+miniapp.py:568:                margin_percentage=get_partner_shop_markup(partner_bot) + get_partner_category_markup(partner_bot, "goods"),
+miniapp.py:795:            supplied_key = request.headers.get("X-API-Key", "").strip()
+miniapp.py:798:            api_account = get_api_account_by_key(supplied_key) if supplied_key else None
+miniapp.py:799:            if api_account is None:
+miniapp.py:801:                    text=json.dumps({"error": "Invalid API key"}),
+miniapp.py:804:            api_user_id = int(api_account.get("api_user_id") or 0)
+miniapp.py:808:                    text=json.dumps({"error": "API account not found"}),
+miniapp.py:821:                margin_percentage=int(PUBLIC_API_MARKUP_PERCENT),
+miniapp.py:824:            return api_context, {"id": api_user_id, "owner_id": int(api_account["user_id"]), "username": "api_client"}, profile
+miniapp.py:1144:    async def _poll_topup_payment(self, topup_id: int) -> None:
+miniapp.py:1146:            topup = get_topup(topup_id)
+miniapp.py:1163:                        complete_topup_payment(topup_id)
+miniapp.py:1171:    def _schedule_topup_payment_poll(self, topup_id: int) -> bool:
+miniapp.py:1172:        existing_task = self._topup_payment_tasks.get(topup_id)
+miniapp.py:1178:                await self._poll_topup_payment(topup_id)
+miniapp.py:1180:                self._topup_payment_tasks.pop(topup_id, None)
+miniapp.py:1182:        self._topup_payment_tasks[topup_id] = asyncio.create_task(
+miniapp.py:1184:            name=f"miniapp-topup-payment-{topup_id}",
+miniapp.py:1196:            return calculate_sale_price_from_base_usdt(purchase_unit_price, int(PUBLIC_API_MARKUP_PERCENT))
+miniapp.py:1198:        franchise_markup_percentage = get_partner_category_markup(partner_bot, "proxy")
+miniapp.py:1201:            PROXY_BASE_MARKUP_PERCENT + franchise_markup_percentage,
+miniapp.py:1317:        partner_margin_percentage = get_partner_category_markup(partner_bot, "proxy")
+miniapp.py:1318:        effective_markup = int(PUBLIC_API_MARKUP_PERCENT) if is_public_api else PROXY_BASE_MARKUP_PERCENT + partner_margin_percentage
+miniapp.py:1333:            partner_bot_id=(int(partner_bot["id"]) if partner_bot else None),
+miniapp.py:1335:            partner_margin_percentage=partner_margin_percentage,
+miniapp.py:1337:                calculate_partner_profit_share_amount(purchase_unit_price, quantity, partner_margin_percentage)
+miniapp.py:1386:                            "country_name": str(order.get("category_name") or "Страна"),
+miniapp.py:1407:                        "country_name": str(order.get("category_name") or "Страна"),
+miniapp.py:1430:        unit_price = convert_rub_to_usdt(product.get("price", 0), bot_context.margin_percentage)
+miniapp.py:1432:        partner_margin_percentage = get_partner_category_markup(partner_bot, "goods")
+miniapp.py:1444:            partner_bot_id=(int(partner_bot["id"]) if partner_bot else None),
+miniapp.py:1446:            partner_margin_percentage=partner_margin_percentage,
+miniapp.py:1448:                calculate_partner_profit_share_amount(purchase_unit_price, quantity, partner_margin_percentage)
+miniapp.py:1681:            "country_name": str(row.get("country_name") or ""),
+miniapp.py:1763:                                PUBLIC_API_MARKUP_PERCENT
+miniapp.py:1815:            PUBLIC_API_MARKUP_PERCENT
+miniapp.py:1822:            partner_bot_id=(int(bot_context.partner_bot["id"]) if bot_context.partner_bot else None),
+miniapp.py:1824:            country_id=country, country_name=str(body.get("country_name") or country),
+miniapp.py:2026:                    "country_name": str(category.get("name", {}).get("ru") or "Страна"),
+miniapp.py:2121:        except AnyMessageAPIError as error:
+miniapp.py:2133:                    PUBLIC_API_MARKUP_PERCENT if request.path.startswith("/api/v1/") else None,
+miniapp.py:2165:        except AnyMessageAPIError as error:
+miniapp.py:2186:            PUBLIC_API_MARKUP_PERCENT if request.path.startswith("/api/v1/") else None,
+miniapp.py:2188:        partner_bot_id = int(bot_context.partner_bot["id"]) if bot_context.partner_bot else None
+miniapp.py:2196:            partner_bot_id=partner_bot_id,
+miniapp.py:2225:        except AnyMessageAPIError as error:
+miniapp.py:2301:        except AnyMessageAPIError as error:
+miniapp.py:2333:            except AnyMessageAPIError as error:
+miniapp.py:2387:        except AnyMessageAPIError as error:
+miniapp.py:2408:            PUBLIC_API_MARKUP_PERCENT if request.path.startswith("/api/v1/") else None,
+miniapp.py:2410:        partner_bot_id = int(bot_context.partner_bot["id"]) if bot_context.partner_bot else None
+miniapp.py:2418:            partner_bot_id=partner_bot_id,
+miniapp.py:2447:        except AnyMessageAPIError as error:
+miniapp.py:2916:            # small number concurrently while keeping pressure on the API bounded.
+miniapp.py:2999:                        convert_rub_to_usdt(product.get("price", 0), bot_context.margin_percentage)
+miniapp.py:3055:                "price_usdt": round(convert_rub_to_usdt(product.get("price", 0), bot_context.margin_percentage)
+miniapp.py:3168:            unit_price = convert_rub_to_usdt(product.get("price", 0), bot_context.margin_percentage)
+miniapp.py:3240:    async def handle_create_topup(self, request: web.Request) -> web.Response:
+miniapp.py:3269:        topup_id = create_topup(
+miniapp.py:3275:        description = f"Balance topup #{topup_id} | user {user_id}"
+miniapp.py:3279:                merchant_order_id = f"topup-{topup_id}-{user_id}-{int(time.time())}"
+miniapp.py:3285:                    additional_data=str(topup_id),
+miniapp.py:3292:                    description=f"SOUS MARKET balance top-up #{topup_id}",
+miniapp.py:3293:                    extra=f"topup:{topup_id}:user:{user_id}",
+miniapp.py:3299:                payment_id = f"topup-{topup_id}-{user_id}-{int(time.time())}"
+miniapp.py:3305:                    additional_data=str(topup_id),
+miniapp.py:3311:                    topup_id,
+miniapp.py:3314:                    payload_data={"topup_id": topup_id, "user_id": user_id},
+miniapp.py:3325:            topup_id=topup_id,
+miniapp.py:3331:        topup = get_topup(topup_id)
+miniapp.py:3332:        self._schedule_topup_payment_poll(topup_id)
+miniapp.py:3341:                f"🆔 Topup ID: {topup_id}",
+miniapp.py:3349:                "topup_id": int(topup_id),
+miniapp.py:3463:        app.router.add_post("/miniapp/{bot_slug:[A-Za-z0-9_]+}/api/topup", self.handle_create_topup)
+miniapp.py:3476:        app.router.add_post("/proxy/{bot_slug:[A-Za-z0-9_]+}/api/topup", self.handle_create_topup)
+miniapp.py:3491:        app.router.add_post("/email/{bot_slug:[A-Za-z0-9_]+}/api/topup", self.handle_create_topup)
+miniapp.py:3504:        app.router.add_post("/sms/{bot_slug:[A-Za-z0-9_]+}/api/topup", self.handle_create_topup)
+keyboard.py:44:    generate_api_key,
+keyboard.py:45:    get_api_account,
+keyboard.py:46:    list_pending_api_applications,
+keyboard.py:47:    review_api_application,
+keyboard.py:48:    submit_api_application,
+keyboard.py:52:    complete_topup_payment,
+keyboard.py:57:    create_topup,
+keyboard.py:92:    record_partner_withdrawal,
+keyboard.py:176:API_BASE_URL = f"{os.getenv('MINIAPP_BASE_URL', 'https://31-77-145-160.sslip.io').rstrip('/')}/api/v1"
+keyboard.py:177:API_DOCS_URL = os.getenv("API_DOCS_URL", "https://docs.sousmarketfranchize.shop/#api").strip()
+keyboard.py:920:def convert_rub_to_usdt(amount_rub: float, margin_percentage: int | None = None) -> float:
+keyboard.py:923:    effective_margin = MARKET_MARKUP_PERCENT if margin_percentage is None else margin_percentage
+keyboard.py:927:def format_rub_and_usdt(amount_rub: float, margin_percentage: int | None = None) -> str:
+keyboard.py:928:    amount_usdt = convert_rub_to_usdt(amount_rub, margin_percentage)
+keyboard.py:1054:    # A single negative Bot API response must not randomly lock an already
+keyboard.py:1072:    raw_value = partner_bot.get("shop_markup_percentage")
+keyboard.py:1083:        "goods": "goods_markup_percentage",
+keyboard.py:1084:        "proxy": "proxy_markup_percentage",
+keyboard.py:1085:        "sms": "sms_markup_percentage",
+keyboard.py:1086:    }.get(kind, "margin_percentage")
+keyboard.py:1089:        value = partner_bot.get("margin_percentage")
+keyboard.py:1108:    franchise_markup_percentage = get_partner_category_markup(partner_bot, "proxy")
+keyboard.py:1111:        PROXY_BASE_MARKUP_PERCENT + franchise_markup_percentage,
+keyboard.py:1115:def calculate_sale_price_from_base_usdt(base_price_usdt: float, margin_percentage: int) -> float:
+keyboard.py:1116:    raw_amount = float(base_price_usdt or 0) * (1 + max(margin_percentage, 0) / 100)
+keyboard.py:1125:    margin_percentage: int,
+keyboard.py:1127:    clean_profit_usdt = float(purchase_unit_price or 0) * max(margin_percentage, 0) / 100 * max(quantity, 0)
+keyboard.py:1334:        topup_id=int(topup["id"]),
+keyboard.py:1499:    margin_percentage: int,
+keyboard.py:1508:                text=f"{truncate_text(product_title, 34)} • {convert_rub_to_usdt(product.get('price', 0), margin_percentage):.2f} $",
+keyboard.py:1669:                        f"+{int(partner_bot.get('margin_percentage') or 0)}%"
+keyboard.py:1698:                f"дод. націнка: {int(partner_bot.get('margin_percentage') or 0)}%"
+keyboard.py:1704:                f"доп. наценка: {int(partner_bot.get('margin_percentage') or 0)}%"
+keyboard.py:1712:    shop_markup_percentage = get_partner_shop_markup(partner_bot)
+keyboard.py:1719:            f"🏪 Націнка магазину: {shop_markup_percentage}%\n"
+keyboard.py:1724:            f"💰 Зароблено всього: {float(partner_bot.get('partner_earnings') or 0):.2f}$\n"
+keyboard.py:1725:            f"💸 Уже виведено: {float(partner_bot.get('partner_withdrawn') or 0):.2f}$\n"
+keyboard.py:1728:            f"📈 Базова націнка магазину: {shop_markup_percentage}%.\n"
+keyboard.py:1737:        f"🏪 Наценка шопа: {shop_markup_percentage}%\n"
+keyboard.py:1742:        f"💰 Заработано всего: {float(partner_bot.get('partner_earnings') or 0):.2f}$\n"
+keyboard.py:1743:        f"💸 Уже выведено: {float(partner_bot.get('partner_withdrawn') or 0):.2f}$\n"
+keyboard.py:1746:        f"📈 Базовая наценка магазина: {shop_markup_percentage}%.\n"
+keyboard.py:1876:        f"💸 Доп. наценка: {int(partner_bot.get('margin_percentage') or 0)}%"
+keyboard.py:2111:        [InlineKeyboardButton(text="⚙️ Заявки API", callback_data="admin_api_applications")],
+keyboard.py:2264:    api_key = os.getenv("HELEKET_PAYMENT_API_KEY", os.getenv("HELEKET_API_KEY", "")).strip()
+keyboard.py:2405:    rows.append([InlineKeyboardButton(text="⚙️ API", callback_data="api_menu")])
+keyboard.py:2435:def build_api_application_keyboard() -> InlineKeyboardMarkup:
+keyboard.py:2445:        "⚙️ <b>API</b>\n\n"
+keyboard.py:2447:        f"Endpoint: <code>{html.escape(API_BASE_URL)}</code>\n"
+keyboard.py:2448:        f"Документация: <code>{html.escape(API_DOCS_URL)}</code>\n"
+keyboard.py:2449:        f"Баланс API: <b>{float(account.get('balance') or 0.0):.2f} USDT</b>\n\n"
+keyboard.py:2456:        [InlineKeyboardButton(text="🔑 Сгенерировать API key", callback_data="api_generate_key")],
+keyboard.py:2457:        [InlineKeyboardButton(text="💳 Пополнить API", callback_data="api_topup")],
+keyboard.py:2459:    if API_DOCS_URL:
+keyboard.py:2460:        rows.append([InlineKeyboardButton(text="📖 Документация", url=API_DOCS_URL)])
+keyboard.py:2478:def build_admin_api_applications_keyboard(applications: list[dict]) -> InlineKeyboardMarkup:
+keyboard.py:2486:    rows.append([InlineKeyboardButton(text="🔄 Обновить", callback_data="admin_api_applications")])
+keyboard.py:2492:    topup_id: int,
+keyboard.py:2502:    rows.append([InlineKeyboardButton(text=payment_button_text(tr(lang, "common.check_payment")), callback_data=check_callback_data or f"topup_check:{topup_id}", icon_custom_emoji_id=PAYMENT_CHECK_EMOJI_ID)])
+keyboard.py:2558:    partner_id = int(order.get("partner_bot_id") or 0)
+keyboard.py:3024:    country_name = resolve_localized_text(category.get("name"), lang, fallback=tr(lang, "common.not_specified"))
+keyboard.py:3027:        f"{tr(lang, 'proxy.country', value=country_name)}\n"
+keyboard.py:3035:    country_name = resolve_localized_text(category.get("name"), lang, fallback=tr(lang, "common.not_specified"))
+keyboard.py:3039:        f"{tr(lang, 'proxy.country', value=country_name)}\n"
+keyboard.py:3048:    country_name = resolve_localized_text(category.get("name"), lang, fallback=tr(lang, "common.not_specified"))
+keyboard.py:3052:        f"{tr(lang, 'proxy.country', value=country_name)}\n"
+keyboard.py:3078:    margin_percentage: int,
+keyboard.py:3091:            f"  {convert_rub_to_usdt(product.get('price', 0), margin_percentage):.2f} $ | "
+keyboard.py:3102:    margin_percentage: int,
+keyboard.py:3117:        f"{tr(lang, 'market.price', value=format_rub_and_usdt(product.get('price', 0), margin_percentage))}\n"
+keyboard.py:3128:    margin_percentage: int,
+keyboard.py:3136:        f"{tr(lang, 'market.price', value=format_rub_and_usdt(product.get('price', 0), margin_percentage))}\n"
+keyboard.py:3485:        f"{bot['bot_username']} - {bot['users_count']} пользователей - {bot['partner_earnings']:.2f} $"
+keyboard.py:3818:    margin_percentage = get_effective_market_margin(getattr(target_message, "bot", None))
+keyboard.py:3822:        build_market_products_text(category, products, current_page, last_page, margin_percentage, lang),
+keyboard.py:3828:            margin_percentage,
+keyboard.py:3844:    margin_percentage = get_effective_market_margin(getattr(target_message, "bot", None))
+keyboard.py:3847:        build_market_product_text(category, product, margin_percentage, lang),
+keyboard.py:3859:    effective_margin_percentage = get_effective_market_margin(bot)
+keyboard.py:3861:    unit_price = convert_rub_to_usdt(product.get("price", 0), effective_margin_percentage)
+keyboard.py:3863:    partner_margin_percentage = get_partner_category_markup(partner_bot, "goods")
+keyboard.py:3875:        partner_bot_id=(int(partner_bot["id"]) if partner_bot else None),
+keyboard.py:3877:        partner_margin_percentage=partner_margin_percentage,
+keyboard.py:3879:            calculate_partner_profit_share_amount(purchase_unit_price, quantity, partner_margin_percentage)
+keyboard.py:4476:    partner_bot_id = int(data.get("partner_broadcast_bot_id") or 0)
+keyboard.py:4477:    if not source_chat_id or not source_message_id or partner_bot_id <= 0:
+keyboard.py:4482:    user_ids = list_partner_bot_user_ids(partner_bot_id)
+keyboard.py:4533:    margin_percentage = get_partner_category_markup(partner_bot, "proxy")
+keyboard.py:4537:            PROXY_BASE_MARKUP_PERCENT + margin_percentage,
+keyboard.py:4552:        partner_bot_id=(int(partner_bot["id"]) if partner_bot else None),
+keyboard.py:4554:        partner_margin_percentage=margin_percentage,
+keyboard.py:4556:            calculate_partner_profit_share_amount(data["unit_price"], quantity, margin_percentage)
+keyboard.py:4867:    await state.update_data(partner_bot_id=partner_id, partner_markup_kind=kind)
+keyboard.py:4917:    saved = record_partner_withdrawal(
+keyboard.py:4918:        partner_bot_id=partner_id,
+keyboard.py:4968:    await state.update_data(partner_bot_id=partner_id)
+keyboard.py:5053:            margin_percentage=PARTNER_DEFAULT_MARGIN_PERCENT,
+keyboard.py:5097:    margin_percentage = int(margin_text)
+keyboard.py:5098:    if not 0 <= margin_percentage <= 500:
+keyboard.py:5103:    partner_id = int(data.get("partner_bot_id", 0))
+keyboard.py:5109:    updated = update_partner_bot_margin(partner_id, message.from_user.id, margin_percentage)
+keyboard.py:5130:    partner_id = int(data.get("partner_bot_id") or 0)
+keyboard.py:5172:    await state.update_data(partner_bot_id=partner_id)
+keyboard.py:5185:    partner_id = int(data.get("partner_bot_id") or 0)
+keyboard.py:5240:    partner_id = int(data.get("partner_bot_id") or 0)
+keyboard.py:5331:    await state.update_data(partner_bot_id=partner_id)
+keyboard.py:5347:    partner_id = int(data.get("partner_bot_id") or 0)
+keyboard.py:5437:    await state.update_data(partner_bot_id=partner_id)
+keyboard.py:5449:    partner_id = int(data.get("partner_bot_id") or 0)
+keyboard.py:5516:    await state.update_data(partner_bot_id=partner_id)
+keyboard.py:5541:    partner_id = int(data.get("partner_bot_id") or 0)
+keyboard.py:5571:    await state.update_data(partner_bot_id=partner_id)
+keyboard.py:5590:    partner_id = int(data.get("partner_bot_id") or 0)
+keyboard.py:5629:    await state.update_data(partner_bot_id=partner_id)
+keyboard.py:5646:    partner_id = int(data.get("partner_bot_id") or 0)
+keyboard.py:5685:    await state.update_data(partner_bot_id=partner_id)
+keyboard.py:5703:    partner_id = int(data.get("partner_bot_id") or 0)
+keyboard.py:5824:        f"Текущая доп. наценка: {int(partner_bot.get('margin_percentage') or 0)}%\n"
+keyboard.py:5844:        f"Текущая доп. наценка: {int(updated_bot.get('margin_percentage') or 0)}%",
+keyboard.py:5874:    margin_percentage = int(margin_text)
+keyboard.py:5875:    if not 0 <= margin_percentage <= 500:
+keyboard.py:5885:    update_partner_bot_margin(int(partner_bot["id"]), message.from_user.id, margin_percentage)
+keyboard.py:5888:        f"✅ Доп. наценка обновлена до {margin_percentage}%.",
+keyboard.py:5939:    partner_bot_id = int(data.get("partner_broadcast_bot_id") or 0)
+keyboard.py:5940:    audience_count = count_partner_bot_users(partner_bot_id) if partner_bot_id > 0 else 0
+keyboard.py:6846:        topup_id = create_topup(message.from_user.id, amount, int(partner_bot["id"]) if partner_bot else None)
+keyboard.py:6849:        merchant_order_id = f"topup-{topup_id}-{message.from_user.id}-{int(time.time())}"
+keyboard.py:6850:        description = f"Balance topup #{topup_id} | user {message.from_user.id}"
+keyboard.py:6857:                additional_data=str(topup_id),
+keyboard.py:6868:            topup_id=topup_id,
+keyboard.py:6875:        topup = get_topup(topup_id)
+keyboard.py:6885:            reply_markup=build_topup_payment_keyboard(topup_id, invoice["pay_url"], language_code=lang),
+keyboard.py:6890:        topup_id = create_topup(message.from_user.id, amount, int(partner_bot["id"]) if partner_bot else None)
+keyboard.py:6896:                description=f"SOUS MARKET balance top-up #{topup_id}",
+keyboard.py:6897:                extra=f"topup:{topup_id}:user:{message.from_user.id}",
+keyboard.py:6908:            topup_id=topup_id,
+keyboard.py:6915:        topup = get_topup(topup_id)
+keyboard.py:6918:            reply_markup=build_topup_payment_keyboard(topup_id, invoice["pay_url"], language_code=lang),
+keyboard.py:6925:        topup_id = create_topup(message.from_user.id, amount, int(partner_bot["id"]) if partner_bot else None)
+keyboard.py:6928:        payment_id = f"topup-{topup_id}-{message.from_user.id}-{int(time.time())}"
+keyboard.py:6929:        description = f"Balance topup #{topup_id} | user {message.from_user.id}"
+keyboard.py:6936:                additional_data=str(topup_id),
+keyboard.py:6947:            topup_id=topup_id,
+keyboard.py:6954:        topup = get_topup(topup_id)
+keyboard.py:6964:            reply_markup=build_topup_payment_keyboard(topup_id, invoice["pay_url"], language_code=lang),
+keyboard.py:8524:    account = get_api_account(message.from_user.id)
+keyboard.py:8527:        await message.answer("Доступ к API не одобрен.")
+keyboard.py:8531:    topup_id = create_topup(message.from_user.id, amount, balance_kind="api")
+keyboard.py:8534:    description = f"API balance topup #{topup_id} | user {message.from_user.id}"
+keyboard.py:8538:                order_id=f"api-topup-{topup_id}-{int(time.time())}", amount_usd=amount,
+keyboard.py:8539:                description=description, success_url=success_url, additional_data=str(topup_id),
+keyboard.py:8544:                extra=f"api_topup:{topup_id}:user:{message.from_user.id}", redirect_url=success_url,
+keyboard.py:8548:                amount_usd=amount, payment_id=f"api-topup-{topup_id}-{int(time.time())}",
+keyboard.py:8549:                comment=description, success_url=success_url, additional_data=str(topup_id),
+keyboard.py:8553:                topup_id, amount, description,
+keyboard.py:8554:                payload_data={"topup_id": topup_id, "user_id": message.from_user.id, "balance_kind": "api"},
+keyboard.py:8561:        topup_id=topup_id, invoice_id=invoice["invoice_id"], pay_url=invoice["pay_url"],
+keyboard.py:8566:        f"✅ Счёт на пополнение API создан\n\nСумма: {amount:.2f} USDT\nСпособ: {get_payment_provider_label(provider)}",
+keyboard.py:8568:            topup_id, invoice["pay_url"], check_callback_data=f"api_topup_check:{topup_id}", back_callback_data="api_menu"
+keyboard.py:8577:    account = get_api_account(callback.from_user.id)
+keyboard.py:8581:            "⚙️ <b>API</b>\n\nПодать заявку на API?",
+keyboard.py:8582:            reply_markup=build_api_application_keyboard(),
+keyboard.py:8589:            "⏳ <b>Заявка на API отправлена</b>\n\nОжидайте решения администратора.",
+keyboard.py:8598:        "✅ Новый API key создан. Предыдущий ключ больше не работает.\n\n" + build_api_menu_text(account),
+keyboard.py:8608:    account = submit_api_application(callback.from_user.id)
+keyboard.py:8616:            f"⚙️ Новая заявка на API\n\nПользователь: {html.escape(user_label)}\nID: <code>{callback.from_user.id}</code>",
+keyboard.py:8635:    raw_key = generate_api_key(callback.from_user.id)
+keyboard.py:8637:        await callback.answer("Доступ к API не одобрен.", show_alert=True)
+keyboard.py:8639:    account = get_api_account(callback.from_user.id)
+keyboard.py:8651:    account = get_api_account(callback.from_user.id)
+keyboard.py:8653:        await callback.answer("Доступ к API не одобрен.", show_alert=True)
+keyboard.py:8656:        "💳 Выберите способ пополнения API-баланса:",
+keyboard.py:8670:        "💳 Введите сумму пополнения API-баланса в USDT:",
+keyboard.py:8677:@user.callback_query(F.data == "admin_api_applications")
+keyboard.py:8678:async def admin_api_applications(callback: CallbackQuery, state: FSMContext):
+keyboard.py:8683:    applications = list_pending_api_applications()
+keyboard.py:8684:    text = "⚙️ <b>Заявки API</b>\n\n" + ("\n".join(f"• <code>{row['user_id']}</code>" for row in applications) or "Новых заявок нет.")
+keyboard.py:8685:    await callback.message.edit_text(text, reply_markup=build_admin_api_applications_keyboard(applications), parse_mode="HTML")
+keyboard.py:8696:    if not review_api_application(user_id, approved, callback.from_user.id):
+keyboard.py:8703:            "✅ Ваша заявка на API одобрена. Откройте Профиль → API." if approved else "❌ Ваша заявка на API отклонена.",
+keyboard.py:8705:    applications = list_pending_api_applications()
+keyboard.py:8706:    text = "⚙️ <b>Заявки API</b>\n\n" + ("\n".join(f"• <code>{row['user_id']}</code>" for row in applications) or "Новых заявок нет.")
+keyboard.py:8707:    await callback.message.edit_text(text, reply_markup=build_admin_api_applications_keyboard(applications), parse_mode="HTML")
+keyboard.py:8792:    topup_id = create_topup(callback.from_user.id, amount, int(partner_bot["id"]) if partner_bot else None)
+keyboard.py:8793:    description = f"Balance topup #{topup_id} | user {callback.from_user.id}"
+keyboard.py:8797:            topup_id,
+keyboard.py:8801:            payload_data={"topup_id": topup_id, "user_id": callback.from_user.id},
+keyboard.py:8812:        topup_id=topup_id,
+keyboard.py:8819:    topup = get_topup(topup_id)
+keyboard.py:8822:        reply_markup=build_topup_payment_keyboard(topup_id, invoice["pay_url"], language_code=lang),
+keyboard.py:8831:    topup_id = int(callback.data.split(":")[1])
+keyboard.py:8832:    topup = get_topup(topup_id)
+keyboard.py:8878:            reply_markup=build_topup_payment_keyboard(topup_id, topup["xrocket_pay_url"], language_code=lang),
+keyboard.py:8882:    topup = complete_topup_payment(topup_id)
+keyboard.py:8899:    topup_id = int(callback.data.split(":", 1)[1])
+keyboard.py:8900:    topup = get_topup(topup_id)
+keyboard.py:8901:    if not is_entity_owned_by_user(topup, callback.from_user.id) or str((topup or {}).get("balance_kind")) != "api":
+keyboard.py:8921:        complete_topup_payment(topup_id)
+keyboard.py:8922:    account = get_api_account(callback.from_user.id)
+keyboard.py:8924:        "✅ API-баланс пополнен.\n\n" + build_api_menu_text(account),
+docs_static\app.js:4: ru:{language:'Язык',news:'Новостной канал ↗',support:'Поддержка ↗',groups:['Магазин','Домены','Политики','Для разработчиков'],nav:['Обзор','Вход в аккаунты','SMS','Email','Информация','Подключение домена','Cloudflare и безопасность','Политика использования','Политика конфиденциальности','API v1']},
+docs_static\app.js:5: en:{language:'Language',news:'News channel ↗',support:'Support ↗',groups:['Store','Domains','Policies','Developers'],nav:['Overview','Account access','SMS','Email','Information','Connect a domain','Cloudflare and security','Acceptable Use Policy','Privacy Policy','API v1']},
+docs_static\app.js:6: es:{language:'Idioma',news:'Canal de noticias ↗',support:'Soporte ↗',groups:['Tienda','Dominios','Políticas','Desarrolladores'],nav:['Resumen','Acceso a cuentas','SMS','Email','Información','Conectar un dominio','Cloudflare y seguridad','Política de uso','Privacidad','API v1']}
+docs_static\app.js:76: const auth=ru?'Передавайте ключ в заголовке <span class="inline-code">Authorization: Bearer API_KEY</span> или <span class="inline-code">X-API-Key</span>. Ключ создаётся в боте после одобрения заявки. Не размещайте их в HTML, JavaScript, Git или Telegram-сообщениях.':es?'Envíe la clave en <span class="inline-code">Authorization: Bearer API_KEY</span> o <span class="inline-code">X-API-Key</span>. No la publique en HTML, JavaScript, Git ni mensajes.':'Send the key as <span class="inline-code">Authorization: Bearer API_KEY</span> or <span class="inline-code">X-API-Key</span>. Never expose it in HTML, JavaScript, Git, or chat messages.';
+docs_static\app.js:78: return `<div class="hero"><span class="eyebrow">SOUS API</span><h1>API v1</h1><p class="lead">${pricing}</p></div><h2>${ru?'Авторизация':es?'Autorización':'Authentication'}</h2><p>${auth}</p><pre>curl -H "Authorization: Bearer $SOUS_API_KEY" \\\n  ${base}/profile</pre><div class="notice">${ru?'Запросы покупки списывают реальный баланс API-аккаунта. Для повторяемых POST-запросов используйте уникальный <b>request_key</b>/<b>request_id</b>.':es?'Las compras cargan el saldo real. Use un <b>request_key</b>/<b>request_id</b> único para solicitudes POST reintentables.':'Purchase calls charge the real API account balance. Use a unique <b>request_key</b>/<b>request_id</b> for retryable POST requests.'}</div><h2>${ru?'Общие методы':es?'Métodos comunes':'Common methods'}</h2>${endpoint('GET','/health',ru?'Проверка доступности. Ключ не нужен.':es?'Estado del servicio; no requiere clave.':'Service health; no key required.')}${endpoint('GET','/profile',ru?'Баланс и ID API-аккаунта.':es?'Saldo e ID de la cuenta API.':'API account balance and ID.')}`;
+docs_static\app.js:81: if(id==='home')return `<div class="hero"><span class="eyebrow">SOUS MARKET</span><h1>${ru?'Документация магазина':es?'Documentación de la tienda':'Store documentation'}</h1><p class="lead">${ru?'Покупки, активации, домены, правила сервиса и интеграция с API — в одном месте.':es?'Compras, activaciones, dominios, políticas e integración API en un solo lugar.':'Purchases, activations, domains, policies, and API integration in one place.'}</p><a class="cta" href="${links.support}">${ru?'Открыть поддержку':es?'Abrir soporte':'Open support'} ↗</a></div><div class="cards"><div class="card"><strong>SMS</strong><p>${ru?'Виртуальные номера для получения одноразового кода.':es?'Números virtuales para recibir un código de un solo uso.':'Virtual numbers for one-time verification codes.'}</p></div><div class="card"><strong>Email</strong><p>${ru?'Одноразовые адреса для одного входящего письма.':es?'Direcciones de un solo uso para un correo entrante.':'Single-use addresses for one incoming message.'}</p></div><div class="card"><strong>${ru?'Товары':es?'Productos':'Products'}</strong><p>${ru?'Каталог, избранное, баланс и история заказов.':es?'Catálogo, favoritos, saldo e historial.':'Catalog, favorites, balance, and order history.'}</p></div><div class="card"><strong>API v1</strong><p>${ru?'Каталоги и покупка сервисов через API.':es?'Catálogos y compra de servicios mediante API.':'Catalog and service ordering through API.'}</p></div></div>`;
+docs_static\app.js:90: if(id==='api'){let h=commonApi(lang);const d=ru?['Категории магазина.','Товары; обязательны category_id и page.','Создать заказ: items[{product_id,category_id,quantity}].','Каталог сервисов и стран.','Тарифы: service и country.','Купить номер; request_key обязателен.','Email-домены: site обязателен.','Купить Email; site, domain, request_id.','Каталог прокси.','Купить прокси: items[{category_id,item_id,quantity}].']:es?['Categorías de la tienda.','Productos: category_id y page.','Crear pedido con items.','Servicios y países.','Tarifas: service y country.','Comprar número; requiere request_key.','Dominios Email; requiere site.','Comprar Email con request_id.','Catálogo proxy.','Comprar proxy con items.']:['Store categories.','Products; requires category_id and page.','Create an order with items.','Services and countries.','Offers; requires service and country.','Buy a number; request_key required.','Email domains; site required.','Buy Email with request_id.','Proxy catalog.','Buy proxy with items.'];h+=`<h2>${ru?'Магазин':es?'Tienda':'Market'}</h2>${endpoint('GET','/market/categories',d[0])}${endpoint('GET','/market/products?category_id=12&page=1',d[1])}${endpoint('POST','/market/orders',d[2])}<pre>{"items":[{"product_id":123,"category_id":12,"quantity":1}]}</pre><h2>SMS</h2>${endpoint('GET','/sms/catalog',d[3])}${endpoint('GET','/sms/prices?service=ig&country=0',d[4])}${endpoint('POST','/sms/orders',d[5])}<pre>{"request_key":"unique_8_chars","service":"ig","service_name":"Instagram","country":0,"country_name":"Russia","provider_id":1}</pre><p>${ru?'Статус:':es?'Estado:':'Status:'} <span class="inline-code">GET /sms/activations/{id}</span>, <span class="inline-code">POST /check</span>, <span class="inline-code">POST /new-code</span>, <span class="inline-code">POST /cancel</span>. ${ru?'Отмена — только через 2 минуты.':es?'Cancelación después de 2 minutos.':'Cancellation is available after 2 minutes.'}</p><h2>Email</h2>${endpoint('GET','/email/domains?site=instagram',d[6])}${endpoint('POST','/email/orders',d[7])}<pre>{"site":"instagram","domain":"example.com","request_id":"unique_8_chars"}</pre><p>${ru?'Email API не предоставляет отмену.':es?'La API Email no ofrece cancelación.':'The Email API does not expose cancellation.'}</p><h2>Proxy</h2>${endpoint('GET','/proxy/catalog',d[8])}${endpoint('POST','/proxy/orders',d[9])}<pre>{"items":[{"category_id":1,"item_id":10,"quantity":1}]}</pre><h2>${ru?'Ошибки':es?'Errores':'Errors'}</h2><table><tr><th>HTTP</th><th>${ru?'Значение':es?'Significado':'Meaning'}</th></tr><tr><td>400</td><td>${ru?'Некорректные параметры':es?'Parámetros inválidos':'Invalid input'}</td></tr><tr><td>401</td><td>${ru?'Неверный ключ':es?'Clave inválida':'Invalid key'}</td></tr><tr><td>402</td><td>${ru?'Недостаточно баланса':es?'Saldo insuficiente':'Insufficient balance'}</td></tr><tr><td>409</td><td>${ru?'Цена/остаток изменились':es?'Precio o stock cambiado':'Price or stock changed'}</td></tr><tr><td>429</td><td>${ru?'Слишком много запросов':es?'Demasiadas solicitudes':'Rate limited'}</td></tr><tr><td>502</td><td>${ru?'Поставщик недоступен':es?'Proveedor no disponible':'Upstream unavailable'}</td></tr></table>`;return h}
+docs_static\index.html:6:  <meta name="description" content="Документация SOUS MARKET: магазин, SMS, Email, домены, политики и API.">
+miniapp_static\app.js:1500:        margin_percentage: marginPercentage,
+miniapp_static\app.js:1511:        margin_percentage: marginPercentage,
+miniapp_static\app.js:2159:        marginPercentage: Number(payload.margin_percentage || 0),

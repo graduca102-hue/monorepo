@@ -1,0 +1,9 @@
+/target
+**/*.rs.bk
+.env
+*.log
+/deploy/*.tfstate
+/deploy/*.tfstate.backup
+/deploy/.terraform
+/deploy/inventory.local.yml
+secrets/

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>PREVIEW — Партнёрский кабинет SOUS</title>
+  <link rel="stylesheet" href="styles.css?v=preview">
+  <style>
+    /* emulate Telegram dark theme vars for local preview (set on :root like TG does) */
+    :root{
+      --tg-theme-bg-color:#17212b;--tg-theme-secondary-bg-color:#0e1621;
+      --tg-theme-section-bg-color:#17212b;--tg-theme-section-header-text-color:#6c7883;
+      --tg-theme-text-color:#f5f5f5;--tg-theme-hint-color:#708499;--tg-theme-subtitle-text-color:#708499;
+      --tg-theme-link-color:#6ab7ff;--tg-theme-accent-text-color:#6ab7ff;
+      --tg-theme-button-color:#5288c1;--tg-theme-button-text-color:#ffffff;
+      --tg-theme-destructive-text-color:#ec3942;--tg-theme-header-bg-color:#17212b;
+    }
+    :root.light{
+      --tg-theme-bg-color:#ffffff;--tg-theme-secondary-bg-color:#efeff4;
+      --tg-theme-section-bg-color:#ffffff;--tg-theme-section-header-text-color:#6d6d72;
+      --tg-theme-text-color:#000000;--tg-theme-hint-color:#8e8e93;--tg-theme-subtitle-text-color:#8e8e93;
+      --tg-theme-link-color:#007aff;--tg-theme-accent-text-color:#007aff;
+      --tg-theme-button-color:#007aff;--tg-theme-button-text-color:#ffffff;
+      --tg-theme-destructive-text-color:#ff3b30;--tg-theme-header-bg-color:#f7f7f7;
+    }
+    #dev{position:fixed;top:6px;right:6px;z-index:99;display:flex;gap:4px;flex-wrap:wrap;max-width:60vw;justify-content:flex-end}
+    #dev button{font:11px system-ui;padding:4px 7px;border-radius:6px;border:1px solid #888;background:#2228;color:#fff}
+    #mb{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--tg-theme-button-color);color:var(--tg-theme-button-text-color);
+      text-align:center;font:600 15px system-ui;padding:15px;display:none}
+  </style>
+</head>
+<body>
+  <div id="dev">
+    <button data-nav="overview">overview</button>
+    <button data-nav="bots">bots</button>
+    <button data-nav="universal_store">store</button>
+    <button data-nav="create_bot">create</button>
+    <button data-nav="stats">stats</button>
+    <button data-nav="referral">referral</button>
+    <button data-nav="markup">markup</button>
+    <button data-nav="broadcast">broadcast</button>
+    <button data-nav="subscription">subscription</button>
+    <button data-nav="withdraw">withdraw</button>
+    <button data-nav="settings">settings</button>
+    <button data-nav="utm">utm</button>
+    <button data-nav="profile">profile</button>
+    <button data-nobot="1">no-bot</button>
+    <button data-theme="1">theme</button>
+  </div>
+  <div id="mb"></div>
+  <main id="app"><div class="loading">Загрузка кабинета…</div></main>
+
+  <script>
+  // ---- mock Telegram.WebApp ----
+  const mbEl = document.getElementById('mb');
+  window.Telegram = { WebApp: {
+    initData: 'mock', initDataUnsafe: {},
+    ready(){}, expand(){}, setHeaderColor(){}, setBackgroundColor(){},
+    HapticFeedback:{ impactOccurred(){}, notificationOccurred(){} },
+    showAlert(m){ window.alert(m); },
+    BackButton:{ _cb:null, show(){document.title='‹ '+document.title.replace(/^‹ /,'')}, hide(){}, onClick(cb){this._cb=cb} },
+    MainButton:{
+      _cb:null,
+      setText(t){ mbEl.textContent=t; }, onClick(cb){ this._cb=cb; mbEl.onclick=()=>cb&&cb(); },
+      offClick(){ this._cb=null; }, show(){ mbEl.style.display='block'; }, hide(){ mbEl.style.display='none'; },
+      enable(){}, disable(){}, showProgress(){ mbEl.textContent='…'; }, hideProgress(){},
+    },
+  }};
+
+  // ---- mock API ----
+  const DB = {
+    has_bot:true,
+    bot:{ username:'my_shop_bot', active:true, owner_id:1907513941 },
+    available_balance:128.44, earned:412.90,
+    stats:{ total_users:342, delivered_revenue:5120.55, profit:96.20 },
+    bots:[
+      { username:'my_shop_bot', active:true, users:342, earned:412.90, selected:true },
+      { username:'vpn_reseller_bot', active:false, users:57, earned:41.10 },
+    ],
+    referral:{ link:'https://t.me/SousPartnersBot?start=ref_1907513941', percent:15 },
+    subscription:{ channel_url:'https://t.me/mychannel', enabled:false },
+    franchise:{ create_button_visible:true },
+    markups:{ goods:12, proxy:8, sms:5 },
+    payout_minimum:5,
+    _t:{},
+  };
+  // preview: reference screenshots live at /reference, not under the fake base path
+  new MutationObserver(() => {
+    document.querySelectorAll('img[src*="/preview.html/reference/"]').forEach((img) => {
+      img.src = img.getAttribute('src').replace('/preview.html/reference/', '/reference/');
+    });
+  }).observe(document.documentElement, { subtree:true, childList:true });
+
+  const realFetch = window.fetch.bind(window);
+  window.fetch = async (url, opts={}) => {
+    const u = String(url);
+    const json = (obj) => new Response(JSON.stringify(obj), { status:200, headers:{'Content-Type':'application/json'} });
+    if (u.includes('/api/dashboard')) return json(DB);
+    if (u.includes('/api/action')) { DB.bot.active = !DB.bot.active; return json({ active: DB.bot.active }); }
+    if (u.includes('/api/settings')) { const b=JSON.parse(opts.body); return json({ value:b.value }); }
+    if (u.includes('/api/config')) return json({ ok:true });
+    if (u.includes('/api/create-bot')) return json({ bot:{ username:'new_partner_bot' } });
+    if (u.includes('/api/payout')) return json({ request_id: 8421 });
+    if (u.includes('/api/broadcast')) return json({ sent: 340 });
+    if (u.includes('/api/utm')) {
+      DB._utm = DB._utm || [
+        { source:'instagram', start_param:'utm_instagram', url:'https://t.me/my_shop_bot?start=utm_instagram', clicks:184, revenue:412.5 },
+        { source:'tg-ads', start_param:'utm_tg-ads', url:'https://t.me/my_shop_bot?start=utm_tg-ads', clicks:63, revenue:88 },
+      ];
+      if ((opts.method || 'GET') !== 'GET') {
+        const b = JSON.parse(opts.body);
+        const source = String(b.source || '').toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '');
+        if (b.delete) DB._utm = DB._utm.filter((x) => x.source !== source);
+        else if (source && !DB._utm.some((x) => x.source === source))
+          DB._utm.push({ source, start_param:`utm_${source}`, url:`https://t.me/my_shop_bot?start=utm_${source}`, clicks:0, revenue:0 });
+      }
+      return json({ items: DB._utm, bot_username:'my_shop_bot', limit:20,
+        top_sources: DB._utm.filter((x) => x.clicks).map((x) => ({ source:x.source, clicks:x.clicks, revenue:x.revenue })) });
+    }
+    if (u.includes('/api/texts')) {
+      if ((opts.method || 'GET') === 'GET') return json({ brand:'MARKET', items: [
+        { key:'start_greeting', group:'Приветствие', label:'Сообщение при /start', hint:'Отправляется перед меню. Пусто — ничего не отправляется.', default:'', value: DB._t.start_greeting || '', multiline:true, max_length:1200, changed: !!DB._t.start_greeting },
+        { key:'btn_favorites', group:'Кнопки меню', label:'Кнопка «Избранное»', hint:'', default:'Избранное', value: DB._t.btn_favorites || '', multiline:false, max_length:40, changed: !!DB._t.btn_favorites },
+        { key:'btn_proxy', group:'Кнопки меню', label:'Кнопка «Прокси»', hint:'', default:'Прокси', value:'', multiline:false, max_length:40, changed:false },
+        { key:'btn_vpn', group:'Кнопки меню', label:'Кнопка «VPN»', hint:'', default:'VPN', value:'', multiline:false, max_length:40, changed:false },
+        { key:'btn_catalog', group:'Кнопки меню', label:'Кнопка «Каталог товаров»', hint:'', default:'Каталог товаров', value:'', multiline:false, max_length:40, changed:false },
+        { key:'text_all_products', group:'Тексты', label:'Подпись «Ассортимент всех товаров»', hint:'Показывается над кнопкой каталога.', default:'Ассортимент всех товаров представлен здесь:', value:'', multiline:true, max_length:600, changed:false },
+      ]});
+      const b = JSON.parse(opts.body); DB._t = DB._t || {};
+      if (b.reset) { delete DB._t[b.key]; return json({ ok:true, key:b.key, value:'', changed:false }); }
+      DB._t[b.key] = b.value; return json({ ok:true, key:b.key, value:b.value, changed: !!b.value });
+    }
+    return realFetch(url, opts);
+  };
+
+  // ---- dev controls ----
+  document.getElementById('dev').addEventListener('click', (e) => {
+    const b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.theme) { document.documentElement.classList.toggle('light'); return; }
+    if (b.dataset.nobot) { DB.has_bot = !DB.has_bot; }
+    if (b.dataset.nav) { window.__setTab && window.__setTab(b.dataset.nav); return; }
+    location.reload();
+  });
+  </script>
+  <script>window.history.replaceState({}, '', location.pathname + '?__preview');</script>
+  <script src="app.js?v=preview&__preview"></script>
+  <script>window.__setTab = (t) => window.__cab && window.__cab.setTab(t);</script>
+</body>
+</html>

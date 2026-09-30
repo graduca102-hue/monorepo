@@ -1,0 +1,148 @@
+"""Always-on background re-check of every customer's residential proxy list.
+
+Periodically probes each held list through the reseller API's refill endpoint;
+dead gateway sessions are swapped for fresh working ones on the same upstream
+subuser (no traffic-pool / billing change). The stored list is kept current so
+"📥 Получить прокси" / the file the customer already has never goes stale, and
+the customer gets one DM (rate-limited) when lines were actually replaced.
+"""
+from __future__ import annotations
+
+import asyncio
+import logging
+import os
+from datetime import datetime, timezone
+
+from aiogram import Bot
+from aiogram.exceptions import TelegramForbiddenError, TelegramBadRequest
+from aiogram.types import BufferedInputFile
+
+from .clients import ApiError, SousClient
+from .db import Database
+from .handlers_user import (
+    _relay_delivery,
+    _residential_api_settings,
+    residential_client_id,
+)
+
+logger = logging.getLogger(__name__)
+
+# Minutes between full sweeps. 0 disables the loop entirely.
+AUTOCHECK_MIN = int(os.getenv("RESIDENTIAL_AUTOCHECK_MIN", "60") or 60)
+# Probe only this many of a customer's lines first; a full re-check (and any
+# replacement) runs only if that sample turns up a bad one. Keeps the steady
+# state ~1 request/customer/sweep instead of one per held line.
+AUTOCHECK_SAMPLE = max(1, int(os.getenv("RESIDENTIAL_AUTOCHECK_SAMPLE", "3") or 3))
+# By default the sweep silently keeps each customer's stored list fresh — no DM.
+# Set RESIDENTIAL_AUTOCHECK_NOTIFY=1 to also message the customer a new file when
+# lines were replaced (throttled by RESIDENTIAL_AUTOCHECK_NOTICE_HOURS).
+NOTIFY = os.getenv("RESIDENTIAL_AUTOCHECK_NOTIFY", "0").strip() not in ("", "0", "false", "no")
+NOTICE_HOURS = float(os.getenv("RESIDENTIAL_AUTOCHECK_NOTICE_HOURS", "6") or 6)
+# Cap lines probed per customer per sweep so one big pull can't stall the loop.
+MAX_LINES = int(os.getenv("RESIDENTIAL_AUTOCHECK_MAX_LINES", "50") or 50)
+# Pause between customers so the sweep stays gentle on the upstream gateway.
+PER_USER_PAUSE = 2.0
+
+
+def _parse_ts(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(str(value))
+    except ValueError:
+        return None
+
+
+def _notice_due(last_notice_at: str | None) -> bool:
+    ts = _parse_ts(last_notice_at)
+    if ts is None:
+        return True
+    if ts.tzinfo is None:
+        ts = ts.replace(tzinfo=timezone.utc)
+    age_h = (datetime.now(timezone.utc) - ts).total_seconds() / 3600
+    return age_h >= NOTICE_HOURS
+
+
+async def _check_one(bot: Bot, db: Database, sous: SousClient, record: dict) -> None:
+    user_id = int(record["user_id"])
+    held = list(record.get("lines") or [])[:MAX_LINES]
+    if not held:
+        await db.touch_residential_check(user_id)
+        return
+
+    client_id = residential_client_id(user_id)
+    # Skip customers whose sub-agent has no traffic — a refill there would only
+    # fail, and there is nothing usable to keep alive anyway.
+    try:
+        info = await sous.residential_client_get(client_id)
+        client = info.get("client") if isinstance(info, dict) else None
+        remaining = float((client or info or {}).get("remaining_gb") or 0)
+    except ApiError:
+        remaining = 0.0
+    if remaining < 0.001:
+        await db.touch_residential_check(user_id)
+        return
+
+    settings = await db.get_proxy_settings(user_id)
+    res = await sous.residential_refill(
+        client_id, held, _residential_api_settings(settings), sample=AUTOCHECK_SAMPLE
+    )
+    if res.get("sampled"):   # sample was clean — nothing to do
+        await db.touch_residential_check(user_id)
+        return
+    text = res.get("data") if isinstance(res, dict) else ""
+    new_lines = [ln.strip() for ln in str(text or "").splitlines() if ln.strip()]
+    replaced = int(res.get("replaced") or 0)
+
+    if new_lines:
+        # Silently keep the pool fresh — the customer's menu / "Получить прокси"
+        # and a re-check always return the current good list.
+        await db.save_residential_delivery(user_id, new_lines)
+        if replaced:
+            logger.info("autocheck: refreshed %d line(s) for %s", replaced, user_id)
+
+    if NOTIFY and replaced > 0 and new_lines and _notice_due(record.get("last_notice_at")):
+        delivery = _relay_delivery("\n".join(new_lines))
+        file = BufferedInputFile(delivery.encode(), filename="residential_proxies.txt")
+        try:
+            await bot.send_document(
+                user_id,
+                file,
+                caption=f"♻️ Обновлён список резидентских прокси ({replaced} шт).",
+            )
+            await db.touch_residential_check(user_id, notified=True)
+            return
+        except (TelegramForbiddenError, TelegramBadRequest) as exc:
+            logger.info("autocheck: cannot DM %s: %s", user_id, exc)
+
+    await db.touch_residential_check(user_id)
+
+
+async def _sweep(bot: Bot, db: Database, sous: SousClient) -> None:
+    records = await db.list_residential_deliveries()
+    fixed = 0
+    for record in records:
+        try:
+            before = len(record.get("lines") or [])
+            await _check_one(bot, db, sous, record)
+            fixed += 1 if before else 0
+        except ApiError as exc:
+            logger.warning("autocheck user %s: %s", record.get("user_id"), exc)
+        except Exception:  # one bad user must not kill the sweep
+            logger.exception("autocheck user %s crashed", record.get("user_id"))
+        await asyncio.sleep(PER_USER_PAUSE)
+    logger.info("residential autocheck sweep done: %d customers", len(records))
+
+
+async def residential_autocheck_loop(bot: Bot, db: Database, sous: SousClient) -> None:
+    if AUTOCHECK_MIN <= 0:
+        logger.info("residential autocheck disabled (RESIDENTIAL_AUTOCHECK_MIN=0)")
+        return
+    logger.info("residential autocheck loop: every %d min", AUTOCHECK_MIN)
+    await asyncio.sleep(90)  # let startup settle before the first sweep
+    while True:
+        try:
+            await _sweep(bot, db, sous)
+        except Exception:
+            logger.exception("residential autocheck sweep failed")
+        await asyncio.sleep(AUTOCHECK_MIN * 60)

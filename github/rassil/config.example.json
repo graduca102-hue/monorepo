@@ -1,0 +1,13 @@
+{
+  "auto_buy": false,
+  "max_price": 100,
+  "currency": "rub",
+  "max_items_per_run": 1,
+  "accounts_dir": "accounts",
+  "filters": {
+    "country[]": ["USA"],
+    "password": "no",
+    "spam": "no",
+    "premium": 0
+  }
+}

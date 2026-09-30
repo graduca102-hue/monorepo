@@ -1,0 +1,668 @@
+{
+  "bots": {
+    "8489255568": {
+      "bot_id": "8489255568",
+      "username": "rostovshini_bot",
+      "first_name": "Бесплатно проверка номера телефона",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": ""
+      }
+    },
+    "7791873001": {
+      "bot_id": "7791873001",
+      "username": "sportclublider_bot",
+      "first_name": "Спортивный клуб Лидер Бот",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T12:02:07"
+      }
+    },
+    "8331622778": {
+      "bot_id": "8331622778",
+      "username": "zayvka101_bot",
+      "first_name": "Твой вкусный чебурек",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": ""
+      }
+    },
+    "8475911814": {
+      "bot_id": "8475911814",
+      "username": "bit_hub_life_bot",
+      "first_name": "Bithub_bot",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T12:02:08"
+      }
+    },
+    "8369999699": {
+      "bot_id": "8369999699",
+      "username": "site_7gl_chat_bot",
+      "first_name": "7gl_chat",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T12:02:09"
+      }
+    },
+    "6450034196": {
+      "bot_id": "6450034196",
+      "username": "SPZ_lead_magnit_bot",
+      "first_name": "SPZ_lead_magnit_bot",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": ""
+      }
+    },
+    "7904460918": {
+      "bot_id": "7904460918",
+      "username": "edontsov_bot",
+      "first_name": "edontsov",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T12:02:10"
+      }
+    },
+    "8418062878": {
+      "bot_id": "8418062878",
+      "username": "adwizzbot",
+      "first_name": "AdWizz - Internal",
+      "private_users": {
+        "1907513941": {
+          "chat_id": 1907513941,
+          "first_seen": "2026-04-16T11:53:20",
+          "username": "dsgasdgasdg",
+          "first_name": "FIAT ⚽",
+          "last_name": "",
+          "language_code": "ru",
+          "is_bot": false,
+          "last_seen": "2026-04-16T11:53:20",
+          "last_update_id": 646477009
+        }
+      },
+      "stats": {
+        "total_private_users": 1,
+        "last_collect_at": "2026-04-16T12:02:11"
+      }
+    },
+    "8765920977": {
+      "bot_id": "8765920977",
+      "username": "claude_urist_arh_bot",
+      "first_name": "claude_urist_arh_bot",
+      "private_users": {
+        "1907513941": {
+          "chat_id": 1907513941,
+          "first_seen": "2026-04-16T11:53:21",
+          "username": "dsgasdgasdg",
+          "first_name": "FIAT ⚽",
+          "last_name": "",
+          "language_code": "ru",
+          "is_bot": false,
+          "last_seen": "2026-04-16T11:53:21",
+          "last_update_id": 95148746
+        }
+      },
+      "stats": {
+        "total_private_users": 1,
+        "last_collect_at": "2026-04-16T11:54:28"
+      }
+    },
+    "911857373": {
+      "bot_id": "911857373",
+      "username": "IvanchinBot",
+      "first_name": "Александр Иванчин",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": ""
+      }
+    },
+    "8068027239": {
+      "bot_id": "8068027239",
+      "username": "aiprintgen_bot",
+      "first_name": "aiprintgen_service",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:29"
+      }
+    },
+    "8545448433": {
+      "bot_id": "8545448433",
+      "username": "albvt_bot",
+      "first_name": "ALBVT - заявки",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": ""
+      }
+    },
+    "7795446477": {
+      "bot_id": "7795446477",
+      "username": "alpha_shini_bot",
+      "first_name": "alpha_shini",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:30"
+      }
+    },
+    "8294577688": {
+      "bot_id": "8294577688",
+      "username": "alterna_store_bot",
+      "first_name": "Alterna",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:31"
+      }
+    },
+    "8554257544": {
+      "bot_id": "8554257544",
+      "username": "novedadyou_bot",
+      "first_name": "nivedad_bot",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": ""
+      }
+    },
+    "2098635478": {
+      "bot_id": "2098635478",
+      "username": "site42_bot",
+      "first_name": "42_site_message",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:32"
+      }
+    },
+    "1089941759": {
+      "bot_id": "1089941759",
+      "username": "ADMForModeratorsBot",
+      "first_name": "Бот уведомлений",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:32"
+      }
+    },
+    "7561497109": {
+      "bot_id": "7561497109",
+      "username": "alva_t_bot",
+      "first_name": "gravity",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": ""
+      }
+    },
+    "8410674140": {
+      "bot_id": "8410674140",
+      "username": "antiquerusbot",
+      "first_name": "Antiquerus",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": ""
+      }
+    },
+    "8149257042": {
+      "bot_id": "8149257042",
+      "username": "antiquehomebot",
+      "first_name": "Бот Antiquehome.ru",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": ""
+      }
+    },
+    "8409689829": {
+      "bot_id": "8409689829",
+      "username": "antikor50_bot",
+      "first_name": "Best Link Here 🥵🔥",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:34"
+      }
+    },
+    "8190135330": {
+      "bot_id": "8190135330",
+      "username": "Antrekot38_bot",
+      "first_name": "Antrekot38_bot",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": ""
+      }
+    },
+    "8763696687": {
+      "bot_id": "8763696687",
+      "username": "Arh33bot",
+      "first_name": "Arhb",
+      "private_users": {
+        "1907513941": {
+          "chat_id": 1907513941,
+          "first_seen": "2026-04-16T11:53:33",
+          "username": "dsgasdgasdg",
+          "first_name": "FIAT ⚽",
+          "last_name": "",
+          "language_code": "ru",
+          "is_bot": false,
+          "last_seen": "2026-04-16T11:53:33",
+          "last_update_id": 294128715
+        }
+      },
+      "stats": {
+        "total_private_users": 1,
+        "last_collect_at": "2026-04-16T11:54:36"
+      }
+    },
+    "7070024804": {
+      "bot_id": "7070024804",
+      "username": "arsenalhelper_bot",
+      "first_name": "Arsenal bot",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:36"
+      }
+    },
+    "6172645337": {
+      "bot_id": "6172645337",
+      "username": "artway_partner_bot",
+      "first_name": "Artway Partner Bot",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:37"
+      }
+    },
+    "8596782009": {
+      "bot_id": "8596782009",
+      "username": "art_borisov_bot",
+      "first_name": "Бот art-borisov.ru",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:37"
+      }
+    },
+    "8052009488": {
+      "bot_id": "8052009488",
+      "username": "applicationsatsbot",
+      "first_name": "Заявки с сайта atsautogroup.ru",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": ""
+      }
+    },
+    "1834273371": {
+      "bot_id": "1834273371",
+      "username": "bigparty_bot",
+      "first_name": "big-party__contact",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:38"
+      }
+    },
+    "8786645225": {
+      "bot_id": "8786645225",
+      "username": "ATLBTL_Bot",
+      "first_name": "ATL-цифра",
+      "private_users": {
+        "1907513941": {
+          "chat_id": 1907513941,
+          "first_seen": "2026-04-16T11:53:38",
+          "username": "dsgasdgasdg",
+          "first_name": "FIAT ⚽",
+          "last_name": "",
+          "language_code": "ru",
+          "is_bot": false,
+          "last_seen": "2026-04-16T11:53:38",
+          "last_update_id": 173401301
+        }
+      },
+      "stats": {
+        "total_private_users": 1,
+        "last_collect_at": "2026-04-16T11:54:39"
+      }
+    },
+    "7606907173": {
+      "bot_id": "7606907173",
+      "username": "Site_StAv_bot",
+      "first_name": "StAvBot",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:39"
+      }
+    },
+    "8428269962": {
+      "bot_id": "8428269962",
+      "username": "bot_tolliati_spa_bot",
+      "first_name": "Тольятти Салон Бот",
+      "private_users": {
+        "1907513941": {
+          "chat_id": 1907513941,
+          "first_seen": "2026-04-16T11:53:40",
+          "username": "dsgasdgasdg",
+          "first_name": "FIAT ⚽",
+          "last_name": "",
+          "language_code": "ru",
+          "is_bot": false,
+          "last_seen": "2026-04-16T11:53:40",
+          "last_update_id": 239463452
+        }
+      },
+      "stats": {
+        "total_private_users": 1,
+        "last_collect_at": "2026-04-16T11:54:40"
+      }
+    },
+    "6212155627": {
+      "bot_id": "6212155627",
+      "username": "bankasnus_bot",
+      "first_name": "bankasnus",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:41"
+      }
+    },
+    "8179095353": {
+      "bot_id": "8179095353",
+      "username": "zvk_bagira_bot",
+      "first_name": "zvk_bagira_bot",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:41"
+      }
+    },
+    "8521261158": {
+      "bot_id": "8521261158",
+      "username": "banibesedki_bot",
+      "first_name": "Бани-Беседки Заявки",
+      "private_users": {
+        "1907513941": {
+          "chat_id": 1907513941,
+          "first_seen": "2026-04-16T11:53:43",
+          "username": "dsgasdgasdg",
+          "first_name": "FIAT ⚽",
+          "last_name": "",
+          "language_code": "ru",
+          "is_bot": false,
+          "last_seen": "2026-04-16T11:53:43",
+          "last_update_id": 476746162
+        }
+      },
+      "stats": {
+        "total_private_users": 1,
+        "last_collect_at": "2026-04-16T11:54:42"
+      }
+    },
+    "8248750081": {
+      "bot_id": "8248750081",
+      "username": "bekor_message_bot",
+      "first_name": "BekorGroupBot",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:42"
+      }
+    },
+    "6144585142": {
+      "bot_id": "6144585142",
+      "username": "boxDriverbot",
+      "first_name": "boxDriver",
+      "private_users": {
+        "1907513941": {
+          "chat_id": 1907513941,
+          "first_seen": "2026-04-16T11:53:45",
+          "username": "dsgasdgasdg",
+          "first_name": "FIAT ⚽",
+          "last_name": "",
+          "language_code": "ru",
+          "is_bot": false,
+          "last_seen": "2026-04-16T11:53:45",
+          "last_update_id": 738923533
+        }
+      },
+      "stats": {
+        "total_private_users": 1,
+        "last_collect_at": "2026-04-16T11:54:43"
+      }
+    },
+    "7692833747": {
+      "bot_id": "7692833747",
+      "username": "brandcenter_orders_bot",
+      "first_name": "BrandCenter Заявки",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:43"
+      }
+    },
+    "7949783362": {
+      "bot_id": "7949783362",
+      "username": "FormByteKidsData_bot",
+      "first_name": "Заявки с формы онлайн-школы",
+      "private_users": {
+        "1907513941": {
+          "chat_id": 1907513941,
+          "first_seen": "2026-04-16T11:53:46",
+          "username": "dsgasdgasdg",
+          "first_name": "FIAT ⚽",
+          "last_name": "",
+          "language_code": "ru",
+          "is_bot": false,
+          "last_seen": "2026-04-16T11:53:46",
+          "last_update_id": 846378159
+        }
+      },
+      "stats": {
+        "total_private_users": 1,
+        "last_collect_at": "2026-04-16T11:54:44"
+      }
+    },
+    "8021774565": {
+      "bot_id": "8021774565",
+      "username": "CAPSULAhair_booking_bot",
+      "first_name": "CAPSULAhair заявки с лендингов",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:44"
+      }
+    },
+    "7771019704": {
+      "bot_id": "7771019704",
+      "username": "CAPSULAhairHrVcancyBot",
+      "first_name": "capsulahair.ru hr заявки на работу",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:45"
+      }
+    },
+    "8403222700": {
+      "bot_id": "8403222700",
+      "username": "cmp_ekb_bot",
+      "first_name": "CmpEkbBot",
+      "private_users": {
+        "1907513941": {
+          "chat_id": 1907513941,
+          "first_seen": "2026-04-16T11:53:52",
+          "username": "dsgasdgasdg",
+          "first_name": "FIAT ⚽",
+          "last_name": "",
+          "language_code": "ru",
+          "is_bot": false,
+          "last_seen": "2026-04-16T11:53:52",
+          "last_update_id": 463029058
+        }
+      },
+      "stats": {
+        "total_private_users": 1,
+        "last_collect_at": "2026-04-16T11:54:46"
+      }
+    },
+    "8619793106": {
+      "bot_id": "8619793106",
+      "username": "contact_camp_bot",
+      "first_name": "Заявки Полный Контакт",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:46"
+      }
+    },
+    "7160391413": {
+      "bot_id": "7160391413",
+      "username": "PCHelperMessengerBot",
+      "first_name": "PC Helper's messenger",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:47"
+      }
+    },
+    "6954779819": {
+      "bot_id": "6954779819",
+      "username": "cr7_FootballSchool_Bot",
+      "first_name": "cr7FootballSchoolBot",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:47"
+      }
+    },
+    "8701721071": {
+      "bot_id": "8701721071",
+      "username": "kranmo_bot",
+      "first_name": "cranmo",
+      "private_users": {
+        "1907513941": {
+          "chat_id": 1907513941,
+          "first_seen": "2026-04-16T11:53:56",
+          "username": "dsgasdgasdg",
+          "first_name": "FIAT ⚽",
+          "last_name": "",
+          "language_code": "ru",
+          "is_bot": false,
+          "last_seen": "2026-04-16T11:53:56",
+          "last_update_id": 251239031
+        }
+      },
+      "stats": {
+        "total_private_users": 1,
+        "last_collect_at": "2026-04-16T11:54:48"
+      }
+    },
+    "7716682042": {
+      "bot_id": "7716682042",
+      "username": "sitecontacttg_bot",
+      "first_name": "deanonimuska",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": ""
+      }
+    },
+    "8290668799": {
+      "bot_id": "8290668799",
+      "username": "CorpitsolAppsBot",
+      "first_name": "Corpitsol - заявки",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:49"
+      }
+    },
+    "8074358143": {
+      "bot_id": "8074358143",
+      "username": "Ctc_servicebot",
+      "first_name": "Ctc-service",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": "2026-04-16T11:54:50"
+      }
+    },
+    "6089627523": {
+      "bot_id": "6089627523",
+      "username": "dariy_fab_bot",
+      "first_name": "dariybot",
+      "private_users": {
+        "1907513941": {
+          "chat_id": 1907513941,
+          "first_seen": "2026-04-16T11:54:00",
+          "username": "dsgasdgasdg",
+          "first_name": "FIAT ⚽",
+          "last_name": "",
+          "language_code": "ru",
+          "is_bot": false,
+          "last_seen": "2026-04-16T11:54:00",
+          "last_update_id": 675854332
+        }
+      },
+      "stats": {
+        "total_private_users": 1,
+        "last_collect_at": "2026-04-16T11:54:50"
+      }
+    },
+    "8552882757": {
+      "bot_id": "8552882757",
+      "username": "davin_shop_bot",
+      "first_name": "Davines",
+      "private_users": {
+        "1907513941": {
+          "chat_id": 1907513941,
+          "first_seen": "2026-04-16T11:54:01",
+          "username": "dsgasdgasdg",
+          "first_name": "FIAT ⚽",
+          "last_name": "",
+          "language_code": "ru",
+          "is_bot": false,
+          "last_seen": "2026-04-16T11:54:01",
+          "last_update_id": 212532880
+        }
+      },
+      "stats": {
+        "total_private_users": 1,
+        "last_collect_at": "2026-04-16T11:54:51"
+      }
+    },
+    "5060685318": {
+      "bot_id": "5060685318",
+      "username": "SpaSalons_bot",
+      "first_name": "Тест",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": ""
+      }
+    },
+    "7658558222": {
+      "bot_id": "7658558222",
+      "username": "Prodemontazh48_bot",
+      "first_name": "Prodemontazh48",
+      "private_users": {},
+      "stats": {
+        "total_private_users": 0,
+        "last_collect_at": ""
+      }
+    }
+  }
+}

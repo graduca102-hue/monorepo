@@ -1,0 +1,10 @@
+services:
+  game:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - game-data:/app/data
+
+volumes:
+  game-data:

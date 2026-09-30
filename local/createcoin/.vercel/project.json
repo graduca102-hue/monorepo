@@ -1,0 +1,16 @@
+{
+  "projectId": "prj_S4SlUD9vLDEceDzst4s9rPbAekva",
+  "orgId": "team_l1h54AJgz0wquHtA8Keqvgs6",
+  "projectName": "createcoin",
+  "settings": {
+    "createdAt": 1777835562718,
+    "framework": "vite",
+    "devCommand": null,
+    "installCommand": null,
+    "buildCommand": null,
+    "outputDirectory": "dist",
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "24.x"
+  }
+}

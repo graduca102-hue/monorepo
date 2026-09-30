@@ -1,0 +1,51 @@
+SERVER DIAGNOSTIC REPORT
+Target: 2.26.150.7
+Collected: 2026-08-13 13:29-13:30 UTC
+Mode: read-only SSH diagnostics
+
+IDENTITY
+Hostname: dxb6plze.evonix.cloud
+Virtualization: KVM
+OS: Ubuntu 22.04.5 LTS
+Kernel: 5.15.0-187-generic x86_64
+
+COMPUTE
+CPU: 2 vCPU, AMD Ryzen 9 9950X 16-Core Processor
+Quick SHA-256 benchmark: 1,684,029 operations/sec (1 KiB blocks, single process)
+Load average: 0.00 / 0.00 / 0.00
+CPU snapshot: 100% idle, 0% steal, 0% I/O wait
+
+MEMORY
+RAM: 3.8 GiB total, 189-191 MiB used, about 3.4 GiB available
+Swap: none
+
+STORAGE
+Root filesystem: ext4, 50 GiB total, 4.2 GiB used, 43 GiB free (9% used)
+Inodes: 4% used
+
+NETWORK
+Interface: ens3, public address 2.26.150.7/32, MTU 1500
+Interface errors/drops: 0
+Outbound ping to 1.1.1.1: min/avg/max 3.775/3.907/4.101 ms, 0% loss
+Outbound ping to 8.8.8.8: min/avg/max 3.379/5.357/12.053 ms, 0% loss
+Client-to-server TCP/22 samples: 1.0, 17.4, 1.2, 14.0, 2.1 ms; average 7.1 ms
+DNS resolution: working
+
+HEALTH
+Uptime during test: 9 minutes (booted 2026-08-13 13:20:50 UTC)
+Failed systemd services: 0
+Critical journal entries: none
+Zombie processes: 0
+Reboot required: no
+Temperature sensors: unavailable to VM
+
+LISTENING SERVICES
+22/tcp: SSH (public IPv4/IPv6)
+7777/tcp: FastPanel nginx (public)
+8888/tcp: FastPanel nginx (public)
+5501/tcp: FastPanel (localhost only)
+53/tcp+udp: systemd-resolved (localhost only)
+
+NOTES
+ufw is not installed. This does not by itself prove that no nftables/hosting-provider firewall exists.
+No server configuration was changed during collection.

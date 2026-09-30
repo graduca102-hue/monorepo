@@ -1,0 +1,16 @@
+[Unit]
+Description=join-approver telegram bot (auto-approve join requests)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/join-approver
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=/opt/join-approver/.env
+ExecStart=/opt/join-approver/.venv/bin/python -m app.main
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+[Unit]
+Description=supplier-bot telegram bot (@menupostavshukabot, SOUS MARKET suppliers)
+After=network-online.target botshop.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/supplier-bot
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=/opt/supplier-bot/.env
+ExecStart=/opt/supplier-bot/.venv/bin/python -m app.main
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

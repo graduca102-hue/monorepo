@@ -1,0 +1,17 @@
+[Unit]
+Description=perebiraika — fast-RU maskify sifter (owner-only)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/perebiraika
+ExecStart=/opt/perebiraika/venv/bin/python /opt/perebiraika/perebiraika.py daemon
+Restart=always
+RestartSec=5
+StandardOutput=append:/opt/perebiraika/perebiraika.log
+StandardError=append:/opt/perebiraika/perebiraika.log
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

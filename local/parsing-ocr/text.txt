@@ -1,0 +1,642 @@
+РАСПОЗНАННЫЙ ТЕКСТ СО СКРИНШОТОВ TELEGRAM-КАНАЛА @HIJO30 («parsing»)
+======================================================================
+
+Источник: https://t.me/HIJO30 — 223 скриншота (msg004–msg226).
+Содержимое скриншотов: разделы комментариев под видео в TikTok и карточки
+TikTok-профилей (ниша «слив оригиналов» — Воронеж/подъезд, Казань/коттедж,
+«пантера», собака; в комментариях спамят ссылки на свои ТГ-каналы).
+Формат блока: ник — текст комментария — время · лайки. Мусор интерфейса опущен.
+Спарсено распознаванием изображений (vision OCR).
+
+======================================================================
+
+
+msg004–msg011, 016, 017, 020 — видео «Приручила 🦌 / sobakaQA» (поиск «собака ричи на даче у…», 1 182 комм.)
+  • d$mrey — кому? — 23h ·♥2
+  • Kola — axax у @simpontinsik все есть — 12h ·♥1
+  • 『GATS』 — and — 12h ·♥1
+  • (обрезан) — кому? @Twanok — 19h ·♥2
+  • Личинус — кому? @kazannn1111 — 19h ·♥2
+  • ☠YRBEKX_Чернобыль☠ — @Twanok бистрий ответь — 10h ·♥1
+  • (ник) — кому? @Twanok — 10h ·♥1
+  • 0_semmi_0 — Кому? @Twanok — 11h ·♥1
+  • овсянкин — [видео-комм: «собака без ботов @loyric1»] — 11h ·♥1
+  • wuuling — кому? @ovzey — 6h ·♥1
+  • golubec — Кому? @Twanok — 6h ·♥1
+  • 迪馬 — Кому? @Twanok — 13h ·♥2
+  • فلاد الحقير — Кому? @krutnnn — 21h ·♥3
+  • КАБЛУЧОК👠 — кому? @vika_1233 — 2h ·♥1
+  • †Sh4d0w†_v1 — @Nekita_bro — 2h ·♥1
+  • RsLka — Кому? @velaronov — 2h ·♥1
+  • Alnur — Кому? @Twanok — 12h ·♥3
+  • Jagsir Singh Nri — тгэк geso16 — 58m ·♥2
+  • Stasioxxx — тут видел geso16 — 59m ·♥2
+  • Айару — [видео-комм: «Dersim.top (Браузер)»] — 12m
+  • dexmony — [видео-комм: «@SESTRAF» / вотермарк @BRATIKD] — 13h ·♥2
+  • papacha1958 — Скиньте ориг, дайте посмотреть 🥰 — 18h ·♥75
+  • (msg017/020 — только кадр видео, комментов нет)
+
+msg013, 014 — видео «tell me how / still tryna» (252 комм.)
+  • Diawara — Te ge jur119 сверяй юз — 54m ·♥4
+  • user446327 — Tege jur119 — 51m ·♥3
+  • SaBuSa NB — в ТГК Ghjwqe без всяких звёзд или заданий — 21m
+  • 🍓feli🍏 — Дайте проду пжж
+  • Никвих — кому @vika_1233 — 4m ·♥1
+  • bani_west — кому @velaronov — 12m ·♥1
+  • ♪DOGMA♪ — Кому? @Twanok — 1h ·♥2
+  • белый — Кому? @Twanok — ♥1
+
+msg012, 015, 018 — видео «живу в воронеже проснулся утром…» / «видос с падика - padful» (17 комм.)
+  • 1 — дайте ориг бесплатно?? — 13h
+  • lichi — @froseger — 13h
+  • щібьонка — new 11111 [First comment] — 13h
+  • user8166880408195 — где ориг глянуть ❓ — 11h ·♥63
+  • .yuuichi1 — Скину пантеру за Мишку — 8h
+  • павлов — @valiiahmetova у нее фулл — 10h
+  • foxik — с кем обмен с вас это видео — 13h
+  • asped — дайте мне @Amalelle — 12h
+  • StretCarSpecial — это не воронеж а нижний новгород — 12h
+  • ZAN//Age guard — меняю собаку и пантеру на это видео — 13h
+  • Limonich — пж бригу — 13h
+
+msg019 — профиль TikTok «шоколадыч» @4tvlqluks3p (1 подписка / 42 подписчика / 510 лайков) — «ФУЛЛ В ТГ @tam741»
+msg021 — видео «типичный подъезд в Воронеже» — комментов на кадре нет
+msg022, 034–040, 055, 059, 061 — видео «друн попросил подождать его с девушкой около подъезда / что происходит в подъезде» (поиск «воронеж инверсия по…», 109 комм.)
+  • nikitka — Клянусь Воронеж подъезд здесь @Worful79 — 1d
+  • jos — @ffdxvhhh кидает — 2d
+  • Васястрой 748 — Клянусь воронеж подъезд здесь @jxw71" — 2d
+  • никитос бурмалдос — "Клянусь воронеж подъезд здесь @jxw71" — 2d
+  • лучший — Клянусь воронеж подьзед здесь @Worful79 — 2d
+  • Себастьян — Клянусь воронеж подъезд здесь @jxw71" — 2d
+  • pilewip_krk — Скиньте пожалуйста @Pilewip — 2d ·♥1
+  • marlov — @naaako рил скинул — 3d ·♥1
+  • rizza — рандом — 1w ·♥2
+  • gooks_rust — @viebonik лучший — 7h
+  • delekat — клянусь Воронеж подъезд здесь @Worful79 — 9h
+  • кисленький_ — Единственный кто скинул @ghtyro — 10h
+  • artem glek — Клянусь воронеж подъезд здесь @worful79 — 20h
+  • mostionlife — Клянусь воронеж подъезд здесь @covawo" — 22h
+  • Mafiosi — @sxxsv16 здесь — 1d
+  • @sxxsv16 здесь — 10h
+  • flake — мне чел с ником @wigiya отправил — 10h
+  • ǃЧerkash — @sadlergs за мишку кинул💋 — 10h
+  • Dark Angel — у него есть @Sqeez_gz — 11h
+  • _naebanutom_ — (обрезан)
+  • farvix1325 — пантеру поменяю на это @HTNOOBU — 4d ·♥1
+  • smyrin — скиньте сюда @Starbound_fu — 4d ·♥1
+  • Брутал — Клянусь воронеж подъезд здесь @covawo — 4d
+  • A4Fan — Клянусь Воронеж подъезд здесь @Worful79 — 2d
+  • FUT|ZeyroX — Воронеж — 2d
+  • gooks_rust — @viebonik лучший — 7h
+  • maksyta148 — @sxxsv16 здесь — 10h
+  • Мafiosi/marlov — @naaako рил скинул
+  • умтити — @nastix_SxS есть подезд и пантера — 2d
+  • golOpOp228 — Эмм вообще то видала тутаа @BratGor — 2d
+  • тгк:AgamynkylTGK — @RyxolV кому?? — 2d
+  • ?? — @xdxwz кому? — 2d
+  • Себастьян — Клянусь воронеж подъезд здесь @jxw71" — 2d
+
+msg023, 027 — видео «плов: мама заглянула в твой телефон… / видос с падика - padful» — комментов на кадре нет / профильные
+msg024 — видео с плашкой «фулл видео - @zopgeo / видео с ней - @zopgeo»
+msg025 — видео «типичные подростки Воронежа после школы»
+  • shost_0 — кому? @Fix1Play — 1h
+  • MavrodiSS (Creator) — видео ищи в описании моего тт — 13h
+msg026 — профиль TikTok «MavrodiSS» @mavrodiss (0/48/2 317) — «Фуллчанский в тг - @mechtaa666»
+msg028 — видео-текст: «нашол тгк воронеж и подъезд тгк larp234»
+msg029 — видео «пов: ты живешь в воронеже и решила пересмотреть видео со своего „прайма"» (2 комм.)
+  • ayvaazyyannnn — Скинте пожалуйста @ayvaazyyannnn — 16h
+  • павлов — @valiiahmetova у нее фулл — 10h
+msg030 — видео с плашкой «Фулл в @Tandir_ameba»; автор @alobaqn, «Фулл оригинал #брагина #fyp #котедж #казань #оренбург #воронеж»
+msg031/033/041/043 — профили: dilerfulls @dilerfulls «вятские поляны 👉 @trymind99  t.me/trymind99»; MavrodiSS @mavrodiss «Фуллчанский в тг @mechtaa666»
+msg032 — профиль user51817335068 @rozik925 (37/14.8K/322.6K) — «‼️девочка с собакой  t.me/sokrod»
+msg042 — профиль user51817335068 @rozik925 — t.me/sokrod (повтор)
+msg044 — профиль MavrodiSS @mavrodiss — @mechtaa666 (повтор)
+msg033 (видео) — «злые подростки отказались покупать мороженое мальчику» (поиск «воронеж инверсия подъезд», 45 комм.); автор dilerfulls, «видел в @ongmind9 #воронеж #подъезд #воронежподъезд #коттедж»
+  • Alexandr_FB — [видео-комм: «@trymind99 казань коттедж, воронеж подъезд, сауна (теге)»] — 1d
+  • (обрезан) — уже не хочу спать — 
+  • Artem_na_Shacman — [видео-комм: «@trymind99 казань коттедж…»] — 1d ·♥1
+  • [видео-комм: «@hupoptw»] — 52m ·♥1
+
+msg045–054, 056–058, 060 — видео «полное с падика - padful / утром выходя в школу ты замечаешь одноклов в подъезде» (поиск «воронеж подъезд ори…», 130 комм.)
+  • Рита — Клянусь, Воронеж подъезд здесь @jxw71 — 3d
+  • mobe:zxcrybe — @Zxccfewe — 4d
+  • сёмчик✌️ — го в лс [First comment] — 4d
+  • ArtHusman — кому? — 1d
+  • (ник) — кому? @Niktozxz — 1d ·♥ (курица-аватар)
+  • (ник) — Единственный кто скинул @ghtyro — 1d
+  • nofunos — Клянусь воронеж подъезд здесь @covawo — 1d
+  • Piska — @sadlergs за мишку кинул — 1d
+  • a — a — 2d
+  • name — Клянусь воронеж подъезд здесь @covawo — 2d
+  • #Артемийбалтика228 — кому? — 2d
+  • E.g.o.r.e.s.OMG — кому? @gsDariana — 2d
+  • t812 — кому? @kolpomopl — 2d
+  • FUT|ZeyroX — Воронеж — 2d
+  • 丹尼斯 — Клянусь Воронеж подъезд здесь @covawo — 2d
+  • (ник) — кому?? @xdxwz — 2d
+  • forever young — кому? @ggrgg77 — 3d
+  • JeLliAnN_tigr — кому? @ggrgg77 — 3d
+  • kkkdx94 — Клянусь, Воронеж подъезд здесь @covawo — 3d
+  • (ник) — видел у @skvlu — 3d
+  • 11/50 — @Vogobe скиньте пожалуйста — 3d
+  • димон — @Dfgat222 — 3d
+  • картошка92 — мне чел с ником @wigiya отправил — 3d
+  • Мдс|baga — Кому @dfgat222 — 2d
+  • lllo33 — видел тут @BratGor — 2d
+  • frilans_sofonet — Смотрел тут @wontut — 3d
+  • stfaq — видел тут @sawcvza — 3d
+  • sanya — видел тут @forboj — 1d
+  • (ник) — @Кому? @mohrq — 1d
+  • никитос бурмалдос — "Клянусь воронеж подъезд здесь @jxw71" — 2d
+  • heydex — клянусь Воронеж подъезд тут @cowavo — 3d
+  • ьа — клянусь воронеж подъезд здесь @covawo — 3d
+  • волосатуй|techtok mi9t — to whom? @ramizhuseynov0 — 3d
+  • кому?? @xdxwz — 2d
+  • Млауд FreeFire — кому? — 2d
+  • Ogurchik002 — Кому? @Niktozxz — 2d
+  • f812 — кому? @kolpomopl — 2d
+  • @.:кому? @Maksimka_67_67 — 1d
+  • jos — @ffdxvhhh кидает — 2d
+  • умтити — @nastix_SxS есть подезд и пантера — 2d
+  • golOpOp228 — Эмм вообще то видала тутаа @BratGor — 2d
+  • тгк:AgamynkylTGK — @RyxolV кому?? — 2d
+  • Млауд FreeFire — кому? @hiqise — 3d
+  • эшкере — Эмм вообще то видала тутаа @BratGor — 3d
+  • щекастый — клянусь Воронеж подъезд здесь@covawo — 3d
+  • S.W.A.T — Кому? @Niktozxz — 1d
+  • parkett — кому?? @f9rmat — 1d
+  • (ник) — Кому? @xxxxxxx001xx — 1d
+  • SOLDIER — кому? @Niktozxz — 1d
+  • Видел у него @werwyzi — 1d
+  • dekster — Видел у @mmmmmstikk — 1d
+  • яков — @naaako рил скинул — 1d
+  • sha — Кто просил — @sestrasbratom — 10h
+  • Dark Angel — у него есть @Sqeez_gz — 11h
+  • Arturnapike — Видел у @Asmailtop7 — 12h
+
+msg062, 067(видео-комм) — картинка-комм «@TRYMIND / Казань коттедж, Новгород подъезд, Воронеж сауна (тегешка)»
+msg063, 068, 070, 076 — видео «полное с падика - padful / чный день жителя [Воро]нежа вышедшего в подъезд» (поиск «воронеж инверсия», 370 комм.)
+  • (ник) — мне чел с ником @wigiya отправил — 8h ·♥1
+  • ybityй — @Saneks_1 не обманул 🌹 — 10h ·♥1
+  • (ник) — «Srizu лучшее💗» — 11h ·♥1
+  • (ник) 11:11 — клянусь Воронеж подъезд здесь @Worful79 — 15h ·♥1
+  • Kam — (обрезан)
+  • Anna Verdoliva261 — Tge wug32 — 17h ·♥5
+  • Berlin. — T wug32 — 17h ·♥5
+  • Sanchez Sammy — wug32 — 17h ·♥3
+  • roidavide185 — (обрезан)
+  • Миша забивной — кому? @teremokmeow — 6h ·♥1
+  • benzin ne dizel — Клянусь Воронеж подъезд у него @Worful79 — 8h ·♥2
+  • shadowraze552 — Кому? @naaako — 10h ·♥1
+
+msg064, 065, 069, 071, 072, 073, 074, 077 — видео «(кадр подъезда, потолок)» (поиск «воронеж инверсия по…», 731 комм.)
+  • garbrandt — @naaako рил скинул — 3d ·♥1
+  • A999УЕ — @naaako рил скинул — 3d ·♥1
+  • fnn tnn — @sadlergs не обманул 🌹 — 3d ·♥1
+  • BlinkBeat — Меняю Казань на воронеж — 
+  • really — @ovapobo спс за подарок — 6d ·♥1
+  • CAMELOT — киньте пожалуйста — 08-27 ·♥2
+  • danya — каму — 08-27 ·♥2
+  • revizz — (обрезан)
+  • kirusha42 — Каму @prk_stanter_42 — 5d ·♥1
+  • werxapee — Меняю Казань на Воронеж — 5d ·♥1
+  • byrmoldaetc — мне скинул @voronez82 — 08-29 ·♥2
+  • kurva13123131 — (обрезан)
+  • zo_zuka — [картинка-комм: «@VORONE_G воронеж, подъезд, пантера»] — 08-27 ·♥1
+  • (обрезан) — скиньте пж 😭 — 08-29 ·♥3
+  • not_yours — можете видио скинуть или у кого есть видио я прост не могу найти — 08-25 ·♥4
+  • Sweetioe Fox — @romam555 реально — 08-28 ·♥3
+  • (ник) — Клянусь воронеж здесь @covawo — 5d ·♥1
+  • Kulich — [видео-комм: «@BRATIKD»] — 14h ·♥1
+  • Fantik — [видео-комм: «@kazvoj»] — 
+
+msg066, 075 — видео «(зелёный подъезд, парень)» (поиск «воронеж подъезд ори…», 130 комм.)
+  • cometmine2 — клянусь кому? @pantera_kozan — 19h ·♥1
+  • Artem — Клянусь Воронеж подъезд здесь @Worful79 — 25s ago
+  • собачий инкубатор — Кому? @Twanok — 2d ·♥2
+  • Fotik — (обрезан)
+  • gooks_rust — @viebonik лучший — 7h
+  • anatoukg1o2 — @SaneKs_1 не обманул — 9h
+  • (ник, "слив тут @why_pek") — кому? @why_pek — 9h
+  • maksyta148 — @sxxsv16 здесь — 10h
+  • diddyblud380 — Видел @mmmmmstikk — 3h
+  • (ник, японский ник) — кому? @Niktozxz — 4h
+  • klenixx — @Worful79 — 7h
+  • fiofan — @fullversio — 7h
+  • user6717855722172 — кому? @letternnn — 13h
+  • プライム Клауз — кому @iKlayZz67 — 18h
+  • artem glek — Клянусь воронеж подъезд здесь @worful79 — 20h
+  • overzap — Клянусь Воронеж подъезд здесь @covawo — 
+  • сися — кому? @archangelllll — 3d ·♥1
+  • marlov — @naaako рил скинул — 3d ·♥1
+  • qwzsxt — @sadlergs кому? — 4d ·♥1
+  • арсенузбек — клянусь воронеж подъезд здесь @Worful79 — 
+
+msg078, 082, 085 — видео «в дет доме с пантеркой #хайпушки #роды» (поиск «аккаунт пантеры», 136 комм.)
+  • (ник) — @wontut всем скидывает КЛЯНУСЬ [видео-комм @WONTUT] — 6d ·♥1
+  • соня чорт — у меня фулл пентеры в репостах — 11h
+  • карамелька — мне жалко её, она красивая — 4d
+  • 💎 — Где найти оригу? — 2d
+  • Sidy Boubacar Djallo — kov655 тут — 2d ·♥4
+  • seydou,sidibe — Где найти оригу? — 2d
+  • Stiliqn69 — kov655 тут — 2d
+
+msg079 — видео «(лестница, две фигуры)» (поиск «воронеж инверсия по…», 247 комм.)
+  • (ник) «подруга пантеры» — [картинка-комм: номер в отеле] — 08-28 ·♥17
+  • (ник) — так она ушла оттуда же — 6d ·♥3
+  • user8284106829774 — Кому? @Taika_mee — 14h
+
+msg080 — профиль TikTok «Juilo» @juilogrub (1/873/11.8K) — t.me/KAZANPANTERAFULLV
+msg081, 083 — видео «military dog owner part 3» (мультяшное, 31 комм.)
+  • (обрезан, @malez0)
+  • промокашка — я тут смотрела @kazpantera1 — 08-23 ·♥1
+  • КУПЛЮ ЭНДУРО В КРАСНОДАРЕ — Кому? @Vast505 — 1w
+  • KARINA — @panterakazax — 08-30
+  • Абрикося — Увидела в @panterakazax — 
+  • zlatt's — @panterka1113 fries — 08-25
+  • Пантера — @pantera1976 фриииииииии — 08-25
+  • 09 — @марюшка — 08-23 ·♥1
+  • hdudis — 🥰🥰🥰 — 2d
+
+msg084 — видео «(часы-заглушка)» (поиск «пантера ориг акк тт», 780 комм.)
+  • Lera King — AT tgshke voku29 — 08-25 ·♥4
+  • (ник ☀️) — тегэка voku29 — 08-25 ·♥4
+  • Iffo boss — voku29 in тегеє — 08-25 ·♥3
+  • jen — (обрезан)
+
+msg085 — профиль TikTok «PRYANIK» @pryaniknet (18/9 512/257.3K) — «ТГ: PRYNIKNET … https://web.pryanik.net.ru/»
+
+msg086 — профиль TikTok «пантерочка» @panterkaxdxd (0/123/9 155) — «tegee sl6752»
+msg087 — профиль TikTok «MANGO3030» @_mango3030_ (0/178/13.1K) — https://t.me/fulltuma0
+msg088 — видео «(зелёный подъезд, парень, девушка)» плашка «ещё одна пантерка)»
+msg089 — профиль TikTok «@monkolio_bot» @anakyzyy (5/66/762) — https://t.me/+wcQp1YI4x_A1OTFi; посты: «@mankalio_bot / Что сделала фанатка пантеры?», «АХАХАХХАХА САУНА ВОРОНЕЖ УЖЕ»
+msg090, 093 — видео «полное с падика - padful / обычный день жителя воронежа вышедшего в подъезд» (поиск «воронеж инверсия», 370 комм.)
+  • GIULIANA — k wug62 — 8h ·♥5
+  • Mickael Dupont — тгэк wug62 герой! спасибо — 8h ·♥4
+  • lin — wug62 — 8h ·♥4
+  • ABK Koulibaly — Где ориг глянуть?! — (обрезан)
+msg091, 081, 083, 100 — видео «military dog owner part 3» (мультик, 31 комм.) — доп. комментарии:
+  • ars._ba — кому @Balaiana — 08-29
+  • DEATLI_MONTI — @panterakazax — 08-28
+  • cyzka.pen — @wako_433 скинул — 08-28
+  • Ulkasss_38 — @kymanobo так тут есть Воронеж — 08-26
+  • (ник) — тут видел @kazanslis — 4d
+  • алинуся — кому? @romam555 — 4d
+  • акация — Кому? @Vast505 — 5d
+  • ars._ba — кому — 08-31
+  • @maloz0 — 08-22
+  • VizikK — [картинка-комм «ПРАЙМ»] [First comment] — 08-22 ·♥1
+  • промокашка — я тут смотрела @kazpantera1 — 08-23 ·♥1
+  • бурундук) — кому? @heavy_drek_0 — 08-26
+  • Dark aero — [картинка-комм: «@pantera340 пантера коттедж тиге»] — 
+msg092 — профиль TikTok «marmeladkaam» @marmeladkaam (0/8 010/101.1K) — «Телеграм[padikk12] ✅  t.me/padikk12»; посты «жизни Пантеры», «ВОРОНЕЖСКАЯ ПАНТЕРА», «жизни Тома»
+msg094 — видео «(мультик-сауна) Фулл в коммах» (поиск «пантера», 91 комм.)
+  • (ник) — @Twanok кому? — 5d ·♥1
+  • Sanya_Vam_ne_covetuy — Кому? @omgmind99 — 5d ·♥1
+  • egor na makse — @Niktozxz скинул — 10h
+  • белый виш — Кому? @Niktozxz — 11h
+  • Иван — Казань и Воронеж видел здесь hagafapo 🥰 — 08-26 ·♥12 / ·♥7
+  • user3624262622706 — [картинка-комм: небо] — 
+msg095 — профиль TikTok «тгк:trakovlifeee» @trakovlw (33/13.3K/1M) — «18 y.o, Kazan, тг:@trakovlw, тгк:trakovlifeee 🎯50к»
+msg096 — видео «(девушка ночью, камуфляж)» (поиск «pantera famous pranks», 5 054 комм.)
+  • Piter Griffin — ооо кстати да — 08-28 ·♥4
+  • Piter Griffin → Piter Griffin — я в тг ewd42 видел — 08-28 ·♥7
+  • на зимнем вайбе — ewd42 — 08-28
+msg097 — профиль TikTok «marmeladkaam» @marmeladkaam — t.me/padikk12 (повтор)
+msg098 (military dog owner part 3, доп.):
+  • (ник) — тут видел @kazanslis — 4d
+  • алинуся — кому? @romam555 — 4d
+  • акация — Кому? @Vast505 — 5d
+  • ars._ba — кому — 08-31
+  • ДАША.^^ — (обрезан)
+msg099 — профиль TikTok «ПАНТЕРА В ПРОФИЛЕ» @nisouqq (2/154/3 443) — «пантера, воронеж, минск, подъезд и даже черниговская пантера тут … https://t.me/qmb1299»
+msg101 (military dog owner part 3, доп.):
+  • Ulkasss_38 — @kymanobo так тут есть Воронеж — 08-26
+  • бурундук) — кому? @heavy_drek_0 — 08-26
+  • Dark aero — [картинка-комм: «@pantera340 пантера коттедж тиге»]
+
+msg102 — профиль TikTok «kazan__969» @kazan__969 (112/385/6 780) — «‼️ВСЕ В ТГ - kazan_969 ‼️»; посты: «Казань коттедж что же произошло на видео?», «пантерой коттедж»
+msg103, 096, 106 — видео «(девушка у Burger King, камуфляж)» (поиск «pantera famous pranks», 5 054 комм.)
+  • ☆bolpvadze☆ — Где ориг глянуть? интересно же — 08-25 ·♥258
+  • housseinatou — У него Tuka42 — 08-25 ·♥9
+  • sorokonojka — в тг скину @sorokonojka_e — 08-30
+  • videotutbroo — ну я смотрел у videotutz ток оттуда — 08-29
+  • Piter Griffin → Piter Griffin — я в тг ewd42 видел — 08-28 ·♥7
+  • на зимнем вайбе — ewd42 — 08-28
+msg104, 108(мультик «военная пантера»), 105, 109, 110, 111, 112 — видео (мультики) (поиск «пантера аккаунт», 133 комм.)
+  • milenkaaa — B tg newopat — 5h
+  • ود العجب — у нэво vag636 — 9h ·♥8
+  • Lasha Kheladze — Гдэ найти то? — 14h ·♥72
+  • il cuore nero — вот vag636 тэдка — 27m ·♥10
+  • meladze_meladze — Видел у vag636 — 23m ·♥7
+  • Sh3x — подскажите, где найти?! — 1h ·♥62
+  • As#ncio — squirt636 — 23m ·♥10
+  • user13181314244 — А где найти эти кружочк?? — 9h ·♥59
+  • teo — vag636 здесь есть! — 9h ·♥9
+  • ayb.701 — Видел у vag636 — 9h ·♥7
+  • ТОКО 07 — [видео-комм: «Renosa.lol (Браузер)»] — 
+msg107 — видео (Соловьёв, ТВ) «ПАНТЕРА ОБЪЯСНИЛА КАК БЫЛО НА САМОМ ДЕЛЕ В КОТЕДЖЕ» (поиск «kazn622 коттедж», 357 комм.); автор @panther_tiffany
+  • (ник) — Где найти?! Дайте пжлс — 1d ·♥74
+  • Morgan Morales — Подскажите, где найти!? — 3d ·♥159
+  • user36872120478 (Creator) — see: full _ ich — 2d ·♥5
+  • Schluderich — Где ориг глянуть? интересно же — 4d ·♥196
+  • (картинка-комм: «@spoti_xxxl») — 10h ·♥1
+  • luckux.brainrot — [видео-комм: «@SESTRAFF» / @BRATIKD] — 
+msg108 — профиль TikTok «Свидетель» @svidetel41 (50/2 064/26.1K) — «T*g - video715 … https://t.me/+p4Cn4wQpUMtmZmE6»
+msg113, 114, 115, 116 — видео «(девушка Burger King / чёрная пантера Fizx)» (поиск «ориг акк пантеры», 30 комм.)
+  • (ник W) — [картинка-комм: «@saungordvr»] — 4d
+  • TikTok DRAKONCIK — [видео-комм: «@kazvoj»] — 
+  • Malammor_6.5 — Кому? @egxrdmnx — 08-28
+  • Ale63848 — Pantera_video2 — 08-28
+  • axruz_ — @panterakazax — 08-28
+  • сонька — кому?? @STRANIkK01 — 
+  • N🇷🇺 — @panterakazax — 08-27 ·♥1
+  • belanze — кто это и почему она стала такая популярна — 08-26 ·♥1
+  • ayo.cuhh__ — @dotump реально скинул — 08-26 ·♥1
+  • Panther Rant — ALSO Panther — 
+msg117, 118, 119(?) — видео «Что сделала Пантера? / (мультики, сауна)» (поиск «видео с пантерой ори…», 789 комм.)
+  • swizyk — @pan_tera_tt спасибо за видосик — 08-29 ·♥6
+  • Dima_velicko — дайте ориг — 08-26 ·♥7
+  • (картинка-комм: «@pwzy1») — 08-30 ·♥1
+  • magarigamerytaura — дай посмотреть — 3d
+  • defilar — defi43 пишите отвечаю сразу — 6d
+
+msg118, 120, 124, 127, 129, 131, 133 — видео «Что сделала Пантера? / (мультик-сауна, танцы у бассейна)» (поиск «видео с пантерой ори…», 789 комм.)
+  • макарка — кому? @hanteb — 5d ·♥1
+  • Asco — дайте пж видео @MURAT_M777 (если бесплатно) — 6d ·♥1
+  • Asco — @pantera_kazanif у него ориг — 6d ·♥1
+  • sf? — Кому?! @Vast505 — 6d ·♥1
+  • We — Кому..? @kazann1111 — 6d ·♥1
+  • bbсафуановна.Rjn — коттедж в бургер кинге 👍 — 08-28 ·♥2
+  • котолай заметь меня mr boar — СПАСИБО twanok — 
+  • komkom — @Niktozxz кому? — 3d ·♥1
+  • shadowraze552 — @naaako моментально — 4d ·♥1
+  • Stalker — кому? @Zzzxczm — 08-30 ·♥2
+  • (ник) lanynews — «мне 13: … пантера в 13:» — 6d ·♥1
+  • Luka 's wife — Вот здеся видел Ponter66 — 08-30 ·♥1
+  • снэй — Она она — 08-29
+  • Kimiko Lane — Где ориг глянуть? никак найти не могу — 1w ·♥98
+  • hdhdjbdhdjsjdddh — tgk bsx54 я там смотрел — 1w ·♥4
+  • Adri' Vial — видеееел в тгшке bsx54 — 1w ·♥2
+  • Aman Gure — в тг bsx54 там видел 👍 — 1w ·♥2
+  • やxむeとnわtぐyoy — кому? @Twanok — 6d ·♥3
+  • варькаа — Кому? @Twanok — 2d ·♥1
+  • TodayMC — Кому? @Twanok — 08-29 ·♥4
+msg119, 121 — видео «(чёрная пантера Fizx)» (поиск «ориг акк пантеры», 30 комм.)
+  • Julila — Saw it at @kottetzh3. — 4d
+  • たにきなき — @panterakazax — 08-31
+  • Цезарь — кому? @Twanok — 08-29
+  • (картинка-комм: «@saungordvr казань и воронеж (теге)») — 08-27
+  • urbex_перчатки — всем дала — 08-23 ·♥3
+  • Fizx (Creator) — мне тоже — 
+  • Luka — [картинка-комм: «@kazanskypantera с пруфами»] — 08-26
+  • I❤Israel — @Panterakazan — 08-27
+  • сонька — кому?? @STRANIkK01 — 08-28
+  • yahyazamat_95 — @panterakazax — 08-27
+  • Leonardo — @SERYOGA_3738 serious video — 08-27
+  • mar1usz.01 — Хз, увидел у @Panterachka_1 — 08-27
+msg122, 125 — видео «(девушка/парень танцуют у бассейна) / (мультик)» (поиск «видео с пантерой ори…», 789 комм.)
+  • sf? — Кому?! @Vast505 — 6d ·♥1
+  • We — Кому..? @kazann1111 — 6d ·♥1
+  • bbсафуановна.Rjn — коттедж в бургер кинге — 08-28 ·♥2
+  • komkom — @Niktozxz кому? — 3d ·♥1
+  • shadowraze552 — @naaako моментально — 4d ·♥1
+  • Stalker — кому? @Zzzxczm — 08-30 ·♥2
+msg123 — видео (Соловьёв ТВ) «kazn622 коттедж», 357 комм.
+  • Aïcha Balde — Где ориг глянуть? интересно же — 8h ·♥85
+  • March girl — Смотрела в wug62 — 8h ·♥5
+  • tonia — тута видел wug62 — 8h ·♥4
+  • raijenisha613gmailco — тгэк wug62 герой! спасибо — 8h ·♥4
+msg126 — видео «(девушка Burger King)» (поиск «ориг акк пантеры», 30 комм.)
+  • (ник) — в крациях: её выебали — 08-31
+  • ayo.cuhh__ — @dotump реально скинул — 08-26 ·♥1
+  • Panther Rant — ALSO Panther [картинка танка «Panther»] — 
+msg128 — профиль TikTok «Пантера» @tiktokslivu (0/2 450/7 416) — https://t.me/panteraumen; посты «ПАНТЕРА ВОРОНЕЖ», «казань коттедж», «Коч братан!»
+msg130 — видео (TikTok Pro, поиск-меню); видео автора panterazdessssik (09-01) «то самое види ищи в тг koch967 #пантера #казань #тг #залетит»
+msg132 — видео «(комната с бассейном)» (50 комм.)
+  • бурмалда — кому? leon_581 — 6h
+  • кареглаꙗая — мне — 4d
+  • амелька → кареглаꙗая — лс — 4d
+  • •ХОРОШИЙ• — @Twanok — 5d ·♥1
+
+msg134 — видео «(компания парней у бассейна)» (50 комм.)
+  • (картинка-комм: «@bm6702 пантера коттедж (теге)») — 4d ·♥5
+  • mognk — @Fixed 505 — 1d ·♥1
+  • амелька — кому — 4d ·♥3
+msg135, 136, 138, 140, 141, 142, 145, 147 — видео «(парень танцует ночью, BRONX)» (поиск «safuan разговор с ма…», 957 комм.)
+  • Sultan tumurtimi — kov655 тут — 3d ·♥4
+  • Fan.yas — kov655 там в тэгэшшшшке — 3d ·♥3
+  • extazzy — [видео-комм: «@SESTRAF» / @BRATIKD] — 
+  • SQ_Lohikso — [видео-комм: «@hupoptw»] — 3h ·♥1
+  • Ожидаю — @Ожидаю: Скину - @maksimpan99 — 2d
+  • ام محمد — Видел у vag912 — 3d ·♥10
+  • YUSUF — у нево vag912 — 3d ·♥10
+  • Katy — vag912 здесь ест! — 3d ·♥9
+  • Julene Christian — Где найти то? ‼️ — 
+  • GIULIANA — Тгешка kov655 — 3d ·♥3
+  • lolololla — [видео-комм: «@SESTRAF» / @BRATIKD] — 9h ·♥1
+  • (ник) — Ориг есть у кавота? — 3d ·♥66
+  • joaquim de Been — kov655 тут — 3d ·♥4
+  • Graig Gillespie — Tag kov655 — 3d ·♥4
+  • jsk kabylie5 — kov655 там в тэгэшшшшке — 3d ·♥3
+  • (видео-комм @BRATIKD) — 12h ·♥1
+  • user3524568594530 — [видео-комм: «@BRATIKD»] — 
+msg137, 143, 146, 148, 149 — видео «(комната с бассейном, коттедж)» (поиск «kazan cottage pantera i…», 309 комм.)
+  • kriss — @sonn1li кому? — 08-29
+  • рикса. — @Dpddpdhd кому? — 08-28
+  • M🤍 — Пантера репостнула — 08-28
+  • inst: m_gud67 — кому? @mgud2 — 
+  • (ник) — @fulttytz тут видал ❤ — 08-29
+  • (ник) — "Кому? @lifozo" — 08-29
+  • 複|KYAMI — @XxxAann у него — 08-29
+  • myrmark[gmd] — юзы) — 08-29
+  • Nala — кому? @ruslannn689 — 08-30
+  • Artem4' — кому? @TTEUIOO — 08-30
+  • Moni_los — panther — 08-30
+  • Zenoxxx — Единственный у кого видео оригинал @rentomu1 — 6d
+  • hyosan — кому? @Rhlmlc — 6d
+  • KIRILL — @fullpontera тут — 6d
+  • Zhalgasovv — Кому? @twanok — 4d
+  • Сулумбек — @Twanok — 4d
+  • DZILIKHOV — Кому? @Twanok — 4d
+  • Aomine — @Gerasimoy — 4d
+  • Bryze — @dotump really sent it — 08-26 ·♥6 (это msg139 — «kazan cottage pantera», 59 комм.)
+  • mara — Кому @vorona96 — 1d ·♥1
+  • Badts BLACK3xx — What happened in the video? — 1w ·♥2
+msg139 — видео «(девушка танцует у бассейна, 17 y.o.)» (поиск «kazan cottage pantera …», 59 комм.) — см. выше Bryze/mara/Badts
+msg144 — профиль TikTok «panterazdessssik» @pantera123sixseven (680/442/543) — «wag228bot tg»
+msg135(доп.)/141 — «vag636» спам: amang9194 «vag636 здесь есть!», ChickenWings858 «вот vag636 тэдка», Ousmane «Видел у vag636», ucnobi321 (обрезан) — это msg140 (поиск «воронеж подъезд», 543 комм., видео «пов: друг попросил подождать его в падике»)
+msg141 — профиль TikTok «ШОКОЛАДЫЧ» @chocolatychoff (0/11/460) — «ВСЁ ТУТ 👇 ТГ - tam741»
+
+msg150–msg157 — видео «(коттедж с бассейном)» (поиск «kazan cottage pantera i…», 309 комм.) — доп. комментарии:
+  • Aleeza — Кому? @Aleza101 — 4d
+  • Who am I? — пантера тут @panteraky — 5d
+  • Nukt — кому? @Ffddgsggsg — 5d
+  • dingus — @fullpontera тут — 09-01
+  • n¹ MILKA — кому? @HIKITA0764 — 09-01
+  • _v.l.a.d.i.k_ — Танцуй пантера и Воронеж у @besmanage — 09-01
+  • (ник «Помощь при диких животных») — кому @hicamo — 08-30
+  • way2sskia — Кому? @Twanok — 08-30
+  • arcturus-01 — кому? @Baranchuk_shon — 08-30
+  • Сергей Удалов — @ruslannn689 — 08-30
+  • └Skw1zi┐ — кому? @Gree_p — 08-29
+  • МАДИНОЧКА — кому? @Niktozxz — 08-29
+  • S4ME — кому? — 08-29
+  • (ник) — кому? @Kosta_333 — 08-30
+  • EVCH — @PARTERAFULL — 08-30
+  • † (Angry Bird) — кому? @stowsen — 08-30
+  • кабановна — кому? @twanok — 08-29
+  • Mister — Смотрел у @hicamo — 08-31
+  • kalyannn2 — Каму @lifozo — 08-31
+  • (ник) — кому? @Zzzxczm — 08-31
+  • iliim11 — @Zzzxczm — 08-30
+  • Artem4' — кому? @TTEUIOO — 1w
+  • aza — Кому? @Vast505 — 1w
+  • tencai — кому воронеж и пантеру? @revorr — 1w
+  • error — Кому!? @Vast505 — 09-02
+  • Нікіта — кому? @lifozo — 08-31
+  • $turbo$ — я тут видел @everest_665 — 08-31
+  • NURS🇺🇸 — (обрезан)
+
+msg158–msg165 — то же видео «kazan cottage pantera i…» (309 комм.) — ещё комментарии:
+  • Kenzi — кому? @Nooooon_N — 1d
+  • Писюн Вялый — ориг у @nOOdLlsS — 1d
+  • kitten — Who? Kykykri — 1d
+  • nowelou — @Wontut Кому? — 1d
+  • Anna — Кому? @Vast505 — 5d ·♥1
+  • дгоmir — Кому? @Twanok — 08-30 ·♥2
+  • mopsik_tiktok — кому? @Twanok — 08-29 ·♥2
+  • meghgan001 — Кому? @Twanok — 17h ·♥1
+  • tied_club9 — Кому? @Twanok — 3d ·♥2
+  • Slawko — Спасибо — 2d
+  • 2pax — СПС — / Кому? @Twanok — 3d
+  • wx — кому? @romam555 — 2d ·♥1
+  • THE_BRO — кому? @Twanok — 6d ·♥2
+  • st3phens0n — Кому? @Twanok — 3d ·♥1
+  • Prime_Ed — ffdxvhhh кидает — 3d ·♥1
+  • mellstro790 — Кому? @Twanok — 08-28 ·♥3
+  • 凹SHADOW凹 — Кому? @Twanok — 4d ·♥1
+  • Валя — Кому? @Twanok — 08-28 ·♥1
+  • ЛЯГУШКА — кому? @Ulquiora_Cifer — 08-28 ·♥1
+  • бананы — Кому? @romam555 — 08-28 ·♥1
+  • DersotVino — @kartofel144 — 08-28 ·♥1
+  • (картинка-комм: «@spoti_xxxl») — 8h ·♥1
+  • Brodyaga — @svin67 мне сразу скинул — 2d
+  • alishka.0401 — Кому? @Enter11111112 — 2d
+  • max1movskiy — @ffdxvhhh кому? — 3d
+
+msg166–msg171 — то же видео «kazan cottage pantera i…» (309 комм.) — ещё:
+  • _bakytbekovich.e_ — [картинка-комм: «@bm6702 пантера коттедж (теге)»] — 5d
+  • user203047749 — мне интересно посмотреть на реакцию арендодателя — 5d
+  • nowelou — @Wontut Кому? — 1d
+  • WW — Кому? @Twanok — 2d
+  • victory — Кому? @Twanok — 2d
+  • $ype4 — @Puipleee кому — 
+  • <3 Stalker <3 — «ХАХАХ ВИДЕЛА КОМУ? @kariiox» — 08-27 ·♥1
+  • plmnwyy — кому? Niktozxz — 9h
+  • @gerlopo — кому? — 9h
+  • Reletanat — Кому? @Vast505 — 6d ·♥1
+  • Dias — кому? — 08-27 ·♥2
+  • Hoho Zxc — Кому? @Twanok — 1w ·♥1
+  • ♡Velaris♡ — Кому? @Twanok — 
+  • DersotVino — @kartofel144 — 08-28 ·♥1
+  • ju_sap — @vorona96 тут — 08-28 ·♥1
+  • ttlondon_4 — Кому? @Twanok — 08-28 ·♥1
+  • Do1dik — @Frezarka — 08-28 ·♥1
+  • Rickie Mathews — теге bsx54 — 1w ·♥2
+  • user5312027183599 — видеееел в тгшке bsx54 — 1w ·♥2
+  • Chandu darling — ну чекни в теге bsx54 — 1w ·♥2
+  • user2995743735923 — Где посмотреть? ‼️ — 
+msg172 — видео «ПАНТЕРА ПРО БЕРЕМЕННОСТЬ / ТАМЕРЛАН СТАНЕТ ПАПОЙ» (кадр, без комментов)
+msg173 — профиль TikTok «Сашка» @sasha.milashka (2/370/18.3K) — «тгк:antilavskiipantera»; посты «про коттедж», «разговор моей мамы с мальчиком из коттеджа»
+
+msg174 — видео (Соловьёв/Барановская ТВ) «ПАНТЕРА ОБЪЯСНИЛА КАК БЫЛО НА САМОМ ДЕЛЕ В КОТЕДЖЕ»; автор user36872120478 / @panther_tiffany — «TG:full_ich ИЩИ В ТЕЛЕГРАМЕ #казань #коттедж #казанскаяпантера #пантера»
+msg175, 179, 180, 181 — видео «(блондинка ночью) сегодня буду смотреть сливы пантеры с коттеджа и снимать реакцию» (поиск «соив пантеры», 206 комм.); автор «ликта»
+  • xxan — кому? @XxxAann — 3d ·♥1
+  • мисье гага — ликта скинь паже вот @koost1a — 4d ·♥1
+  • Каринка — Можно @thehuman0_0 — 5d ·♥1
+  • 🍩MASHA — Кому? @milanarok — 3d ·♥1
+  • #sabotazh. — Мне тоже скинь 🥰 @sabotazh_2233 — 3d ·♥1
+  • ликта (Creator) — посмотри новое видео с реакцией — 2d
+  • любитель бычьих яичек — видел у @radionoffc — 16h
+  • Squishy world — Кому? @Twanok — 16h
+  • nfidgd — @keltisa кому — 18h
+  • solomi — скиньте мне кто нибуть @solomi26 — 
+msg176 — профиль TikTok «тгк: kazanebilivo» @vanen.xd (0/82/1 074) — «все в тг @kazanebilivo»; посты «Собака и человек — все тгк @red_kind», «Balenciaga runner»
+msg177 — профиль TikTok «telelog» @ceoclubmilioners (732/453/2 792) — «фулл в тг @kazankotedzch»
+msg178 — профиль TikTok «карим» @bequjotdwlr (0/82/1 638) — «Все видео тут @QPMCX66»; посты «ПАНТЕРА НЕ БЫЛА ДЕВАЧКОЙ УТВЕРЖДАЕТ МАМА ТАМЕРЛАНА», «Смотреть тут @GTYQ66», «ОН КРИЧАЛ: „ТАНЦУЙ ПАНТЕРА" И ОНА СИЯЛА»
+
+msg182–msg185 — то же видео «соив пантеры» (206 комм.) — ещё комментарии:
+  • (ник) — мне тож — 1d
+  • Nixt — @kasfu чудесное 🌹 — 1d
+  • Dreamx — @kasfu чудесное 🌹 — 1d
+  • Зая — скинь и мне — 1d
+  • Миша — кому? @Jomeer — 11h
+  • 🐱HARLEY STAR — Кому? @vladlen2124 — 12h
+  • алинка — кому? @alinesko2 — 12h
+  • Fryzen_Core — Кому? @Twanok — 
+  • meow205meow — кому @lllkisdab1 — 2d
+  • Ксюша Огнева — Мне скиньте — 2d
+  • xxan — @XxxAann кому? — 2d
+  • solomi — скиньте мне кто нибуть @solomi26 — 20h
+  • kira.wingss — кому? @fguwox — 20h
+  • Abuska_edits 2.0 — спасибо лучший — 13h ·♥1
+  • vermillion.ashley — Скиньте пж @mia_jann_princess — 21h
+  • Vuala — Кому? @irinc7ka — 1d
+  • vladzy — @Twanok спасибо — 1d
+msg186 — профиль TikTok «Казанская Пантера» @ooldschoolll (19/5 728/88.2K) — «это мой новый аккаунт … мой новый тгк @antilaavskii33 … https://t.me/+FKpRovzMOYxkMTVi»
+msg187 — профиль TikTok «lianella» @li_killers (157/336/26.7K) — «тгк: good morning?»
+msg188 — профиль TikTok «ФУЛЛ ВОРОНЕЖА И ПАНТЕРЫ💥» @slivtutapantera (0/221/18.1K) — «те самые видео  tgk: @panterakazan_tut»
+
+msg190 — профиль TikTok «telelog» @ceoclubmilioners — «фулл в тг @kazankotedzch»; пост «ЕДЕМ В ТУР ПО КОТТЕДЖАМ»
+msg191, 192 — то же видео «kazan cottage pantera i…» (309 комм.) — ещё:
+  • (ник) — Напиши @Hectorioc — 08-30
+  • Kind.ly — : я тут смотрел @nowefullbot — 08-30
+  • Kovalenko — @httppantera — 4d
+  • #Просто_Диана — «Смысл в том, что вы её хейтите? Ну да, это произошло..Она была ведь не …» —
+  • Dilliprasad Kandel — Тут видела Fret64 — 08-28 ·♥18
+  • FabsFabs — В тэге Fret64 — 08-28 ·♥16
+  • jok — т г Fret64 — 08-28 ·♥16
+msg193 — профиль TikTok «ssskkrrtttpnt» @ssskkrrtttpnt (0/170/4 238) — «новый аккаунт lilagrotrap в блоке … новый тг саши пантеры: pnt3ra»
+msg194 — то же видео «соив пантеры» (206 комм.) — ещё:
+  • rus_moto — "кому? @cusam" — 19h ·♥1
+  • маришка — кому? @Twanok — 1d ·♥2
+  • (ник) — Кому? @Twanok — 4d ·♥3
+  • Stanislava — Кому? — (обрезан)
+msg195 — профиль TikTok «faramedia.official» @faramedia.official (6/158/10.1K) — «Telegram sashaprimess»
+msg196 — профиль TikTok «сафуанов» @safuan1160 (0/227/2 944) — «новый и единственный тгк с пантерой : @lilbabysafuan  остальные фейк»
+msg197 — профиль TikTok «Главная мразь тиктока» @wereta67 (247/7 185/250K) — «кот.крутаяприческа.смотритеэто 📍 ВерхнийТагил  https://t.me/weretagoat»
+
+msg198 — профиль TikTok «Uzбагойся» @manynia.vididila (800/6 035/748.7K) — «славянки для кавказцев  тгк vididila»
+msg199, 203 — профиль TikTok «казанская пантера 🐆» @panther_tiffany (1 → 11K подписчиков / ~142.9K лайков) — «https://t.me/pantera_offl  Подписываемся Цель 10k (Отвечаю только за подписку)»; посты «ПРЕСТИЖНЫЕ ГЕРОИ КОТТЕДЖА», «Это мой папа», «теперь ждём новую часть с училища»
+msg200 — профиль TikTok «panterakazan999» @panterakazan999 (0/408/5 561) — «тэгэшка panterakazan999  https://t.me/panterakazan999»
+msg201 — профиль TikTok «Добрый 😁» @dobryuseer887 (498/40.9K/853.1K) — «Основа - @Добрый Ммашник … МОЙ ТГК: onedobry … https://t.me/mydobriy»
+msg202 — видео «(парень в бассейне коттеджа)» плашка «Full v PanteraFull129»
+msg204 — профиль TikTok «Черная кобра» @marixll54 (23/270.1K/10.3M) — «Гёрл с Израиля  Тгк: лесная норка Маши  Сотрудничество тг: @ig_ganng»
+msg205 — профиль TikTok «karitaro07» @karitaro07 (49/148/3 958) — «расклады/ритуалы в тг:@karitaro07»
+
+msg206 — профиль TikTok «MATVEY ASTIN» @matvey_astin (70/9 225/136.3K) — «18 y.o … https://t.me/matveyastin»; посты «Отдай собаку сыне бесплатно», «КОЧ ПАНТЕРА ГОЛОДА», «ИСТОРИЯ МЕМА КОЧ БРАТАН»
+msg207 — профиль TikTok «@-)2&3?» @sumerqa (21/1 457/145.4K) — «фулл тут 👇 @panterkaaKAZAN»
+msg208 — профиль TikTok «mk» @karina_marina_swag (6/157/5 069) — «https://t.me/vmfsxnlkkjfd наш канал в тг»
+msg209 — профиль TikTok «steelway11» @steelway11 (65/2 016/276.7K) — «Цель: 3000 … ТГК-@ssgoldenhour»
+msg210 — профиль TikTok «slivtiktouk» @slivtiktouk (0/3/187) — «тгк: @slivtiktouk  бесплатный доступ тгк: @slivtiktouk»
+msg211 — профиль TikTok «Свидетель» @svidetel41 (50/2 058/26K) — «T*g - video715 … https://t.me/+p4Cn4wQpUMtmZmE6»
+msg212 — профиль TikTok «казанская пантера 🐆» @panther_tiffany (0/6 630/142.8K) — «https://t.me/pantera_offl … Цель 10k» (повтор, ранний слепок)
+msg213 — профиль TikTok «ВСЕ ЗДЕСЬ» @70hgphfuhaz (0/8/131) — «СМОТРЮ ЗДЕСЬ 👇 tam741»
+
+msg214 — профиль TikTok «뒈진 개자식» @vikixxs69 (424/285/15.9K) — bio без ТГ-ссылки («ЭТи суки СкейТборды…»)
+msg215 — профиль TikTok «Calvadik» @you_rezka (0/22/674) — «Trshka : brat054  Принимаю всех 🥰»
+msg216 — профиль TikTok «ШОКОЛАДЫЧ» @chocolatychoff (0/11/460) — «ВСЁ ТУТ 👇 ТГ - tam741» (повтор)
+msg217 — профиль TikTok «PANTERA 🐆» @mellcraf (20/1 455/17.5K) — «MAGAZINE LUIZA S/A … ТУТ 👇 https://t.me/panterajt»
+msg218 — профиль TikTok «Черная кобра» @marixll54 (23/270.1K/10.3M) — «Гёрл с Израиля  Тгк: лесная норка Маши  Сотрудничество тг: @ig_ganng» (повтор)
+msg219 — профиль TikTok «Арбузыч 🍉» @facbq_original (54/117.3K/4.1M) — «По вопросам рекламы в тг:Arbuzach_manager  Заработок на отзывах 👇 https://t.me/arbuzach_AI»; посты «АПИСАЛ МЕЛСТРОЙ»
+msg220 — профиль TikTok «Свидетель» @svidetel41 (50/2 060/26K) — «T*g - video715 … https://t.me/+p4Cn4wQpUMtmZmE6»; посты «что произошло в Казани», «пантера и вечеринка на коттедже», «как асхаб Тамаев связан»
+msg221 — профиль TikTok «ТГК: @fuullsliv» @kimpintyay0 (2/210/3 006) — «тгк - @fuullsliv  СВЕРЯЙТЕ ЮЗ»
+
+msg222 — профиль TikTok «казанская пантера 🐆» @panther_tiffany (0/6 619/142.3K) — «https://t.me/pantera_offl … Цель 10k» (повтор)
+msg223 — профиль TikTok «PANTERA 🐆» @mellcraf (20/1 453/17.5K) — «… ТУТ 👇 https://t.me/panterajt» (повтор)
+msg224 — профиль TikTok «user02939566989» @samosliv2 (10/2 487/247.7K) — «все тут 👇 т.г.: @sliva8  https://t.me/sliva8»; посты «настоящий хозяин собаки, также эта девочка», «я думала самое страшное это Казань и Воронеж, но вятские поля»
+msg225 — профиль TikTok «panterakazan999» @panterakazan999 (0/408/5 549) — «тэгэшка panterakazan999  https://t.me/panterakazan999» (повтор)
+msg226 — профиль TikTok «ВСЕ ЗДЕСЬ» @70hgphfuhaz (0/8/129) — «СМОТРЮ ЗДЕСЬ 👇 tam741» (повтор)
+
+--- КОНЕЦ RAW NOTES (msg004–msg226, 223 скриншота) ---
